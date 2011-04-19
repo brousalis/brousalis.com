@@ -33,7 +33,7 @@ desc 'Generate and publish the entire site, and send out pings'
 end
 
 desc 'Push to the github'
-  task :p => [:build, :push] do
+  task :p => [:push] do
 end
 
 desc 'create a new draft post'
