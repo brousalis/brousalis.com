@@ -1,0 +1,15 @@
+---
+layout: default
+javascript:
+  - /js/home.js
+---
+
+  {% for post in site.posts %}
+    <article>
+      <hgroup>
+        <p class="date">{{ post.date }}</p>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      </hgroup>
+      {{ post.content }}
+    </article>  
+  {% endfor %}
