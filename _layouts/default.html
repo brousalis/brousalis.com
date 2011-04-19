@@ -31,13 +31,18 @@
     <div id="top">
       <a href="#" id="logo"><img src="images/logo_name.png"></a> 
       <div id="top-menu"> 
-        <a href="#">Contact</a> 
-        <a href="#">Work</a> 
-        <a href="#">Projects</a> 
-        <a href="#">About</a>                   
+        <a href="contact.html">Contact</a> 
+        <a href="work.html">Work</a> 
+        <a href="projects.html">Projects</a> 
+        <a href="about.html">About</a>                   
       </div>
     </div>
-    <div id="menu" class="parallax"><img style="position:absolute;left:0px;" src="http://awesomewallpapers.files.wordpress.com/2009/06/wallpapers-room_com___field_by_dinesiac_1440x9001.jpg"></div> 
+    <div id="parallax">
+      <div style="width:1440px;height:900px"><img src="images/forest.jpg" style="position:absolute;top:0px;left:0px;"/></div>
+      <!-- <div style="width:930px;height:500px;"><img style="position:absolute;top:0px;left:-50px" src="images/desktop.png"></div>
+      <div style="width:400px;height:200px;"><img style="position:absolute;left:-50px;" src="images/iterm.png"></div>
+      <div style="width:200px;height:500px;"><img style="position:absolute;left:300px;" src="images/textmate.png"></div> -->
+    </div> 
     <div id="page">
       <aside>
       	<p class="skip"><a href="#posts">SKIP TO CONTENT</a></p>
@@ -62,7 +67,7 @@
       </aside>
 
       <div id="posts">
-        {{ content }} 
+        {{ content }}  
       </div>   
 
       <footer>

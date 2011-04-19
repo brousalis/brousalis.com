@@ -6,13 +6,12 @@ body{background:#181819 url(../images/noise.png) repeat;margin:0;padding:0;font-
 .logo{width:30px;height:39px;float:left;padding: 0px 8px 5px 0px;}
 #wrapper{margin:0 auto; width:930px;position:relative;}
 #top{position:absolute;top:111px;display:block;z-index:10;width:991px;}
-#menu{z-index:5;display:block;position:relative;overflow:hidden;height:150px;width:930px;padding:0px 40px 0px 40px;margin:0 auto;}
+#parallax{z-index:5;display:block;position:relative;overflow:hidden;height:150px;width:930px;padding:0px 40px 0px 40px;margin:0 auto;}
 #logo{font-size:24px;background:#000;padding:10px 10px 3px 10px;color:#fff;float:left;display:block;}
 #top-menu{float:right}
-#top-menu a{float:right;text-shadow:0 1px 3px rgba(0,0,0,1);padding:8px 0 5px 0px;display:block;color:#fff;font-size:16px;text-decoration:none;border-bottom:none;margin-left:35px}
+#top-menu a{float:right;text-shadow:0 2px 3px rgba(0,0,0,1);padding:8px 5px;display:block;color:#fff;font-size:16px;text-decoration:none;border-bottom:none;margin-left:35px}
 #top-menu.light a{color:#D3DBE8}
 #top-menu a:hover,#top-menu a.active{text-shadow:0 1px 3px rgba(0,0,0,1);color:white}
-#top-menu a span{display:block;float:left;margin:4px 7px 0 0;background-image:url("http://www.versionsapp.com/media/images11/sprite.png");border-color:transparent}
 hgroup{margin:0;padding:0;}
 hgroup a{color:#000;border:0;}
 article{width:640px;margin:0 0 70px 0;padding-bottom:50px;float:right;c}

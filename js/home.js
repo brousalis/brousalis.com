@@ -1,15 +1,16 @@
-// jquery.jparallax.js
-// 0.9.1
-// Stephen Band
-//
-// Dependencies:
-// jQuery 1.2.6 (jquery.com)
-//
-// Project and documentation site:
-// http://webdev.stephband.info/parallax.html
 
+$(document).ready(function($) {
+    $('#parallax').jparallax({}, {ytravel:0.5});
+    // $('#parallax').jparallax({}, {xparallax:false,yparallax:true}, {xparallax:false}, {xparallax:false});
+    $('#top-menu a').animate({opacity: '0.5'},{duration: 300});
+    $('#top-menu a').hover(function() {
+      $(this).animate({opacity: '1'},{duration: 300});
+    }, function() {
+      $(this).animate({opacity: '0.5'},{duration: 300});
+    });
+});
 
-// CLOSURE
+// jParallax
 
 (function(jQuery) {
 
@@ -400,11 +401,4 @@ jQuery(function() {
 	
 });
 
-
-// END CLOSURE
-
 })(jQuery);
-
-jQuery(document).ready(function($) {
-    jQuery('#menu').jparallax();
-});
