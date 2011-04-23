@@ -11,14 +11,14 @@
    </title>
    <meta name="author" content="Pete Brousalis" />
    {% if page.summary %}
-     <meta name="description" content="{{ page.summary }}" />
+   <meta name="description" content="{{ page.summary }}" />
    {% endif %}
    <link href="http://feeds2.feedburner.com/brousalis" rel="alternate" title="Pete Brousalis" type="application/atom+xml" />
 
    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
    <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" />
    {% for css in page.css %}
-     <link rel="stylesheet" href="{{ css }}" type="text/css" />
+   <link rel="stylesheet" href="{{ css }}" type="text/css" />
    {% endfor %}
    
    <script type="text/javascript" src="http://use.typekit.com/pgq1wgn.js"></script>
@@ -29,23 +29,20 @@
   <div class="glow"></div> 
   <div id="wrapper">  
     <div id="top">
-      <a href="#" id="logo"><img src="images/logo_name.png"></a> 
+      <a href="{{ base.url }}" id="logo"><img src="images/logo_name.png"></a> 
       <div id="top-menu"> 
-        <a href="contact.html">Contact</a> 
-        <a href="work.html">Work</a> 
-        <a href="projects.html">Projects</a> 
-        <a href="about.html">About</a>                   
+        <a class="contact" href="{{ base.url }}/contact">Contact</a> 
+        <a class="work" href="{{ base.url }}/work">Work</a> 
+        <a class="projects" href="{{ base.url }}/projects">Projects</a> 
+        <a class="about" href="{{ base.url}}/about">About</a>                   
       </div>
     </div>
     <div id="parallax">
-      <div style="width:1440px;height:900px"><img src="images/forest.jpg" style="position:absolute;top:0px;left:0px;"/></div>
-      <!-- <div style="width:930px;height:500px;"><img style="position:absolute;top:0px;left:-50px" src="images/desktop.png"></div>
-      <div style="width:400px;height:200px;"><img style="position:absolute;left:-50px;" src="images/iterm.png"></div>
-      <div style="width:200px;height:500px;"><img style="position:absolute;left:300px;" src="images/textmate.png"></div> -->
+      <div style="width:1440px;height:400px"><img src="images/bg/wood.jpg" style="position:absolute;top:-180px;left:0px;height:900px;width:1440px;"/></div>
     </div> 
     <div id="page">
       <aside>
-      	<p class="skip"><a href="#posts">SKIP TO CONTENT</a></p>
+      	<p class="skip"><a href="#posts">Skip to content</a></p>
         <section>
           <p><img class="logo" src="images/logo.png" />I'm a software engineering student at <a href="http://rose-hulman.edu">RHIT</a> and aspire to be a UI developer. I'm a story teller, festival-goer, and Ruby enthusiast. Learn more <a href="#">about me</a>, or check out some of my <a href="#">projects</a>.</p>
           <h3>Projects</h3>
@@ -55,12 +52,13 @@
             <li><a href="#">Alice in Asylum</a><span>Python</span></li>          
             <li><a href="#">Universal Tic Tac Toe</a><span>iOS</span></li>        
           </ul>
+          <br />
           <h3>Elsewhere</h3>
           <ul class="social">
             <li class="twitter"><a href="http://twitter.com/brousalis">twitter<strong>/brousalis</strong></a></li>
             <li class="github"><a href="http://github.com/brousalis">github<strong>/brousalis</strong></a></li>
-            <li class="facebook"><a href="http://facebook.com/brousalis">facebook<strong>/brousapg</strong></a></li>
-            <li class="email"><a href="brousapg@gmail.com">brousapg<strong>@gmail.com</strong></a></li>        
+            <li class="facebook"><a href="http://facebook.com/brousapg">facebook<strong>/brousapg</strong></a></li>
+            <li class="email"><a href="mailto:brousapg+com@gmail.com">brousapg<strong>@gmail.com</strong></a></li>        
             <li class="rss"><a href="http://feedburner.com/brousalis">rss</a></li>          
           </ul>           
       	</section>

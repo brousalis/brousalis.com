@@ -6,10 +6,11 @@ javascript:
 
   {% for post in site.posts %}
     <article>
-      <hgroup>
-        <p class="date">{{ post.date }}</p>
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-      </hgroup>
+      <div class="meta">
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>        
+        <p class="date"><img src="images/calendar.png">{{ post.date | date: '%B %d, %Y' }} <img src="images/tag.png" style="margin-left:10px"><a href="#">Tag</a>, <a href="#">Tag</a>, <a href="#">Tag</a></p>
+      </div>
       {{ post.content }}
+      <hr />
     </article>  
   {% endfor %}
