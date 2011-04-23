@@ -38,13 +38,14 @@
       </div>
     </div>
     <div id="parallax">
-      <div style="width:1440px;height:400px"><img src="images/bg/wood.jpg" style="position:absolute;top:-180px;left:0px;height:900px;width:1440px;"/></div>
+      <div style="width:1440px;height:800px"><img src="images/bg/wave.jpg" style="position:absolute;top:-180px;left:0px;height:900px;width:1440px;"/></div>
     </div> 
     <div id="page">
       <aside>
       	<p class="skip"><a href="#posts">Skip to content</a></p>
         <section>
           <p><img class="logo" src="images/logo.png" />I'm a software engineering student at <a href="http://rose-hulman.edu">RHIT</a> and aspire to be a UI developer. I'm a story teller, festival-goer, and Ruby enthusiast. Learn more <a href="#">about me</a>, or check out some of my <a href="#">projects</a>.</p>
+          <div id="diagram"></div> 
           <h3>Projects</h3>
           <ul class="projects">
             <li><a href="#">Mobile Trail Mapping</a><span>iOS/Android</span></li>
@@ -75,11 +76,12 @@
   </div>
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
-  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
   {% for js in page.javascript %}
   <script type="text/javascript" src="{{ js }}"></script>
   {% endfor %}
+  <script type="text/javascript" src="js/libs/raphael.js"></script>
 
   <script type="text/javascript">
   //<![CDATA[
