@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bare Bones Subversion Backup
+tags: Ruby, SVN
 ---
 
 This is a basic incremental Subversion backup script. It is meant to be run daily by [cron][c]. It requires Ruby.

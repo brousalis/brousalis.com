@@ -4,13 +4,23 @@ javascript:
   - /js/home.js
 ---
 
-  {% for post in site.posts %}
-    <article>
-      <div class="meta">
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>        
-        <p class="date"><img src="images/calendar.png">{{ post.date | date: '%B %d, %Y' }} <img src="images/tag.png" style="margin-left:10px"><a href="#">Tag</a>, <a href="#">Tag</a>, <a href="#">Tag</a></p>
-      </div>
-      {{ post.content }}
-      <hr />
-    </article>  
+{% for post in site.posts limit:1 %}
+  <article>
+    <div class="meta">
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>        
+      <p class="date"><img src="images/calendar.png">{{ post.date | date: '%B %d, %Y' }} <img src="images/tag.png" style="margin-left:10px">{% if post.tags != empty %}<span class="tags">in {{ post.tags | array_to_sentence_string }}</span>{% endif %}</p>
+    </div>
+    {{ post.content }}
+    <hr />
+  </article>  
+{% endfor %}
+
+<ul class="posts">
+  {% for post in site.posts offset:1 %}
+    <li>
+      <span class="date">{{ post.date | date_to_string }}</span>
+      ▸ <a href="{{ post.url }}">{{ post.title }}</a>
+      {% if post.tags != empty %}<span class="tags">in {{ post.tags | array_to_sentence_string }}</span>{% endif %}
+    </li>
   {% endfor %}
+</ul>

@@ -20,7 +20,7 @@ $(document).ready(function($) {
     var today=new Date(); 
     var bday=new Date(today.getFullYear(), 11, 16); if (today.getMonth()==11 && today.getDate()>16) bday.setFullYear(bday.getFullYear()+1); var days_left = Math.ceil(((bday.getTime()-today.getTime())/(1000*60*60*24))/365*100)
     var college=new Date(today.getFullYear(), 4, 28); if (today.getMonth() == 4 && today.getDate() > 28) college = 100; var college_days_left = 100-Math.ceil(((college.getTime()-today.getTime())/(1000*60*60*24))/365*100)
-    $('#wrapper').append('<div class="get"><div class="arc"><span class="text">College</span><input type="hidden" class="percent" value="'+college_days_left+'" /><input type="hidden" class="color" value="#97BE0D" /></div><div class="arc"><span class="text">Age 22</span><input type="hidden" class="percent" value="'+days_left+'" /><input type="hidden" class="color" value="#88B8E6" /></div><div class="arc"><span class="text">Something</span><input type="hidden" class="percent" value="50" /><input type="hidden" class="color" value="#BEDBE9" /></div></div>');
+    $('#wrapper').append('<div class="get"><div class="arc"><span class="text">College</span><input type="hidden" class="percent" value="'+college_days_left+'" /><input type="hidden" class="color" value="#0c336e" /></div><div class="arc"><span class="text">Age 22</span><input type="hidden" class="percent" value="'+days_left+'" /><input type="hidden" class="color" value="#88B8E6" /></div><div class="arc"><span class="text">Something</span><input type="hidden" class="percent" value="50" /><input type="hidden" class="color" value="#BEDBE9" /></div></div>');
 });
 
 // codrops up in here - http://tympanus.net/Tutorials/AnimatedSkillsDiagram/
@@ -40,7 +40,7 @@ var o = {
 		var size = 130;
 		var stroke_width = 20;
 		
-		r.circle(size, size, 50).attr({ stroke: 'none', fill: '#193340' });
+		r.circle(size, size, 50).attr({ stroke: 'none', fill: '#000' });
 		
 		var title = r.text(size, size, defaultText).attr({
 			font: '16px "proxima-nova-1"',

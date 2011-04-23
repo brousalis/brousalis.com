@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Setup
+title: A New Beginning
 tags: Personal, Trendy
 ---
 
