@@ -40,7 +40,7 @@ var o = {
 		var size = 130;
 		var stroke_width = 20;
 		
-		r.circle(size, size, 50).attr({ stroke: 'none', fill: '#000' });
+		r.circle(size, size, 51).attr({ stroke: 'none', fill: '#000' });
 		
 		var title = r.text(size, size, defaultText).attr({
 			font: '16px "proxima-nova-1"',
