@@ -15,7 +15,7 @@ javascript:
   </article>  
 {% endfor %}
 
-<ul class="posts">
+<ul id="posts">
   {% for post in site.posts offset:1 %}
     <li>
       <span class="date">{{ post.date | date_to_string }}</span>

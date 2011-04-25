@@ -11,6 +11,13 @@ $(document).ready(function($) {
       $(this).animate({opacity: '0.6'},{duration: 300});
     });
     
+    $('#bottom img').animate({opacity: '0.6'},{duration: 300});
+    $('#bottom img').hover(function() {
+      $(this).animate({opacity: '1'},{duration: 0});
+    }, function() {
+      $(this).animate({opacity: '0.6'},{duration: 300});
+    });
+    
     $('.projects li').hover(function() {
       $(this).find('span').animate({backgroundColor:'#000'},300);
     }, function () {
@@ -86,3 +93,30 @@ var o = {
 	}
 }
 $(function(){ o.init(); });
+
+$.fn.spin = function(speed_word){
+  moz = $(this).css('-moz-transform');
+  webkit = $(this).css('webkit-transform');
+  already_rotating = ((moz != 'none' && webkit == '') || (moz == '' && webkit != 'none'))
+  var number = 0;
+  var speed = 0;
+  if (already_rotating){
+    return false;
+  }else  if (speed_word == 'silly-fast'){
+    speed = 3;
+  }else if (speed_word == 'fast'){
+    speed = 0.3;
+  }else if (speed_word == 'slow'){
+    speed = 0.1;
+  }else if (typeof(speed_word) == 'number'){
+    speed = speed_word / 10;
+  }
+  var self = this;
+
+  setInterval(function(){
+    number += speed;
+    jQuery(self).css('webkit-transform', 'rotate(-'+number+'deg)');
+    jQuery(self).css('-moz-transform', 'rotate(-'+number+'deg)');
+  }, 50)
+}
+        
