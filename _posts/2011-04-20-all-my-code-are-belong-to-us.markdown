@@ -4,13 +4,9 @@ title: Bare Bones Subversion Backup
 tags: Ruby, SVN
 ---
 
-This is a basic incremental Subversion backup script. It is meant to be run daily by [cron][c]. It requires Ruby.
-
-There are many other excellent svn backup scripts out there that do way more than this one. But my goal was just to create something simple and hopefully easy to use.
+This is a basic incremental Subversion backup script. It is meant to be run daily by [cron][c]. It requires Ruby. There are many other excellent svn backup scripts out there that do way more than this one. But my goal was just to create something simple and hopefully easy to use. The script checks that a dump of every revision in the repository exists, if not, it dumps the revision and gzips it.
 
 [c]: http://www.freebsd.org/cgi/man.cgi?query=cron&manpath=FreeBSD+8.0-RELEASE
-
-The script checks that a dump of every revision in the repository exists, if not, it dumps the revision and gzips it.
 
 {% highlight ruby %}
 #!/usr/bin/env ruby

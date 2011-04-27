@@ -3,47 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-   <title>
-     {% if page.title %}
-       {{ page.title }} //
-     {% endif %}
-     Pete Brousalis : http://brousalis.com
-   </title>
+   <title>Pete Brousalis : http://brousalis.com</title>
    <meta name="author" content="Pete Brousalis" />
    {% if page.summary %}
    <meta name="description" content="{{ page.summary }}" />
    {% endif %}
    <link href="http://feeds2.feedburner.com/brousalis" rel="alternate" title="Pete Brousalis" type="application/atom+xml" />
 
-   <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
-   <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" />
+   <link rel="stylesheet" href="stylesheets/syntax.css" type="text/css" />
+   <link rel="stylesheet" href="stylesheets/default.css" type="text/css" />
    {% for css in page.css %}
    <link rel="stylesheet" href="{{ css }}" type="text/css" />
    {% endfor %}
-   
-   <script type="text/javascript" src="http://use.typekit.com/pgq1wgn.js"></script>
+
+   <script type="text/javascript" src="http://use.typekit.com/fhb0qqm.js"></script>
    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
    <script src="js/libs/modernizr-1.7.min.js"></script>
 </head>
 <body> 
   <div id="wrapper">  
-    <header id="top">
+    <header id="top" class="clearfix">
       <a href="{{ base.url }}" class="logo"><img src="images/logo_name.png"></a> 
-      <div id="top-menu"> 
-        <a class="contact" href="{{ base.url }}/contact">Contact</a> 
-        <a class="work" href="{{ base.url }}/work">Work</a> 
-        <a class="projects" href="{{ base.url }}/projects">Projects</a> 
-        <a class="about" href="{{ base.url}}/about">About</a>                   
+      <div id="primary"> 
+        <ul class="links">
+          <li><a href="/gallery" class="about">About</a><span>About</span></li> 
+          <li><a href="/build" class="projects">Projects</a><span>Projects</span></li> 
+          <li><a href="/about" class="work">Work</a><span>Work</span></li> 
+          <li><a href="/store" class="contact">Contact</a><span>Contact</span></li> 
+        </ul>       
       </div>
     </header>
-    <div id="parallax">
-      <div style="width:1440px;height:800px"><img src="images/bg/wave.jpg" style="position:absolute;top:-180px;left:0px;height:900px;width:1440px;"/></div>
-    </div> 
-    <div id="page">
+
+    <div id="page" >
       <aside>
       	<p class="skip"><a href="#posts">Skip to content</a></p>
         <section>
-          <p><img class="logo-image" src="images/logo.png" />I'm a software engineering student at <a href="http://rose-hulman.edu">RHIT</a> and aspire to be a UI developer. I'm a story teller, festival-goer, and Ruby enthusiast. Learn more <a href="#">about me</a>, or check out some of my <a href="#">projects</a>.</p>
+          <p><img class="logo-image" src="images/logo.png" />I'm a software engineering student at <a href="http://rose-hulman.edu">RHIT</a> and aspire to be a UI developer. I'm a story teller, festival-goer, and Ruby enthusiast. Learn more <a href="#">about me</a>.</p>
           <div id="diagram"></div> 
           <h3>Projects</h3>
           <ul id="projects">
@@ -84,14 +79,14 @@
     </footer>  
   </div>
   
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
   {% for js in page.javascript %}
   <script type="text/javascript" src="{{ js }}"></script>
   {% endfor %}
   <script type="text/javascript" src="js/libs/raphael.js"></script>
-
+  
   <script type="text/javascript">
   //<![CDATA[
   (function() {

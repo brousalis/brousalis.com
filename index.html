@@ -1,14 +1,14 @@
 ---
 layout: default
 javascript:
-  - /js/home.js
+  - js/home.js
 ---
 
-{% for post in site.posts limit:1 %}
+{% for post in site.posts limit:2 %}
   <article>
     <div class="meta">
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>        
-      <p class="date"><img src="images/calendar.png">{{ post.date | date: '%B %d, %Y' }} <img src="images/tag.png" style="margin-left:10px">{% if post.tags != empty %}<span class="tags">in {{ post.tags | array_to_sentence_string }}</span>{% endif %}</p>
+      <p class="date">Published on {{ post.date | date: '%B %d, %Y' }} in {% if post.tags != empty %}<span class="tags">{{ post.tags | array_to_sentence_string }}</span>{% endif %}</p>
     </div>
     {{ post.content }}
     <hr />
@@ -16,7 +16,7 @@ javascript:
 {% endfor %}
 
 <ul id="posts">
-  {% for post in site.posts offset:1 %}
+  {% for post in site.posts offset:3 %}
     <li>
       <span class="date">{{ post.date | date_to_string }}</span>
       ▸ <a href="{{ post.url }}">{{ post.title }}</a>
