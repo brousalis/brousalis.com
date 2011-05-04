@@ -1,7 +1,6 @@
 @media screen{hgroup,nav,section,article,aside,figure,footer{display:block;}
 menu,ul,li{margin:0;padding:0;}
-html{background:#aaa url(http://alexpascal.com/element/wp-content/themes/element/assets/images/bg.png) repeat;}
-/*-webkit-box-shadow:0px 2px 14px rgba(0,0,0,0.2),0px 0px 2px rgba(0,0,0,0.3);*/
+html{background:#aaa url(../images/bg.png) repeat;}
 body{background:url(../images/glow.png) no-repeat top center;margin:0;padding:0;font-family:"proxima-nova-1","proxima-nova-2",Georgia,serif;color:#333;-webkit-text-size-adjust:none;position:relative;overflow-x:hidden;}
 #background{position:fixed;top:0;left:0;width:100%;}
 #page{border-top:5px solid #181819;width:930px;background-color:rgba(255,255,255,1);padding:25px 30px 25px 30px;z-index:2;position:relative;}
@@ -16,12 +15,13 @@ body{background:url(../images/glow.png) no-repeat top center;margin:0;padding:0;
 #primary ul li{list-style-type:none;display:block;float:left;border-right:#DDD solid 1px;transition:background-color 0.3s linear;-moz-transition:background-color 0.3s linear;-webkit-transition:background-color 0.3s linear;-o-transition:background-color 0.3s linear;}
 #primary ul li:last-child{border-right:none;}
 #primary ul li a{text-indent:-9999px;height:43px;display:block;width:160px;height:87px;overflow:hidden;border-bottom:none;}
+#primary ul li a:active{position:relative;top:1px;}
 #primary ul li:hover{background-color:#fff;}
 #primary ul li a.about{background:url(../images/vcard.png) no-repeat center center;}
 #primary ul li a.projects{background:url(../images/lab.png) no-repeat center center;}
 #primary ul li a.work{background:url(../images/inbox.png) no-repeat center center;}
 #primary ul li a.contact{background:url(../images/envelope.png) no-repeat center center;}
-#primary ul li span {position:absolute;top:100px;display:block;width:160px;text-align:center;color:#888;}
+#primary ul li span {position:absolute;top:100px;display:block;width:160px;text-align:center;color:#888;cursor:pointer;}
 footer{background:#181819;width:991px;}
 #bottom{border-top:5px solid #000;width:100%;background:url(../images/bg/dots.png) repeat;cursor:pointer;z-index:5;display:block;position:relative;overflow:hidden;}
 #bottom img{width:26px;height:34px;float:left;position:absolute;top:12px;left:29px;}
@@ -30,25 +30,24 @@ footer{background:#181819;width:991px;}
 to{-webkit-transform:scale(1.0);opacity:0.75;}
 }
 #bottom img:hover,.logo-image:hover{-webkit-animation-name:pulse;-webkit-animation-duration:0.5s;-webkit-animation-iteration-count:10;}
-#bottom-menu{margin-left:50px;padding:20px 30px 20px 30px;}
+#bottom-menu{float:left;margin-left:50px;padding:20px 30px 20px 30px;}
 #bottom-menu li{list-style:none;display:inline;margin-right:20px;}
 #bottom-menu li a{padding:5px 10px;border-radius:6px;-moz-border-radius:6px;border-bottom:none;}
 #bottom-menu li:first-child a{background-color:#000;}
 #bottom-menu li a:hover{color:#fff;background-color:#222;}
-.meta{margin:0;padding:0;color:#999;font-weight:400;font-size:14px;border-bottom:1px solid #eee;margin-bottom:10px;}
-.meta h1 a{color:#000;border:0;letter-spacing:-1px;}
+.meta{margin:0;padding:0;font-weight:400;font-size:14px;border-bottom:1px solid #eee;margin-bottom:10px;}
+.meta h1 a{color:#000;border:0;letter-spacing:-1px;color:}
 .meta a{border-bottom:0;}
-.meta p{padding-top:0;}
+.meta p{padding-top:0;color:#aaa;}
 .meta p em{color:#666;}
 .meta img{height:12px;width:12px;margin-right:5px;}
-.date{font-family:"proxima-nova-1","proxima-nova-2";}
 hr{height:1px;border:1px solid #ddd;margin-top:30px;margin-bottom:10px;}
 #content{float:right;width:640px;margin:0 0 10px 0;}
 article{width:640px;margin:0 0 10px 0;padding-bottom:10px;}
 article p{line-height:24px;color:#181819;}
 ul#posts{list-style:none;line-height:1.6;margin:0;padding:0;}
 ul#posts li{color:#000;padding-bottom:.4em;}
-ul#posts li .date{font-family:Courier,monospace;color:#777;font-size:90%;display:inline-block;min-width:6.7em;}
+ul#posts li .date{text-transform:uppercase;letter-spacing:1px;color:#777;font-size:90%;display:inline-block;}
 ul#posts li .date + a{margin-left:.5em;}
 ul#posts li .tags{color:#bbb;}
 aside{width:250px;float:left;padding-bottom:30px;}
@@ -58,10 +57,12 @@ aside ul{padding:0px;margin:10px 0px 0px 0px;}
 aside li{list-style-type:none;padding:0;line-height:16px;border-bottom:1px solid #ccc;padding:8px 0px 8px 2px}
 aside li:first-child{border-top:1px solid #ccc;}
 aside li a{margin:0;border-bottom:none;color:#000;}
+aside li a:active{position:relative;top:1px;}
 aside li a:hover{padding:0 10px 0 0;background:url(../images/arrow.png) no-repeat right center;}
 aside li span{float:right;font-size:10px;background:#a4a4a4;color:#fff;padding:0px 5px;-moz-border-radius:3px;border-radius:3px;}
 aside ul#social li{padding:8px 0 8px 27px;background-size:16px;}
 aside ul#social li a strong{color:#aaa;font-weight:normal;}
+aside ul#social li a:active{position:relative;top:1px;}
 aside ul#social li.twitter{background:url(../images/twitter_alt.png) no-repeat 2px 8px}
 aside ul#social li.github{background:url(../images/github_alt.png) no-repeat 2px 8px}
 aside ul#social li.facebook{background:url(../images/facebook.png) no-repeat 2px 8px}

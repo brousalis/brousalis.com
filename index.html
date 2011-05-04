@@ -4,7 +4,7 @@ javascript:
   - js/home.js
 ---
 
-{% for post in site.posts limit:2 %}
+{% for post in site.posts limit:1 %}
   <article>
     <div class="meta">
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>        
@@ -16,7 +16,7 @@ javascript:
 {% endfor %}
 
 <ul id="posts">
-  {% for post in site.posts offset:3 %}
+  {% for post in site.posts offset:1 %}
     <li>
       <span class="date">{{ post.date | date_to_string }}</span>
       ▸ <a href="{{ post.url }}">{{ post.title }}</a>
