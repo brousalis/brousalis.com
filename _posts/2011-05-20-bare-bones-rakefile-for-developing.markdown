@@ -1,3 +1,20 @@
+---
+layout: post
+title: Bare Bones Rakefile for Jekyll
+tags: Ruby, Jekyll
+excerpt: This is a web dev Rakefile that I use for most of my projects, including this one.
+
+---
+
+This is a basic Rakefile I use for most of my projects, including this one. It requires Ruby. This one handles uploading to the server, as well as some other misc tasks that are involved in maintaining this blog. To use this, simply type in 
+
+{% highlight bash %}
+rake 'taskname'
+{% endhighlight %}
+
+If you have any questions, feel free to e-mail me or post in the comments.
+
+{% highlight ruby %}
 require 'date'
 
 task :default => :dev
@@ -89,3 +106,7 @@ end
 def open_in_editor(file)
   system ("mate #{file}")
 end
+{% endhighlight %}
+
+Here is a list of commands and what they do:
+

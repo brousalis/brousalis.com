@@ -1,4 +1,5 @@
-code{font-family:Consolas,Monaco,monospace;font-size:12px;background:#E9E9E9;w}
+code{font-family:Consolas,Monaco,monospace;font-size:12px;background:#E9E9E9;line-height:18px !important;}
+pre{line-height:18px;}
 pre,
 #content-wrap .gist .gist-file .gist-data pre{font-family:Consolas,Monaco,monospace !important;font-size:12px;padding:5px 10px;background:#E9E9E9 !important;font-weight:bold;overflow:auto;border:none !important;}
 #content-wrap .gist .gist-file .gist-meta{background:#FFF;font-family:Helvetica,Arial,sans-serif;font-size:12px;padding-left:0;padding-right:0;}

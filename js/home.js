@@ -13,11 +13,40 @@ $(document).ready(function($) {
     		$(this).find("a").stop().animate({backgroundPosition:"center center"}, { duration:700, easing: "easeOutExpo"})
     		$(this).find("span").stop().animate({top:"100px"}, {duration:700, easing: "easeOutExpo"})
   	})
+
+  	$('aside li a')
+    	.mouseover(function(){    	  
+    		$(this).animate({ paddingLeft: '5px' }, 150);
+    	})
+    	.mouseout(function(){
+    		$(this).animate({ paddingLeft: '0px' }, 150);
+  	})
   	
     var today=new Date(); 
     var bday=new Date(today.getFullYear(), 11, 16); if (today.getMonth()==11 && today.getDate()>16) bday.setFullYear(bday.getFullYear()+1); var days_left = Math.ceil(((bday.getTime()-today.getTime())/(1000*60*60*24))/365*100)
     var college=new Date(today.getFullYear(), 4, 28); if (today.getMonth() == 4 && today.getDate() > 28) college = 100; var college_days_left = 100-Math.ceil(((college.getTime()-today.getTime())/(1000*60*60*24))/365*100)
-    $('#wrapper').append('<div class="get"><div class="arc"><span class="text">College</span><input type="hidden" class="percent" value="100" /><input type="hidden" class="color" value="#0c336e" /></div><div class="arc"><span class="text">Age 22</span><input type="hidden" class="percent" value="'+days_left+'" /><input type="hidden" class="color" value="#00ADEF" /></div><div class="arc"><span class="text">27in Mac</span><input type="hidden" class="percent" value="52" /><input type="hidden" class="color" value="#BEDBE9" /></div></div>');
+	var c1 = "#332f29"
+	var c2 = "#8fa68e"
+	var c3 = "#ccc59e"
+	var c4 = "#cc3910"
+	// var c1 = "#272f32"
+	// var c2 = "#9dbdc6"
+	// var c3 = "#daeaef"
+	// var c4 = "#ff3d2e"
+	$('#content-header').css('background-color',c4)
+    $('#wrapper').append('<div class="get"><div class="arc"><span class="text">College</span><input type="hidden" class="percent" value="100" /><input type="hidden" class="color" value="'+c1+'" /></div><div class="arc"><span class="text">Age 22</span><input type="hidden" class="percent" value="'+days_left+'" /><input type="hidden" class="color" value="'+c2+'" /></div><div class="arc"><span class="text">27in Mac</span><input type="hidden" class="percent" value="52" /><input type="hidden" class="color" value="'+c3+'" /></div></div>');
+
+	$('#list-view').click(function () {
+		$('article').addClass('list');
+		return false;
+	});
+
+	$('#grid-view').click(function () {
+		$('article').removeClass('list');
+		return false;
+	});
+	
+	$('.logo, .blog').tipsy()
 });
 
 // codrops up in here - http://tympanus.net/Tutorials/AnimatedSkillsDiagram/
@@ -31,7 +60,7 @@ var o = {
 	diagram: function(){
 		var r = Raphael('diagram', 300, 400),
 			rad = 40,
-			defaultText = 'Life',
+			defaultText = ' ',
 			speed = 250;
 		
 		var size = 130;
@@ -43,6 +72,9 @@ var o = {
 			font: '16px "proxima-nova-1"',
 			fill: '#fff'
 		}).toFront();
+		
+		var image = r.image("images/life2.png",115,125,29,14).toFront();
+		title.animate({ opacity: 0 }, speed, '>')
 		
 		r.customAttributes.arc = function(value, color, rad){
 			var v = 3.6*value,
@@ -69,13 +101,15 @@ var o = {
 			
 			z.mouseover(function(){
                 this.stop().animate({ 'stroke-width': stroke_width+10, opacity: .75 }, speed*4, 'elastic').toFront();
-				title.stop().animate({ opacity: 0 }, speed, '>', function(){
-					this.attr({ text: text + '\n' + value + '%' }).animate({ opacity: 1 }, speed, '<');
+				image.stop().animate({ opacity: 0 }, speed, '>')
+				title.stop().animate({ opacity: 0 }, speed, 'fast', function(){
+					this.attr({ text: text + '\n' + value + '%' }).animate({ opacity: 1 }, speed, 'fast');
 				});
             }).mouseout(function(){
 				this.stop().animate({ 'stroke-width': stroke_width, opacity: 1 }, speed*4, 'elastic');
-				title.stop().animate({ opacity: 0 }, speed, '>', function(){
-					title.attr({ text: defaultText }).animate({ opacity: 1 }, speed, '<');
+				image.stop().animate({ opacity: 1 }, speed, '>')
+				title.stop().animate({ opacity: 0 }, speed, 'fast', function(){
+					title.attr({ text: defaultText }).animate({ opacity: 1 }, speed, 'fast');
 				});	
             });
 		});
@@ -264,36 +298,107 @@ jQuery.extend( jQuery.easing,
 		return jQuery.easing.easeOutBounce (x, t*2-d, 0, c, d) * .5 + c*.5 + b;
 	}
 });
+(function($) {
+    $.fn.tipsy = function(options) {
 
-/*
- *
- * TERMS OF USE - EASING EQUATIONS
- * 
- * Open source under the BSD License. 
- * 
- * Copyright Ã‚Â© 2001 Robert Penner
- * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
- * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
- * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
- * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
- * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
- *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
- * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
- *
- */
+        options = $.extend({}, $.fn.tipsy.defaults, options);
+        
+        return this.each(function() {
+            
+            var opts = $.fn.tipsy.elementOptions(this, options);
+            
+            $(this).hover(function() {
+
+                $.data(this, 'cancel.tipsy', true);
+
+                var tip = $.data(this, 'active.tipsy');
+                if (!tip) {
+                    tip = $('<div class="tipsy"><div class="tipsy-inner"/></div>');
+                    tip.css({position: 'absolute', zIndex: 100000});
+                    $.data(this, 'active.tipsy', tip);
+                }
+
+                if ($(this).attr('title') || typeof($(this).attr('original-title')) != 'string') {
+                    $(this).attr('original-title', $(this).attr('title') || '').removeAttr('title');
+                }
+
+                var title;
+                if (typeof opts.title == 'string') {
+                    title = $(this).attr(opts.title == 'title' ? 'original-title' : opts.title);
+                } else if (typeof opts.title == 'function') {
+                    title = opts.title.call(this);
+                }
+
+                tip.find('.tipsy-inner')[opts.html ? 'html' : 'text'](title || opts.fallback);
+
+                var pos = $.extend({}, $(this).offset(), {width: this.offsetWidth, height: this.offsetHeight});
+                tip.get(0).className = 'tipsy'; // reset classname in case of dynamic gravity
+                tip.remove().css({top: 0, left: 0, visibility: 'hidden', display: 'block'}).appendTo(document.body);
+                var actualWidth = tip[0].offsetWidth, actualHeight = tip[0].offsetHeight;
+                var gravity = (typeof opts.gravity == 'function') ? opts.gravity.call(this) : opts.gravity;
+
+                switch (gravity.charAt(0)) {
+                    case 'n':
+                        tip.css({top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2}).addClass('tipsy-north');
+                        break;
+                    case 's':
+                        tip.css({top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2}).addClass('tipsy-south');
+                        break;
+                    case 'e':
+                        tip.css({top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth}).addClass('tipsy-east');
+                        break;
+                    case 'w':
+                        tip.css({top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width}).addClass('tipsy-west');
+                        break;
+                }
+
+                if (opts.fade) {
+                    tip.css({opacity: 0, display: 'block', visibility: 'visible'}).animate({opacity: 0.8});
+                } else {
+                    tip.css({visibility: 'visible'});
+                }
+
+            }, function() {
+                $.data(this, 'cancel.tipsy', false);
+                var self = this;
+                setTimeout(function() {
+                    if ($.data(this, 'cancel.tipsy')) return;
+                    var tip = $.data(self, 'active.tipsy');
+                    if (opts.fade) {
+                        tip.stop().fadeOut(function() { $(this).remove(); });
+                    } else {
+                        tip.remove();
+                    }
+                }, 100);
+
+            });
+            
+        });
+        
+    };
+    
+    // Overwrite this method to provide options on a per-element basis.
+    // For example, you could store the gravity in a 'tipsy-gravity' attribute:
+    // return $.extend({}, options, {gravity: $(ele).attr('tipsy-gravity') || 'n' });
+    // (remember - do not modify 'options' in place!)
+    $.fn.tipsy.elementOptions = function(ele, options) {
+        return $.metadata ? $.extend({}, options, $(ele).metadata()) : options;
+    };
+    
+    $.fn.tipsy.defaults = {
+        fade: false,
+        fallback: '',
+        gravity: 'n',
+        html: false,
+        title: 'title'
+    };
+    
+    $.fn.tipsy.autoNS = function() {
+        return $(this).offset().top > ($(document).scrollTop() + $(window).height() / 2) ? 's' : 'n';
+    };
+    
+    $.fn.tipsy.autoWE = function() {
+        return $(this).offset().left > ($(document).scrollLeft() + $(window).width() / 2) ? 'e' : 'w';
+    };
+    
+})(jQuery);
