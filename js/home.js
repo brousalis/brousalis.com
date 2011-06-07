@@ -29,10 +29,6 @@ $(document).ready(function($) {
 	var c2 = "#8fa68e"
 	var c3 = "#ccc59e"
 	var c4 = "#cc3910"
-	// var c1 = "#272f32"
-	// var c2 = "#9dbdc6"
-	// var c3 = "#daeaef"
-	// var c4 = "#ff3d2e"
 	$('#content-header').css('background-color',c4)
     $('#wrapper').append('<div class="get"><div class="arc"><span class="text">College</span><input type="hidden" class="percent" value="100" /><input type="hidden" class="color" value="'+c1+'" /></div><div class="arc"><span class="text">Age 22</span><input type="hidden" class="percent" value="'+days_left+'" /><input type="hidden" class="color" value="'+c2+'" /></div><div class="arc"><span class="text">27in Mac</span><input type="hidden" class="percent" value="52" /><input type="hidden" class="color" value="'+c3+'" /></div></div>');
 
@@ -46,7 +42,8 @@ $(document).ready(function($) {
 		return false;
 	});
 	
-	$('.logo, .blog').tipsy()
+	$('.logo').tipsy({left:5})
+	$('.blog').tipsy()
 });
 
 // codrops up in here - http://tympanus.net/Tutorials/AnimatedSkillsDiagram/
@@ -118,12 +115,6 @@ var o = {
 }
 $(function(){ o.init(); });
 
-/* http://keith-wood.name/backgroundPos.html
-   Background position animation for jQuery v1.0.0.
-   Written by Keith Wood (kbwood{at}iinet.com.au) November 2010.
-   Dual licensed under the GPL (http://dev.jquery.com/browser/trunk/jquery/GPL-LICENSE.txt) and 
-   MIT (http://dev.jquery.com/browser/trunk/jquery/MIT-LICENSE.txt) licenses. 
-   Please attribute the author if you use it. */
 (function($){var g='bgPos';$.fx.step['backgroundPosition']=$.fx.step['background-position']=function(a){if(!a.set){var b=$(a.elem);var c=b.data(g);b.css('backgroundPosition',c);a.start=parseBackgroundPosition(c);a.end=parseBackgroundPosition(a.options.curAnim['backgroundPosition']||a.options.curAnim['background-position']);for(var i=0;i<a.end.length;i++){if(a.end[i][0]){a.end[i][1]=a.start[i][1]+(a.end[i][0]=='-='?-1:+1)*a.end[i][1]}}a.set=true}$(a.elem).css('background-position',((a.pos*(a.end[0][1]-a.start[0][1])+a.start[0][1])+a.end[0][2])+' '+((a.pos*(a.end[1][1]-a.start[1][1])+a.start[1][1])+a.end[1][2]))};function parseBackgroundPosition(c){var d={center:'50%',left:'0%',right:'100%',top:'0%',bottom:'100%'};var e=c.split(/ /);var f=function(a){var b=(d[e[a]]||e[a]||'50%').match(/^([+-]=)?([+-]?\d+(\.\d*)?)(.*)$/);e[a]=[b[1],parseFloat(b[2]),b[4]||'px']};if(e.length==1&&$.inArray(e[0],['top','bottom'])>-1){e[1]=e[0];e[0]='50%'}f(0);f(1);return e}$.fn.animate=function(e){return function(a,b,c,d){if(a['backgroundPosition']||a['background-position']){$(this).data(g,this.css('backgroundPosition'))}return e.apply($(this),[a,b,c,d])}}($.fn.animate)})(jQuery);
 
 /*
@@ -138,29 +129,6 @@ $(function(){ o.init(); });
  * 
  * Copyright Ã‚Â© 2008 George McGinley Smith
  * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
- * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
- * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
- * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
- * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
- *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
- * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
- *
 */
 
 // t: current time, b: begInnIng value, c: change In value, d: duration
@@ -298,83 +266,200 @@ jQuery.extend( jQuery.easing,
 		return jQuery.easing.easeOutBounce (x, t*2-d, 0, c, d) * .5 + c*.5 + b;
 	}
 });
+
+// tipsy, facebook style tooltips for jquery
+// version 1.0.0a
+// (c) 2008-2010 jason frame [jason@onehackoranother.com]
+// released under the MIT license
+
 (function($) {
-    $.fn.tipsy = function(options) {
-
-        options = $.extend({}, $.fn.tipsy.defaults, options);
-        
-        return this.each(function() {
-            
-            var opts = $.fn.tipsy.elementOptions(this, options);
-            
-            $(this).hover(function() {
-
-                $.data(this, 'cancel.tipsy', true);
-
-                var tip = $.data(this, 'active.tipsy');
-                if (!tip) {
-                    tip = $('<div class="tipsy"><div class="tipsy-inner"/></div>');
-                    tip.css({position: 'absolute', zIndex: 100000});
-                    $.data(this, 'active.tipsy', tip);
-                }
-
-                if ($(this).attr('title') || typeof($(this).attr('original-title')) != 'string') {
-                    $(this).attr('original-title', $(this).attr('title') || '').removeAttr('title');
-                }
-
-                var title;
-                if (typeof opts.title == 'string') {
-                    title = $(this).attr(opts.title == 'title' ? 'original-title' : opts.title);
-                } else if (typeof opts.title == 'function') {
-                    title = opts.title.call(this);
-                }
-
-                tip.find('.tipsy-inner')[opts.html ? 'html' : 'text'](title || opts.fallback);
-
-                var pos = $.extend({}, $(this).offset(), {width: this.offsetWidth, height: this.offsetHeight});
-                tip.get(0).className = 'tipsy'; // reset classname in case of dynamic gravity
-                tip.remove().css({top: 0, left: 0, visibility: 'hidden', display: 'block'}).appendTo(document.body);
-                var actualWidth = tip[0].offsetWidth, actualHeight = tip[0].offsetHeight;
-                var gravity = (typeof opts.gravity == 'function') ? opts.gravity.call(this) : opts.gravity;
-
+    
+    function maybeCall(thing, ctx) {
+        return (typeof thing == 'function') ? (thing.call(ctx)) : thing;
+    };
+    
+    function Tipsy(element, options) {
+        this.$element = $(element);
+        this.options = options;
+        this.enabled = true;
+        this.fixTitle();
+    };
+    
+    Tipsy.prototype = {
+        show: function() {
+            var title = this.getTitle();
+            if (title && this.enabled) {
+                var $tip = this.tip();
+                
+                $tip.find('.tipsy-inner')[this.options.html ? 'html' : 'text'](title);
+                $tip[0].className = 'tipsy'; // reset classname in case of dynamic gravity
+                $tip.remove().css({top: 0, left: 0, visibility: 'hidden', display: 'block'}).prependTo(document.body);
+                
+                var pos = $.extend({}, this.$element.offset(), {
+                    width: this.$element[0].offsetWidth,
+                    height: this.$element[0].offsetHeight
+                });
+                
+                var actualWidth = $tip[0].offsetWidth,
+                    actualHeight = $tip[0].offsetHeight,
+                    gravity = maybeCall(this.options.gravity, this.$element[0]);
+                
+                var tp;
                 switch (gravity.charAt(0)) {
                     case 'n':
-                        tip.css({top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2}).addClass('tipsy-north');
+                        tp = {top: pos.top + pos.height + this.options.offset, left: pos.left + pos.width / 2 - actualWidth / 2};
                         break;
                     case 's':
-                        tip.css({top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2}).addClass('tipsy-south');
+                        tp = {top: pos.top - actualHeight - this.options.offset, left: pos.left + pos.width / 2 - actualWidth / 2};
                         break;
                     case 'e':
-                        tip.css({top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth}).addClass('tipsy-east');
+                        tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth - this.options.offset};
                         break;
                     case 'w':
-                        tip.css({top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width}).addClass('tipsy-west');
+                        tp = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width + this.options.offset};
                         break;
                 }
-
-                if (opts.fade) {
-                    tip.css({opacity: 0, display: 'block', visibility: 'visible'}).animate({opacity: 0.8});
-                } else {
-                    tip.css({visibility: 'visible'});
-                }
-
-            }, function() {
-                $.data(this, 'cancel.tipsy', false);
-                var self = this;
-                setTimeout(function() {
-                    if ($.data(this, 'cancel.tipsy')) return;
-                    var tip = $.data(self, 'active.tipsy');
-                    if (opts.fade) {
-                        tip.stop().fadeOut(function() { $(this).remove(); });
+                
+                if (gravity.length == 2) {
+                    if (gravity.charAt(1) == 'w') {
+                        tp.left = pos.left + pos.width / 2 - 15;
                     } else {
-                        tip.remove();
+                        tp.left = pos.left + pos.width / 2 - actualWidth + 15;
                     }
-                }, 100);
-
-            });
-            
-        });
+                }
+                
+                $tip.css(tp).addClass('tipsy-' + gravity);
+                $tip.find('.tipsy-arrow')[0].className = 'tipsy-arrow tipsy-arrow-' + gravity.charAt(0);
+                if (this.options.className) {
+                    $tip.addClass(maybeCall(this.options.className, this.$element[0]));
+                }
+                
+                if (this.options.fade) {
+                    $tip.stop().css({opacity: 0, display: 'block', visibility: 'visible'}).animate({opacity: this.options.opacity});
+                } else {
+                    $tip.css({visibility: 'visible', opacity: this.options.opacity});
+                }
+            }
+        },
         
+        hide: function() {
+            if (this.options.fade) {
+                this.tip().stop().fadeOut(function() { $(this).remove(); });
+            } else {
+                this.tip().remove();
+            }
+        },
+        
+        fixTitle: function() {
+            var $e = this.$element;
+            if ($e.attr('title') || typeof($e.attr('original-title')) != 'string') {
+                $e.attr('original-title', $e.attr('title') || '').removeAttr('title');
+            }
+        },
+        
+        getTitle: function() {
+            var title, $e = this.$element, o = this.options;
+            this.fixTitle();
+            var title, o = this.options;
+            if (typeof o.title == 'string') {
+                title = $e.attr(o.title == 'title' ? 'original-title' : o.title);
+            } else if (typeof o.title == 'function') {
+                title = o.title.call($e[0]);
+            }
+            title = ('' + title).replace(/(^\s*|\s*$)/, "");
+            return title || o.fallback;
+        },
+        
+        tip: function() {
+            if (!this.$tip) {
+				pad = 9 + this.options.left
+                this.$tip = $('<div class="tipsy" style="margin-left: '+pad+'px"></div>').html('<div class="tipsy-arrow"></div><div class="tipsy-inner"></div>');
+            }
+            return this.$tip;
+        },
+        
+        validate: function() {
+            if (!this.$element[0].parentNode) {
+                this.hide();
+                this.$element = null;
+                this.options = null;
+            }
+        },
+        
+        enable: function() { this.enabled = true; },
+        disable: function() { this.enabled = false; },
+        toggleEnabled: function() { this.enabled = !this.enabled; }
+    };
+    
+    $.fn.tipsy = function(options) {
+        
+        if (options === true) {
+            return this.data('tipsy');
+        } else if (typeof options == 'string') {
+            var tipsy = this.data('tipsy');
+            if (tipsy) tipsy[options]();
+            return this;
+        }
+        
+        options = $.extend({}, $.fn.tipsy.defaults, options);
+        
+        function get(ele) {
+            var tipsy = $.data(ele, 'tipsy');
+            if (!tipsy) {
+                tipsy = new Tipsy(ele, $.fn.tipsy.elementOptions(ele, options));
+                $.data(ele, 'tipsy', tipsy);
+            }
+            return tipsy;
+        }
+        
+        function enter() {
+            var tipsy = get(this);
+            tipsy.hoverState = 'in';
+            if (options.delayIn == 0) {
+                tipsy.show();
+            } else {
+                tipsy.fixTitle();
+                setTimeout(function() { if (tipsy.hoverState == 'in') tipsy.show(); }, options.delayIn);
+            }
+        };
+        
+        function leave() {
+            var tipsy = get(this);
+            tipsy.hoverState = 'out';
+            if (options.delayOut == 0) {
+                tipsy.hide();
+            } else {
+                setTimeout(function() { if (tipsy.hoverState == 'out') tipsy.hide(); }, options.delayOut);
+            }
+        };
+        
+        if (!options.live) this.each(function() { get(this); });
+        
+        if (options.trigger != 'manual') {
+            var binder   = options.live ? 'live' : 'bind',
+                eventIn  = options.trigger == 'hover' ? 'mouseenter' : 'focus',
+                eventOut = options.trigger == 'hover' ? 'mouseleave' : 'blur';
+            this[binder](eventIn, enter)[binder](eventOut, leave);
+        }
+        
+        return this;
+        
+    };
+    
+    $.fn.tipsy.defaults = {
+        className: null,
+        delayIn: 0,
+		left: 0,
+        delayOut: 0,
+        fade: true,
+        fallback: '',
+        gravity: 'n',
+        html: false,
+        live: false,
+        offset: 0,
+        opacity: 0.9,
+        title: 'title',
+        trigger: 'hover'
     };
     
     // Overwrite this method to provide options on a per-element basis.
@@ -385,14 +470,6 @@ jQuery.extend( jQuery.easing,
         return $.metadata ? $.extend({}, options, $(ele).metadata()) : options;
     };
     
-    $.fn.tipsy.defaults = {
-        fade: false,
-        fallback: '',
-        gravity: 'n',
-        html: false,
-        title: 'title'
-    };
-    
     $.fn.tipsy.autoNS = function() {
         return $(this).offset().top > ($(document).scrollTop() + $(window).height() / 2) ? 's' : 'n';
     };
@@ -400,5 +477,36 @@ jQuery.extend( jQuery.easing,
     $.fn.tipsy.autoWE = function() {
         return $(this).offset().left > ($(document).scrollLeft() + $(window).width() / 2) ? 'e' : 'w';
     };
+    
+    /**
+     * yields a closure of the supplied parameters, producing a function that takes
+     * no arguments and is suitable for use as an autogravity function like so:
+     *
+     * @param margin (int) - distance from the viewable region edge that an
+     *        element should be before setting its tooltip's gravity to be away
+     *        from that edge.
+     * @param prefer (string, e.g. 'n', 'sw', 'w') - the direction to prefer
+     *        if there are no viewable region edges effecting the tooltip's
+     *        gravity. It will try to vary from this minimally, for example,
+     *        if 'sw' is preferred and an element is near the right viewable 
+     *        region edge, but not the top edge, it will set the gravity for
+     *        that element's tooltip to be 'se', preserving the southern
+     *        component.
+     */
+     $.fn.tipsy.autoBounds = function(margin, prefer) {
+		return function() {
+			var dir = {ns: prefer[0], ew: (prefer.length > 1 ? prefer[1] : false)},
+			    boundTop = $(document).scrollTop() + margin,
+			    boundLeft = $(document).scrollLeft() + margin,
+			    $this = $(this);
+
+			if ($this.offset().top < boundTop) dir.ns = 'n';
+			if ($this.offset().left < boundLeft) dir.ew = 'w';
+			if ($(window).width() + $(document).scrollLeft() - $this.offset().left < margin) dir.ew = 'e';
+			if ($(window).height() + $(document).scrollTop() - $this.offset().top < margin) dir.ns = 's';
+
+			return dir.ns + (dir.ew ? dir.ew : '');
+		}
+	};
     
 })(jQuery);
