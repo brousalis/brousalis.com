@@ -2,7 +2,7 @@
 layout: post
 title: Bare Bones Rakefile for Jekyll
 tags: Ruby, Jekyll
-excerpt: This is a web dev Rakefile that I use for most of my projects, including this one.
+excerpt: This is an example Rakefile I use for most of my projects, including this one. It is mainly targeted for use with Jekyll, but can be adapted to most systems.
 
 ---
 
@@ -37,7 +37,7 @@ end
 desc 'rsync the contents of ./_site to the server'
 task :sync do
   puts '* Publishing files to live server'
-  puts `rsync -e ssh -avz "_site/" you@domain.com:~/public_html/p`
+  puts `rsync -e ssh -avz "_site/" you@domain.com:~/public_html/`
 end
 
 # Pushes the source code to Github - use: rake p m="Commit message"

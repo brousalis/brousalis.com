@@ -20,7 +20,7 @@ end
 desc 'rsync the contents of ./_site to the server'
 task :sync do
   puts '* Publishing files to live server'
-  puts `rsync -e ssh -avz "_site/" you@domain.com:~/public_html/p`
+  puts `rsync -e ssh -avz "_site/" brousali@brousalis.com:~/public_html/p`
 end
 
 # Pushes the source code to Github - use: rake p m="Commit message"
@@ -31,6 +31,7 @@ task :p do
   puts `git commit -m "#{ENV['m']}" .`
   puts `git push origin master`
 end
+
 
 # Do it!
 desc 'Generate and publish the entire site, and send out pings'

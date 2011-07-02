@@ -2,10 +2,10 @@
 layout: post
 title: The Setup
 tags: Personal, Trendy
-excerpt: This is a post inspired by <a href="http://usesthis.com">The Setup</a>. I detail the hardware and software I use.
+excerpt: This is a post inspired by <a href="http://usesthis.com">The Setup</a>, a website filled with interviews dedicated to finding out how prominent designers and developers use to get their work done. Learn more about the software and hardware I use.
 ---
 
-Inspired by [The Setup](http://usesthis.com/), a website filled with interviews dedicated to finding out how prominent designers and developers use to get their work done. My career has only just begun, but I thought I'd share what I use.
+[The Setup](http://usesthis.com/) is a website filled with interviews dedicated to finding out how prominent designers and developers use to get their work done. My career has only just begun, but I thought I'd share what I use.
 
 ### Hardware
 
