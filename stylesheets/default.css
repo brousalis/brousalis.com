@@ -2,12 +2,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */
 @media screen{hgroup,nav,section,article,aside,figure,footer{display:block;}
 ol,menu,ul,li{list-style:none;margin:0;padding:0;}
-html{background:#aaa url(../images/bg.png) repeat;}
+html{background:#151515;}
 body{background:url(../images/glow.png) no-repeat top center;margin:0;padding:0;font-family:"proxima-nova-1","proxima-nova-2",Georgia,serif;color:#333;-webkit-text-size-adjust:none;position:relative;overflow-x:hidden;}
 #container{width:100%;padding:50px 0 100px;}
 #content{float:left;width:100%;}
 #primary{margin-left:210px;position:relative;z-index:2;margin-bottom:40px;}
-.item{background:#fff;position:relative;width:360px;float:left;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.10);-moz-box-shadow:0 1px 1px rgba(0,0,0,0.10);box-shadow:0 1px 1px rgba(0,0,0,0.10);margin:0 0 20px 20px}
+.item{display:block;position:relative;float:left;margin:0 30px 20px 0}
+.item .thumb .hover{cursor:pointer;text-decoration:none;}
+.item .thumb img:hover {outline:2px solid #33ffcc;}
+.item .thumb img{background:#000;margin:0 0 15px 0;outline-offset:1px;position:relative;min-width:280px;min-height:188px;z-index:2;}
+.item .title{overflow:hidden;width:280px;-webkit-font-smooth:antialiased}
+.item .title h1 a{color:#aaa;font-size:16px;font-weight:600;line-height:15px;text-decoration:none}
+.item .tags{color:#555;height:3em;font-family:Georgia;line-height:15px;margin:0 0 2px 0;width:280px;}
+.item .tags{color:#555;font-size:11px;line-height:1.5em;text-decoration:none;}
+.item .tags a:hover{color:#ccc;text-decoration:underline;}
+.item .tags a:active{color:#999;text-decoration:underline}
+.loader{display:none;position:absolute;top:8px;left:8px;z-index:3;}
 #masonry{width:100%;list-style:none;margin:0;padding:0;position:relative} 
 #footer{clear:both;position:relative;z-index:1000;font-size:12px;margin:-20px 0 0;padding: 0 40px;}
 #sidebar{position:fixed;width:150px;left:0;z-index:500;margin:0 0 0 40px}
