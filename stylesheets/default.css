@@ -3,10 +3,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 @media screen{hgroup,nav,section,article,aside,figure,footer{display:block;}
 ol,menu,ul,li{list-style:none;margin:0;padding:0;}
 html{background:#151515;}
-body{background:url(../images/glow.png) no-repeat top center;margin:0;padding:0;font-family:"proxima-nova-1","proxima-nova-2",Georgia,serif;color:#333;-webkit-text-size-adjust:none;position:relative;overflow-x:hidden;}
-#container{width:100%;padding:50px 0 100px;}
+body{background:url(../images/glow.png) no-repeat top center;line-height:1.5;-webkit-font-smooth:antialiased;margin:0;padding:0;font-family:"proxima-nova-1","proxima-nova-2",Arial, Helvetica, Georgia, serif;color:#333;-webkit-text-size-adjust:none;position:relative;overflow-x:hidden;color:#666;font-size:14px;}
+#container{width:100%}
 #content{float:left;width:100%;}
-#primary{margin-left:210px;position:relative;z-index:2;margin-bottom:40px;}
+#primary{margin-left:320px;position:relative;z-index:2;margin-bottom:40px;}
+#masonry{padding:50px 0 100px;width:100%;list-style:none;margin:0;position:relative} 
+#intro{width:100%;background:#fff;padding:20px 0 30px 15px}
 .item{display:block;position:relative;float:left;margin:0 30px 20px 0}
 .item .thumb .hover{cursor:pointer;text-decoration:none;}
 .item .thumb img:hover {outline:2px solid #33ffcc;}
@@ -18,9 +20,8 @@ body{background:url(../images/glow.png) no-repeat top center;margin:0;padding:0;
 .item .tags a:hover{color:#ccc;text-decoration:underline;}
 .item .tags a:active{color:#999;text-decoration:underline}
 .loader{display:none;position:absolute;top:8px;left:8px;z-index:3;}
-#masonry{width:100%;list-style:none;margin:0;padding:0;position:relative} 
 #footer{clear:both;position:relative;z-index:1000;font-size:12px;margin:-20px 0 0;padding: 0 40px;}
-#sidebar{position:fixed;width:150px;left:0;z-index:500;margin:0 0 0 40px}
+#sidebar{position:fixed;background:url(../images/bg.png);width:240px;height:100%;left:0;z-index:500;margin:0 0 0 0px; padding: 0px 0px 0px 30px}
 #logo,#logo a{font-size:28px;line-height:30px;color:3000;display:block}
 #tagline{font-size:12px;line-height:18px;font-weight:400;margin:15px 0 0;}
 #back-to-top a{font-size:11px;display:block;position:relative;z-index:1000;}

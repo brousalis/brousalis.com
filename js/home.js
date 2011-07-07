@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
 
+  // jquery masonry
 	var $wall = jQuery('#masonry');
 	$wall.masonry({
 		columnWidth: 380,
@@ -12,10 +13,17 @@ jQuery(document).ready(function() {
 		itemSelector: '.item'
 	});
 
-	var topLink = jQuery('#back-to-top');
+  // .item hover
+  var $item = jQuery('.item');
+  $item.hover(function (){
+    $item.find('.title h1 a').css("color", "#fff");
+  }, function (){
+    $item.find('.title h1 a').css("color", "#aaa");
+  });
 
+  // back to top link
+	var topLink = jQuery('#back-to-top');
 	function tz_backToTop(topLink) {
-		
 		if(jQuery(window).scrollTop() > 0) {
 			topLink.fadeIn(200);
 		} else {
