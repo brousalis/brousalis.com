@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
     content += "</ul>";
     return content;
   }
-  function link(url, sentence) {
-    return "<li><a href=\"" + url + "\"><span></span>" + sentence + "</a></li>";
+  function link(url, sentence, social){
+    return "<li class=\""+ social +"\"><a href=\"" + url + "\"><span></span>" + sentence + "</a></li>";
   }
 });
