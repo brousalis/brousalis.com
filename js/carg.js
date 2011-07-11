@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
   jQuery(".nav_container").append(nav());
   function nav() {
-    var content;
+    var content = "";
     content += "<ul>";
     content += link("http://twitter.com/brousalis","Follow me on <strong>Twitter</strong>");
     content += link("http://gplus.to/brousalis", "Find me on <strong>Google Plus</strong>");
