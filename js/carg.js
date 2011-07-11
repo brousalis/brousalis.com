@@ -14,5 +14,7 @@ jQuery(document).ready(function() {
     return "<li class=\""+ social +"\"><a href=\"" + url + "\"><span></span>" + sentence + "</a></li>";
   }
 
-  alert(jQuery(".cardimgcrop ").find("img").attr("src"));
+  var source = jQuery(".cardimgcrop ").find("img").attr("src")
+  jQuery(".cardimgcrop ").parent().parent().parent().css("background","url("+source+")");
+  jQuery("div").remove(".cardimgcrop ")
 });
