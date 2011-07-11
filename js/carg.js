@@ -13,4 +13,6 @@ jQuery(document).ready(function() {
   function link(url, sentence, social){
     return "<li class=\""+ social +"\"><a href=\"" + url + "\"><span></span>" + sentence + "</a></li>";
   }
+
+  alert(jQuery(".cardimgcrop ").find("img").attr("src"));
 });
