@@ -3,9 +3,10 @@ jQuery(document).ready(function() {
   function nav() {
     var content = "";
     content += "<ul>";
-    content += link("http://twitter.com/brousalis","Follow me on <strong>Twitter</strong>");
-    content += link("http://gplus.to/brousalis", "Find me on <strong>Google Plus</strong>");
-    content += link("http://github.com/brousalis", "Fork me on <strong>GitHub</strong>");
+    content += link("http://twitter.com/brousalis","Follow me on <strong>Twitter</strong>", "twitter");
+    content += link("http://gplus.to/brousalis", "Find me on <strong>Google Plus</strong>", "plus");
+    content += link("http://github.com/brousalis", "Fork me on <strong>GitHub</strong>", "github");
+    content += link("http://dribbble.com/brousalis", "In progress at <strong>Dribbble</strong>", "dribbble");
     content += "</ul>";
     return content;
   }
