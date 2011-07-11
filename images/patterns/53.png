@@ -1,0 +1,6 @@
+x = 1
+Dir.glob("*").each do |filename|
+  File.rename(filename, x.to_s + ".png")
+  x = x + 1
+end
+
