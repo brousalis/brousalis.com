@@ -14,11 +14,12 @@ jQuery(document).ready(function() {
     return "<li class=\""+ social +"\"><a href=\"" + url + "\">" + sentence + "</a></li>";
   }
   jQuery(".nav_container").append(nav()); 
-  
-  var source = jQuery(".cardimgcrop ").find("img").attr("src");
-  jQuery(".cardimgcrop ").parent().parent().parent().css("background","url("+source+")");
-  jQuery("div").remove(".cardimgcrop ");
 
+  $(".cardimgcrop").each(function(i) {
+    var source = jQuery(this).find("img").attr("src");
+    jQuery(this).parent().parent().parent().css("background","url("+source+")");
+    jQuery("div").remove(this);
+  });
 	jQuery('body').hide();
 	jQuery('body').fadeIn(1000);
 });
