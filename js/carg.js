@@ -18,4 +18,7 @@ jQuery(document).ready(function() {
   var source = jQuery(".cardimgcrop ").find("img").attr("src");
   jQuery(".cardimgcrop ").parent().parent().parent().css("background","url("+source+")");
   jQuery("div").remove(".cardimgcrop ");
+
+	jQuery('body').hide();
+	jQuery('body').fadeIn(1000);
 });
