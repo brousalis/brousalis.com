@@ -21,6 +21,13 @@ jQuery(document).ready(function() {
     jQuery("div").remove(this);
   });*/
 
-	jQuery('body').hide();
+  jQuery('body').hide();
 	jQuery('body').fadeIn(1000);
 });
+
+
+jQuery(window).resize(function() { 
+  $("#thumb_container").reinitialise();
+}); 
+
+
