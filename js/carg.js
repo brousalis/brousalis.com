@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
     content += "<ul>";
     content += link("mailto:brousapg+web.at.gmail.com", "Contact me by <strong>E-mail</strong>", "email");
     content += link("http://twitter.com/brousalis","Follow me on <strong>Twitter</strong>", "twitter");
-    content += link("http://gplus.to/brousalis", "Find me on <strong>Google Plus</strong>", "plus");
+    //content += link("http://gplus.to/brousalis", "Find me on <strong>Google Plus</strong>", "plus");
     content += link("http://github.com/brousalis", "Fork me on <strong>GitHub</strong>", "github");
     content += link("http://dribbble.com/brousalis", "In progress at <strong>Dribbble</strong>", "dribbble");
     content += "</ul>";
@@ -20,6 +20,7 @@ jQuery(document).ready(function() {
     jQuery(this).parent().parent().parent().css("background","url("+source+")");
     jQuery("div").remove(this);
   });
+
 	jQuery('body').hide();
 	jQuery('body').fadeIn(1000);
 });
