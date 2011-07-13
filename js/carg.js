@@ -11,7 +11,7 @@ $(function() {
     return content;
   }
   function link(url, sentence, social){
-    return "<li class=\""+ social +"\"><a href=\"" + url + "\">" + sentence + "</a></li>";
+    return "<li class=\""+ social +"\"><span></span><a href=\"" + url + "\">" + sentence + "</a></li>";
   }
   $(".nav_container").append(nav()); 
 
@@ -19,9 +19,9 @@ $(function() {
 	$('body').fadeIn(1000);
 
   $('.nav_container li').hover(function() {
-    $(this).fadeTo('slow',0.5);     
+    $(this).fadeTo(0.1,0.5);     
   }, function() {
-    $(this).fadeTo('slow',1);
+    $(this).fadeTo(0.1,1);
   });
 });
 
