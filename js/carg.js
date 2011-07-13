@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+$(function() {
   function nav() {
     var content = "";
     content += "<ul>";
@@ -13,22 +13,15 @@ jQuery(document).ready(function() {
   function link(url, sentence, social){
     return "<li class=\""+ social +"\"><a href=\"" + url + "\">" + sentence + "</a></li>";
   }
-  jQuery(".nav_container").append(nav()); 
+  $(".nav_container").append(nav()); 
 
-  /*$(".cardimgcrop").each(function(i) {
-    var source = jQuery(this).find("img").attr("src");
-    jQuery(this).parent().parent().parent().css("background","url("+source+")");
-    jQuery("div").remove(this);
-  });*/
+  $('body').hide();
+	$('body').fadeIn(1000);
 
-  jQuery('body').hide();
-	jQuery('body').fadeIn(1000);
-
-  
-
-  jQuery(window).resize(function() { 
-    $("#thumb_container").reinitialise();
-  }); 
-
+  $('.nav_container li').hover(function() {
+    $(this).fadeTo('slow',0.5);     
+  }, function() {
+    $(this).fadeTo('slow',1);
+  });
 });
 
