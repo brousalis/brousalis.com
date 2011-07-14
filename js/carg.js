@@ -23,5 +23,10 @@ $(function() {
   }, function() {
     $(this).find('span').fadeTo(0.1,1);
   });
+
+  $(window).bind("load",function(){
+  $('.scroll_pane').jScrollPane(  { maintainPosition: false }).data('jsp').reinitialise();
+  });
+
 });
 
