@@ -19,9 +19,9 @@ $(function() {
 	$('body').fadeIn(1000);
 
   $('.nav_container li').hover(function() {
-    $(this).find('span').fadeTo('fast',0.5);     
+    $(this).find('span').fadeTo(0.1,0.5);     
   }, function() {
-    $(this).find('span').fadeTo('fast',1,1);
+    $(this).find('span').fadeTo(0.1,1);
   });
 });
 
