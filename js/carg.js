@@ -11,7 +11,7 @@ $(function() {
     return content;
   }
   function link(url, sentence, social){
-    return "<li class=\""+ social +"\"><span></span><a href=\"" + url + "\">" + sentence + "</a></li>";
+    return "<li class=\""+ social +"\"><span></span><a href=\"" + url + "\"><span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span class=\"title\"></span>" + sentence + "</a></li>";
   }
   $(".nav_container").append(nav()); 
 
@@ -19,9 +19,9 @@ $(function() {
 	$('body').fadeIn(1000);
 
   $('.nav_container li').hover(function() {
-    $(this).find('span').fadeTo(0.1,0.5);     
+    $(this).find('span.title').fadeTo(0.1,0.5);     
   }, function() {
-    $(this).find('span').fadeTo(0.1,1);
+    $(this).find('span.title').fadeTo(0.1,1);
   });
 
   $(window).bind("load",function(){
