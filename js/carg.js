@@ -34,9 +34,9 @@ $(function() {
 
   
    $('.project_thumb a').hover(function() {
-      $(this).find('.overlay').show();
+      $(this).find('.overlay').fadeIn();
     }, function() {
-      $(this).find('.overlay').hide();
+      $(this).find('.overlay').fadeOut();
    });  
     
 });    
