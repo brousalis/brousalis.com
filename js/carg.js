@@ -29,7 +29,7 @@ $(function() {
   });
 
   $('.project_thumb a').each(function(){
-     $(this).append("<a href=\"" + url + "\"><span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span class=\"title\"></span>");  
+     $(this).append("<span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span></span>");  
   });
 
   
