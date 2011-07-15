@@ -25,7 +25,7 @@ $(function() {
   });
 
   $(window).bind("load",function(){
-    $('.scroll_pane').jScrollPane(  { maintainPosition: false }).data('jsp').reinitialise();
+    $('#thumb_container').jScrollPane(  { maintainPosition: false }).data('jsp').reinitialise();
   });
 
 });
