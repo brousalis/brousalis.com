@@ -11,7 +11,7 @@ $(function() {
     return content;
   }
   function link(url, sentence, social){
-    return "<li class=\""+ social +"\"><span></span><a href=\"" + url + "\"><span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span class=\"title\"></span>" + sentence + "</a></li>";
+    return "<li class=\""+ social +"\"><span></span>" + sentence + "</a></li>";
   }
   $(".nav_container").append(nav()); 
 
@@ -26,6 +26,10 @@ $(function() {
 
   $(window).bind("load",function(){
     $('#thumb_container').jScrollPane(  { maintainPosition: false }).data('jsp').reinitialise();
+  });
+
+  $('.project_thumb').each(function(){
+     $(this).find('a').append("<a href=\"" + url + "\"><span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span class=\"title\"></span>");
   });
 
 });
