@@ -11,7 +11,7 @@ $(function() {
     return content;
   }
   function link(url, sentence, social){
-    return "<li class=\""+ social +"\"><a href=\"" + url + "\"><span class=\"title\"></span>" + sentence + "</a></li>";
+    return "<li class=\""+ social +"\"><a href=\"" + url + "\"><span class="title"></span>" + sentence + "</a></li>";
   }
   $(".nav_container").append(nav()); 
 
@@ -29,14 +29,14 @@ $(function() {
   });
 
   $('.project_thumb').each(function(){
-     $(this).find('a').append("<a href=\"" + url + "\"><span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span class=\"title\"></span>");
-
-     $(this).hover(function() {
-       $(this).find('.overlay').show();
-     }, function() {
-       $(this).finde('.overlay').hide();
-     });    
+     $(this).find('a').append("<a href=\"" + url + "\"><span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span class=\"title\"></span>");  
   });
 
-
-});
+  
+   $('.project_thumb a').hover(function() {
+      $(this).find('.overlay').show();
+    }, function() {
+      $(this).find('.overlay').hide();
+   });  
+    
+});    
