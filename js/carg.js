@@ -11,7 +11,7 @@ $(function() {
     return content;
   }
   function link(url, sentence, social){
-    return "<li class=\""+ social +"\"><a href=\"" + url + "\"><span class="title"></span>" + sentence + "</a></li>";
+    return "<li class=\""+ social +"\"><a href=\"" + url + "\"><span class=\"title\"></span>" + sentence + "</a></li>";
   }
   $(".nav_container").append(nav()); 
 
