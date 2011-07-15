@@ -28,8 +28,8 @@ $(function() {
     $('#thumb_container').jScrollPane(  { maintainPosition: false }).data('jsp').reinitialise();
   });
 
-  $('.project_thumb').each(function(){
-     $(this).find('a').parent().append("<a href=\"" + url + "\"><span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span class=\"title\"></span>");  
+  $('.project_thumb a').each(function(){
+     $(this).append("<a href=\"" + url + "\"><span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span class=\"title\"></span>");  
   });
 
   
