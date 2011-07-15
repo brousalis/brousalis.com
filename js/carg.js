@@ -32,5 +32,10 @@ $(function() {
      $(this).find('a').append("<a href=\"" + url + "\"><span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span class=\"title\"></span>");
   });
 
-});
+  $('.project_thumb').hover(function() {
+    $(this).find('.overlay').show();
+  }, function() {
+    $(this).finde('.overlay').hide();
+  })
 
+});
