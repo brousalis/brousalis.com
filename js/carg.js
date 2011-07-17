@@ -25,14 +25,14 @@ $(document).ready(function() {
   });
 
   $(window).bind("load",function(){
-    $('#thumb_container').jScrollPane(  { maintainPosition: false }).data('jsp').reinitialise();
+    $('#thumb_container').jScrollPane({ maintainPosition: false}).data('jsp').reinitialise();
   });
 
   $('.project_thumb a').each(function(){
      $(this).append("<span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span></span>");  
   });
   
-  $('.project_thumb a').hover(function() {
+  $('.project_thumb').hover(function() {
     $(this).find('.overlay').fadeIn();
   }, function() {
     $(this).find('.overlay').fadeOut();
