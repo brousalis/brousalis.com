@@ -32,10 +32,4 @@ $(document).ready(function() {
      $(this).append("<span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span></span>");  
   });
   
-  $('.project_thumb').hover(function() {
-    $(this).find('.overlay').fadeIn();
-  }, function() {
-    $(this).find('.overlay').fadeOut();
-  });  
-    
 });    
