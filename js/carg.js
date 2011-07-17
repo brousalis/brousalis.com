@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   function nav() {
     var content = "";
     content += "<ul>";
@@ -31,12 +31,11 @@ $(function() {
   $('.project_thumb a').each(function(){
      $(this).append("<span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span></span>");  
   });
-
   
-   $('.project_thumb a').hover(function() {
-      $(this).find('.overlay').fadeIn();
-    }, function() {
-      $(this).find('.overlay').fadeOut();
-   });  
+  $('.project_thumb a').hover(function() {
+    $(this).find('.overlay').fadeIn();
+  }, function() {
+    $(this).find('.overlay').fadeOut();
+  });  
     
 });    
