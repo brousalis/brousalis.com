@@ -32,6 +32,5 @@ $(document).ready(function() {
      $(this).append("<span class=\"overlay\" style=\"display: none;\"><span class=\"icon\"></span></span>");  
   });
 
-  $('.project_header').prepend("<div class=\"project_close\"><a href=\"/\">close</a></div>");
-  
+  $('.project_header').prepend("<div class=\"project_close\"><a href=\"#\">close</a></div>");
 });    
