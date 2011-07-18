@@ -29,7 +29,7 @@ task :p do
   puts '* Pushing to Github'
   puts `git add .`
   puts `git commit -m "#{ENV['m']}" .`
-  puts `git push origin master`
+  puts `git push origin new`
 end
 
 # Do it!

@@ -1,0 +1,66 @@
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	#main-nav{width:250px;position:absolute;}
+	#main-nav #tab-nav{display:block;position:absolute;right:-34px;top:46%;width:46px;height:85px;display:none;}
+	#main-nav #tab-nav img{display:none;}
+	}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	/*NAV LIGHT**************/
+#main-nav #tab-nav{display:block;position:absolute;right:-34px;top:46%;width:46px;height:85px;display:none;}
+#main-nav #tab-nav img{display:block;width:46px;height:85px;background:url(../images/tab-nav-single.png) no-repeat;display:none;}
+#main-nav #logo{display:block;width:115px;height:169px;margin:30% auto 20% auto;background:url(../images/logo-iceberg-folio-two.png) no-repeat;}
+#main-nav #nav-menu{position:relative;padding:0 15px 0 35px;}
+#main-nav #nav-menu h4{font:normal 1.5em/1.5em 'Museo300', helvetica, arial, sans;text-transform:uppercase;}
+#main-nav #nav-menu h4 .team-trade{position:absolute;font-size:.5em;top:-8px;}
+#main-nav #nav-menu h4 .dotted-underline{position:relative;display:block;width:90%;height:5px;font-size:.4em;top:-15px;background:url(../images/pattern-dotted-underline.png) 0px 10px;margin-top:15px;}
+#main-nav #nav-menu>p{width:300px;font-size:.7em;margin-bottom:50px;}
+#main-nav #nav-menu>p strong{border-bottom:2px solid #ffea00;padding-bottom:3px;}
+nav#main-nav small{position:relative;display:block;width:75%;font:italic 1em/.9em georgia, serif;border-bottom:5px solid #000;padding:0 0 10px 10px;margin:0 0 15px 25px}
+nav#main-nav{position:fixed;display:block;background:url(../images/backgrounds/pattern-nav-01.png) #f9f9f9;height:100%;top:0;left:0;z-index:1000;box-shadow: 2px 0 10px rgba(0,0,0,0.30);}
+nav#main-nav #nav-options ul{display:block;margin-bottom:15%;}
+nav#main-nav #nav-options ul li{display:block;padding:0px;}
+nav#main-nav #nav-options ul li a{
+	display:inline;
+	-moz-transition: all .7s; 
+	-webkit-transition: all .7s; 
+	-o-transition: all .7s; 
+	transition: all .7s;
+	width:100%;
+	background:#fd0000;
+	background:transparent;
+	font:italic .9em/1em georgia, Georgia, helvetica, arial, sans;color:#000;display:block;text-decoration:none;
+	margin:8px;
+	}
+nav#main-nav #nav-options ul li a:hover{
+	-moz-transition: all 0.2s; 
+	-webkit-transition: all 0.2s; 
+	-o-transition: all 0.2s; 
+	transition: all 0.2s;
+	background:#ffea00;
+	color:#474747;
+	width:75%;
+	padding-left:5px;
+	}
+nav#main-nav ul#network-menu{position:absolute;width:120px;top:100%;margin-left:5px;margin-top:400px;}
+nav#main-nav ul#network-menu li a{display:block;text-indent:-9999px;background:url(../images/social-icons-nav.png) no-repeat;width:23px;height:23px;float:left;margin-right:1px;-moz-transition: all .2s; -webkit-transition: all .2s;-o-transition: all .2s;transition: all .2;opacity:.5;}
+nav#main-nav ul#network-menu li a:hover{-moz-transition: all .2s; -webkit-transition: all .2s;-o-transition: all .2s;transition: all .2s;opacity:1;}
+nav#main-nav ul#network-menu li#scl-facebook a{background:url(../images/social-icons-nav.png) -26px 0px repeat-x;}
+nav#main-nav ul#network-menu li#scl-flickr a{background:url(../images/social-icons-nav.png) -52px 0px repeat-x;}
+nav#main-nav ul#network-menu li#scl-mail a{background:url(../images/social-icons-nav.png) -77px 1px repeat-x;}
+nav#main-nav ul#network-menu{position:absolute;width:120px;margin-left:5px;font-size:.65em;padding-left:20px;margin-top:-85px;}
+nav#main-nav p#copyright{position:absolute;top:95%;margin-left:5px;font-size:.65em;color:#989898;padding-left:20px;}
+
+nav#main-nav #nav-options ul li #filters-launcher{display:none;}
+nav#main-nav .close-sub{display:none;}
+nav#main-nav #tap-close{display:block;}
+#main-nav, #wrapper{position:absolute;}
+
+}

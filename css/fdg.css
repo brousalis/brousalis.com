@@ -1,0 +1,115 @@
+header{
+	position: absolute;
+	width:100%;
+	height:50px;
+	background: #bdf;
+	z-index: 2;
+	
+}
+#galeria *{
+	margin:0;padding:0;
+	
+}
+#galeria{
+	width:100%;
+	height:100%;
+	float:left;
+	position:absolute;
+	overflow:hidden;
+	text-align: center;
+	background:#000000;
+}
+ul#fdgSlides{
+	list-style-type:none;
+	float:left;
+	height:100%;
+	position:relative;
+}
+ul#fdgSlides li{
+	height:100%;
+	float:left;
+	overflow: hidden;
+	text-align:center;
+}
+ul#fdgSlides li.video{
+	background: url('../images/play.png') center center no-repeat;
+}
+ul#fdgSlides li img{
+	position:relative;
+	top: 50%;
+}
+#fdgNav{
+	width:100%;
+	height:100%;
+	position:relative;
+	top:-100%;
+}
+#fdgNav span{
+	width:25%;
+	height:100%;
+	text-indent:-9999px;
+	cursor: pointer;
+}
+#fdgNav span#fdgPrev{
+	float:left;
+	background:url(../images/slide-pixel-l-arrow-release.png) no-repeat center center;
+}
+#fdgNav span#fdgPrev:hover{background:url(../images/slide-pixel-l-arrow-hover.png) no-repeat center center}
+#fdgNav span#fdgNext{
+	float:right;
+	background: url(../images/slide-pixel-r-arrow-release.png) no-repeat center center;
+}
+#fdgNav span#fdgNext:hover{background:url(../images/slide-pixel-r-arrow-hover.png) no-repeat center center}
+#fdgNav span#fdgPrev.hide{
+	background:none;
+	cursor: default;
+}
+#fdgNav span#fdgNext.hide{
+	background:none;
+	cursor: default;
+}
+div#divThumbs{
+	position: relative;
+	width:100%;
+	height:80px;
+	background: #000;
+	top:-110%;
+	float:left;
+	text-align:center;
+	margin-top:-120px;
+	border-top:8px solid #ffea00;
+}
+ul#fdgThumbs{
+	display:block;
+	width:100%;
+	height:100px;
+	margin: 10px 0;
+	padding-top:7px;
+	float:left;
+	text-align:center;
+	overflow:hidden;
+}
+
+ul#fdgThumbs li{
+	margin: 10px 5px;
+	height:100%;
+	display: inline;
+	opacity:.4;
+	-moz-transition: all .7s;
+	-webkit-transition: all .7s;
+	-o-transition: all .7s;
+	transition: all .7s;
+}
+ul#fdgThumbs li:hover{opacity:1;-moz-transition: all .7s;-webkit-transition: all .7s;-o-transition: all .7s;transition: all .7s;cursor:pointer;}
+ul#fdgThumbs li img{height:35px;width:50px;}
+span#up{
+	position: relative;
+	float:left;
+	left:50%;
+	background:#ffea00;
+	width:60px;
+	height:20px;
+	text-indent:-9999px;
+	margin-left: -30px;
+	margin-top: -150px;
+}
