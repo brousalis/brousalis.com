@@ -1,45 +1,22 @@
-/* JS DOCUMENTATION:
-
-* FOLIO Ner2 *
-
-*/
-
-/*********************************************
-* ON READY
-*********************************************/
-
 var donde = null;
 
 $(document).ready(function(){
-	
-/****************************
- MULTIDISPLAY SMART COLLUMS 
-******************************************/
 
-function smartColumns() { //Create a function that calculates the smart columns
-    //Reset column size to a 100% once view port has been adjusted
+function smartColumns() {
 	$("ul#thumbs").css({ 'width' : "100%"});
-	var colWrap = $("ul#thumbs").width(); //Get the width of row
-	var colNum = Math.floor(colWrap / 200); //Find how many columns of 200px can fit per row / then round it down to a whole number
-	var colFixed = Math.floor(colWrap / colNum); //Get the width of the row and divide it by the number of columns it can fit / then round it down to a whole number. This value will be the exact width of the re-adjusted column
-	$("ul#thumbs").css({ 'width' : colWrap}); //Set exact width of row in pixels instead of using % - Prevents cross-browser bugs that appear in certain view port resolutions.
-	$("ul#thumbs li").css({ 'width' : colFixed}); //Set exact width of the re-adjusted column
+	var colWrap = $("ul#thumbs").width();
+	var colNum = Math.floor(colWrap / 400); 
+	var colFixed = Math.floor(colWrap / colNum);
+	$("ul#thumbs").css({ 'width' : colWrap}); 
+	$("ul#thumbs li").css({ 'width' : colFixed}); 
 }
-smartColumns();//Execute the function when page loads
+smartColumns();
 
-
-/***************************
-// SLIDE NAV
-*********************************/
-
-barra = $('nav'); // navigation
-trabajos = $('#wrapper'); // contents
-loquedura = {queue:true, duration:1250, easing: 'easeInOutExpo'}; // style for .animate()
-// para las animaciones del slideNav
+barra = $('nav'); 
+trabajos = $('#wrapper'); 
+loquedura = {queue:true, duration:1250, easing: 'easeInOutExpo'};
 function para(){ barra.stop(); trabajos.stop(); };
-// returns pixels to move
 function mide(){ 	return ($('nav').width()-10)+'px'; };
-// if a param is passed menu enter, if param menu out
 function slideNav(e){ 
 	para();
 	// nav desplaces
@@ -51,11 +28,6 @@ barra.mouseenter(function(){ slideNav();});
 barra.mouseleave(function(){ slideNav(1); });
 $("#tap-close").click(function(){ slideNav(1); });
 var initBar = setTimeout('barra.mouseleave()',1000); // nav pos after one second to load
-
-
-/****************************************
-// HASH FUNCTIONS
-*******************************************/
 
 var controlHash = "";
 $(function() {
@@ -138,12 +110,6 @@ $(function() {
     $(window).trigger('hashchange');
 });
 
-
-      		
-
-/********************************************************
- *  AJAX LOADER ANIMATION
- * ****************************************************** */
 function createLoader(dondeLoad){
 	var marca = document.createElement("img");
 	marca.setAttribute("id", 'imgLoad');
@@ -151,10 +117,6 @@ function createLoader(dondeLoad){
 	dondeLoad.append(marca);
 }
 
-
-/******************************************
-// STICK THE NAV BAR IN IPAD
-*************************************************/
 (function ($) {
  
   $.fn.stickySidebar = function (opts) {
@@ -287,10 +249,6 @@ if (navigator.userAgent.match(/like Mac OS X/i)) {
 						})					
 }
 
-
-/**************************************************
- SLIDE WORK WRAPPER
-********************************************************/
 var workWrapper = $('#work-detail-wrapper');
 function viewportHeight(){
 	return $(window).height();
@@ -312,9 +270,6 @@ function closeSlideWork(){
 });
 };
 
-/*************************************************
- * CENTERWORK
- ************************************************/
 function centerWork() { // centering works
     function wrapper (){
     	return $("#work-detail-wrapper"); 
@@ -335,9 +290,6 @@ function showInfo(){
 	}
 }
 
-/**********************************
-   ON LOAD SLIDE NAV FUNC
-****************************************/
 $(window).load(function(){
 (function(){
 		$('.thumb').fadeTo(250, 0.4);
@@ -345,9 +297,6 @@ $(window).load(function(){
 	centerWork();
 });
 
-/***************************************
- ON RESIZE ADJUST IMAGES
-*********************************************/
 $(window).resize(function(){
 	slideWorks(); //Esential for calculate sizes in iPad landscape/portrait modes.
 	centerWork();
@@ -355,9 +304,6 @@ $(window).resize(function(){
 	slideNav(1);	//Execute the function when page loads 
 });
 
-/**********************************************
-//NAVIGATION		
-************************************************/
 $('#filters-launcher').click(function(){
 	$('#filters').fadeIn(500);
 	$('#sections').fadeOut(500);
@@ -371,9 +317,6 @@ var cat = "none";
 if(cat == "none" )
 		$(".thumb").fadeTo(100, 0.4);
 
-/****************************************
-//FILTERS
-********************************************/
 $("#filter-menu a").click(function() {
 	cat = $(this).attr("class");
 	$("#works .thumb").not("."+cat).fadeTo(100, 0.1);
@@ -398,9 +341,6 @@ $("#network-menu li a").click(function() {
     return false;
 }); 
 
-/*******************************************
- * THUMBS HOVER FIX
- ********************************************/
 $('.thumb').hover(function(){
 	if(cat== null || cat == "none" )
 		$(this).fadeTo(100, 1);
@@ -412,10 +352,6 @@ $('.thumb').hover(function(){
 
 }); // End document ready
 
-/*******************************************
- * MEDIA QUERIES TO DINAMYC ENHANCEMENT
- ********************************************/
-// Edit to suit your needs.
 var ADAPT_CONFIG = {
   // Where is your CSS/adaptive/folder?
   path: 'assets/',
