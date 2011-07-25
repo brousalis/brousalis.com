@@ -1,4 +1,3 @@
-
 *, html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big,
@@ -17,18 +16,14 @@ blockquote, q {quotes: "" ""}
 input, textarea {margin: 0;padding: 0}
 hr {margin: 0;padding: 0;border: 0;color: #000;background-color: #000;height: 1px}
 strong{font-family:inherit;font-size:inherit;color:inherit;}
-
 body{font-size: 62.5%;background-color:#000;}
-/* HTML5 tags */
 header, section, footer,
 aside, nav, article, figure {
     display: block;
 }
-/*shorts for floats and clears*/
 .float-left{float:left;}
 .float-right{float:right;}
 .hidden{visibility:hidden;}
-/* advanced clearfix for fix floating elements */
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -40,12 +35,13 @@ aside, nav, article, figure {
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-.clear{clear:both;}/*basic way for clearing floats*/
-.clear-block{clear:both;display:block;}/*basic way for clearing floats throw spans*/
+.clear{clear:both;}
+.clear-block{clear:both;display:block;}
 
+/* Never gonna give you up */
 
 body {
-  font-family: font-family: "proxima-nova-1", "proxima-nova-2", 'Maven Pro', Helvetica, arial, sans;
+  font-family: "proxima-nova-1", "proxima-nova-2", 'Maven Pro', Helvetica, arial, sans;
   font-size: 1em;
   #font-size: .7em;
   font-style: normal;
@@ -57,38 +53,37 @@ body {
   word-spacing: 0em;
   line-height: 1em;
   overflow-x:hidden;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-nav, #wrapper {
-     -webkit-text-shadow: 0 1px 1px rgba(255,255,255,.3);
-     -moz-text-shadow: 0 1px 1px rgba(255,255,255,.3);
-     -webkit-font-smoothing: subpixel-antialiased;
-     -moz-font-smoothing: subpixel-antialiased;
-     -o-font-smoothing: subpixel-antialiased;
-     font-smoothing: subpixel-antialiased;
+#wrapper {
+  -webkit-text-shadow: 0 1px 1px rgba(255,255,255,.3);
+  -moz-text-shadow: 0 1px 1px rgba(255,255,255,.3);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-font-smoothing: subpixel-antialiased;
+  -o-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
 }
 
+#top-title-bar{display:block;position:fixed;top:0;width:100%;height:41px;;z-index:2000;
+  background:#000;
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+}
+#top-title-bar h1{margin:13px 17px;}
+#top-title-bar h1 a{color:#fff;text-decoration:none;font-weight:800;font-size:22px;text-transform:uppercase;color: rgb(241,242,243);position: relative; text-shadow: 0px 0px 1px rgba(0,0,0,.4), 0px 1px 2px rgba(0,0,0,.2), 0px 0px 9px rgba(0,0,0,.1);}
 
-/*********************************************
-* THE WALL // HOME SECTION WITH WORKS
-*********************************************/
-#top-title-bar{display:block;position:fixed;top:0;width:100%;height:42px;background:#000;z-index:2000;}
-#top-title-bar-sdevice{position:fixed;top:0;width:100%;height:20px;background:#000;z-index:2000;display:none;}
-#top-title-bar-sdevice figure{width:390px;margin:0 auto;}
-#top-title-bar figure{width:1024px;margin:0 auto;}
-h1{position:absolute;text-indent:-9999px;}
-
-#thumb-wrapper{margin-top:40px;*padding-top:40px;width:100%;overflow:hidden;background:#000;}
+#thumb-wrapper{margin-top:25px;*padding-top:25px;width:100%;overflow:hidden;background:#000;}
 #thumbs{width: 100%;}
 .thumb{float: left;width: 175px;/*Set default width*/opacity:0.4;overflow:hidden;}
 .thumb:hover{-moz-transition: opacity 0.3s;-webkit-transition: opacity 0.3s;-o-transition: opacity 0.3s;transition: opacity 0.3s;opacity:1;}
 .thumb a img{
-/*Flexible image size with border*/
-    width: 100%;  /*Took 1% off of the width to prevent IE6 bug*/
-    margin: 0 auto;
-    display:none;
-    -ms-interpolation-mode: bicubic; /*prevents image pixelation for IE 6/7 */
-    overflow:hidden;
+  width: 100%;  
+  margin: 0 auto;
+  display:none;
+  -ms-interpolation-mode: bicubic; 
+  overflow:hidden;
 }
 .thumb:hover{cursor:pointer;}
 .thumb a img:hover{cursor:pointer;}
@@ -108,71 +103,6 @@ ul#thumbs li.thumb img#imgLoad{
 
 #wrapper{position:relative;overflow:hidden;}
 
-
-/*********************************************
-*** NAVIGATION
-*********************************************/
-
-/*********NAV DEFAULT**************/
-nav#main-nav{position:fixed;display:block;background:url(../images/backgrounds/pattern-nav-01.png) #f9f9f9;height:100%;top:0;left:0;z-index:1000;box-shadow: 2px 0 10px rgba(0,0,0,0.30);}
-#main-nav #tab-nav{display:block;position:absolute;right:-34px;top:46%;width:46px;height:85px;}
-#main-nav #tab-nav img{display:block;width:46px;height:85px;background:url(../images/tab-nav-single.png) no-repeat;}
-#main-nav #nav-menu{position:relative;font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, arial, sans;width:200px;height:100%;padding:0 10px 0 20px;}
-#main-nav #nav-menu h4{font-size:.75em;margin:0 0 8px 10px;text-transform:uppercase;}
-
-#main-nav #nav-menu #filters{position:relative;margin-top:10%;}
-#main-nav #nav-options{position:absolute;height:400px;bottom:5%;}
-
-#main-nav #nav-menu #main-logo{display:block;text-indent:-9999px;background:url(../images/logo-break.png) no-repeat;width:141px;height:30px;margin-left:5px;padding:0;}
-nav#main-nav #nav-options ul{display:block;margin-bottom:15%;width:220px;}
-nav#main-nav #nav-options ul li{display:block;padding:0 0 0 0px;}
-nav#main-nav #nav-options ul li a{
-    display:inline;
-    -moz-transition: all .7s; 
-    -webkit-transition: all .7s; 
-    -o-transition: all .7s; 
-    transition: all .7s;
-    width:90%;
-    background:transparent;
-    font-size: 1.45em;
-    *font-size: 2em;
-    font-style: italic;
-    font-weight:100;
-    font-weight:300\9;
-    line-height: .95em;
-    color:#313131;
-    display:block;
-    text-decoration:none;
-    padding-left:10px;
-    }
-nav#main-nav #nav-options ul li a:hover{
-    -moz-transition: all 0.2s; 
-    -webkit-transition: all 0.2s; 
-    -o-transition: all 0.2s; 
-    transition: all 0.2s;
-    background:#ffea00;
-    color:#000;
-    width:75%;
-    padding-left:15px;
-    }
-nav#main-nav #nav-options ul li.active{padding-left:0px;}
-nav#main-nav #social-wrapper{position:relative;font:normal .85em/1.7em 'Maven Pro', sans;height:30px;margin:50px 0 50px -5px;padding:0;}
-nav#main-nav #social-wrapper ul#network-menu{font-size:.75em;position:relative;width:250px;margin:0;padding:0;}
-nav#main-nav ul#network-menu li{*width:55px;#float:left;#font-size:1.2em;}
-nav#main-nav ul#network-menu li a{display:block;height:23px;float:left;margin-right:10px;color:#000;border-top:0px solid #ffea00;text-decoration:none;-moz-transition: all .2s; -webkit-transition: all .2s;-o-transition: all .2s;transition: all .2;}
-nav#main-nav ul#network-menu li a:hover{border-top:5px solid #ffea00;-moz-transition: all .2s; -webkit-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
-nav#main-nav p#copyright{position:absolute;top:98%;margin-left:0px;font-size:.55em;color:#989898;padding-left:20px;}
-
-nav#main-nav #nav-options ul li #filters-launcher{display:none;}
-nav#main-nav #tap-close{display:none;}
-nav#main-nav .close-sub{display:none;}
-
-
-/*********************************************
-**** WORKS SECTION
-*********************************************/
-
-/**** WORK SKIN GAL THUMBS FULL (DEFAULT WORK VIEW) ****/
 #work-detail-wrapper .item-wrapper .item .info-work{
     font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, arial, sans;
     position: absolute;
@@ -390,103 +320,9 @@ h2{font:normal 1em/1.7em 'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helveti
 #mydribbble .btn-next, #mydribbble .btn-prev{position:relative;opacity:.6;font-family:'Terminal Dosis Light', 'Raleway', 'Maven Pro', Helvetica, arial, sans;font-size:2em;text-decoration:none;color:#313131;margin-right:35px;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
 #mydribbble .btn-next:hover, .btn-prev:hover{opacity:1;-moz-transition: all .3s;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
 
-
-/**** CONTACT - DEF SKIN ****/
-#contact h2{width:610px;}
-#contact ul{display:block;width:200px;position:relative;float:left;}
-#contact li.list-section{margin-bottom:30px;}
-#contact li small{display:inline;padding-left:20px;text-transform:uppercase;font-size:.7em;}
-#contact li:last-child{font-size:.8em;}
-div.contact-form{
-    float:left;
-    width:300px;
-    height:305px;
-    height /*\**/: 280px\9;
-    font:normal 1em "Maven Pro", Helvetica, sans;
-    background-color:#a3a3a3;
-    color:#e5e5e5;
-    border:1px solid #FFF;
-    border-top:5px solid #ffea00;
-    border-bottom:none;
-    margin-left:0px;
-    -moz-transition:color 0.2s ease-in, background-color 0.2s linear;
-    -webkit-transition:color 0.2s ease-in, background-color 0.2s linear;
-    -o-transition:color 0.2s ease-in, background-color 0.2s linear;
-    transition:color 0.2s ease-in, background-color 0.2s linear;
-    }
-div.contact-form:hover{background:#000;color:#ffea00;}
-div.contact-form form div#form-wrapper{margin:15px;}
-div.contact-form form div#field-name{margin-top:0px;}
-div.contact-form form label{display:block;letter-spacing:1px;text-transform:uppercase;margin:20px 0 10px 10px;font-size:.7em;}
-div.contact-form form input,textarea{width:250px;line-height:20px;padding:10px;color:#a3a3a3;}
-div.contact-form form input:focus,textarea:focus{color:#474747;border:none;font-style:italic;}
-div.contact-form form input#comments-submit{margin-left:190px;}
-div.contact-form form input.form-submit{
-    font-style:italic;
-    color:#a3a3a3;
-    width:100px;
-    margin:40px 10px 0 170px;
-    background:#e5e5e5;
-    -moz-transition:color 0.2s ease-in, background-color 0.1s linear;
-    -webkit-transition:color 0.2s ease-in, background-color 0.1s linear;
-    -o-transition:color 0.2s ease-in, background-color 0.1s linear;
-    transition:color 0.2s ease-in, background-color 0.1s linear;
-    }
-div.contact-form form input.form-submit:hover{background:#ffea00;color:#000;cursor:pointer;}
-
-div.contact-form form label.error {
-    position:absolute;
-    left:20px;
-    font-size:1em;
-    z-index:2000;
-    display:none;
-    text-indent:-9999px;
-    visibility:hidden;
-}
-div.contact-form div.error {position:absolute;font-size:.65em;margin:-22px 0 0 130px;color:#d1d1d1; }
-div.contact-form #success{text-align:center;margin-top:45%;}
-div.contact-form form input:focus {background-color:#F8E6A9;}
-
-
-/*********************************************
-**** SPECIAL
-*********************************************/
-
-/****************STYLR*********************/
-.get{display:none;}
-#stylr #stylr-launcher{position:absolute;top:185px;right:95px;display:block;width:113px;height:18px;background:url(../images/stylr/lbl-skin-customs-white.png) no-repeat;z-index:9999;}
-#stylr, #stylr-wrapper{position:absolute;width:425px;height:258px;top:75px;right:10%;z-index:100;}
-#stylr{top:-21px;right:0%;}
-#stylr-wrapper{background:url(../images/stylr/bg-stylr.png) no-repeat;display:none;}
-#stylr ul a{text-decoration:none;}
-#stylr #stylr-launcher-active{position:absolute;top:90px;right:30px;display:block;width:113px;height:18px;background:url(../images/stylr/lbl-skin-customs-white.png) no-repeat;}
-#stylr #stylr-launcher-active{background:url(../images/stylr/lbl-skin-customs.png) no-repeat;}
-#stylr #stylr-wrapper{margin:20px;}
-#stylr ul{display:block;width:125px;float:left;}
-#stylr ul li{display:block;padding-left:45px;margin:0 auto;}
-#stylr ul li a{display:block;opacity:1;}
-#stylr ul li a:hover{opacity:.3;transition: opacity 0.4s;-webkit-transition: opacity 0.4s;-moz-transition: opacity 0.4s;}
-#stylr ul li.color-middle{margin:0 0 0 -33px;}
-#stylr ul li.color-middle a{float:left;width:25px;height:10px;margin-bottom:-16px;}
-#stylr ul li#list-title-high{background:url(../images/stylr/lbl-highlights.png) no-repeat;width:81px;height:26px;margin:15px 0 15px 20px;}
-#stylr ul li#list-title-nav{background:url(../images/stylr/lbl-nav-colors.png) no-repeat;width:97px;height:26px;margin:15px 0 15px 15px;}
-#stylr ul li.color-orange{margin-left:-2px;}
-#stylr ul li.color-yellow{margin-left:-1px;}
-#stylr ul li.color-orange a{background:url(../images/stylr/orange.png) no-repeat;width:33px;height:30px;}
-#stylr ul li.color-red a{background:url(../images/stylr/red.png) no-repeat;width:33px;height:30px;}
-#stylr ul li.color-blue a{background:url(../images/stylr/blue.png) no-repeat;width:33px;height:30px;}
-#stylr ul li.color-green a{background:url(../images/stylr/green.png) no-repeat;width:33px;height:30px;}
-#stylr ul li.color-yellow a{background:url(../images/stylr/yellow.png) no-repeat;width:33px;height:30px;}
-#stylr ul li.color-middle a.color-black{background:url(../images/stylr/black.png) no-repeat;width:33px;height:30px;}
-#stylr ul li.color-middle a.color-white{background:url(../images/stylr/white.png) no-repeat;width:3epx;height:30px;}
-
-
-
-/* iPhone 4 ----------- */
 /*@media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {#main-nav{width:150px;background:#FFF;}}*/
-
 
 @media only screen and (-webkit-min-device-pixel-ratio: 0) and (min-device-width: 1025px) {
 ::-webkit-scrollbar{width: 5px;height: 6px;}
