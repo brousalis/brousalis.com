@@ -17,10 +17,10 @@ task :build do
 end
   
 # Uploads the site to your server - Make sure you replace the username and password
-desc 'rsync the contents of ./_site to the server'
+desc 'rsync the contents of ./site to the server'
 task :sync do
   puts '* Publishing files to live server'
-  puts `rsync -e ssh -avz "_site/" you@domain.com:~/public_html/p`
+  puts `rsync -e ssh -avz "_site/" brousali@brousalis.com:~/public_html/`
 end
 
 # Pushes the source code to Github - use: rake p m="Commit message"
