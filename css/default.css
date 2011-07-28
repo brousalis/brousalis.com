@@ -26,7 +26,7 @@ ul#thumbs li.thumb img#imgLoad{height:auto;margin-left:95px;margin-top:-75px;opa
 #work-detail-wrapper .item-wrapper .item .info-work{position:absolute;width:100%;height:320px;top:90%;background-color:#000;z-index:99;color:#999;border-top:8px solid #ffea00;padding:30px 15px 30px 80px;}
 #work-detail-wrapper .item-wrapper span#infobt{position:relative;top:-20px;width:20px;height:20px;float:right;background:#ff0;color:#000;z-index:99;cursor:pointer;}
 #work-detail-wrapper span#closebt{position:absolute;display:block;right:0;margin-right:110px;width:15px;height:15px;z-index:99;cursor:pointer;}
-#work-detail-wrapper .item-wrapper span#closebt a{display:block;width:15px;height:15px;background:url(../images/btn-close-white.png) no-repeat;text-indent:-9999px;margin-left:-50px;}
+#work-detail-wrapper .item-wrapper span#closebt a{display:block;width:15px;height:15px;background:url(../images/btn-close-white.png) no-repeat;text-indent:-9999px;margin-left:-65px;}
 #work-gal{font-size:.8em;}
 #work-gal p{font-size:1.4em;width:510px;float:left;margin:10px 50px 0 0;}
 #work-gal p a{text-decoration:none;text-transform:uppercase;font-size:.8em;color:#ffea00;-moz-transition:all .3s;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;padding:2px;}
@@ -41,7 +41,7 @@ ul#thumbs li.thumb img#imgLoad{height:auto;margin-left:95px;margin-top:-75px;opa
 #work-detail-wrapper #work-gal-photo .item .info-work #info{width:50%;text-align:center;margin:0 25%;}
 #work-detail-wrapper #work-gal-photo .item-wrapper span#closebt{position:absolute;display:block;right:-10%;margin-right:100px;width:15px;height:15px;z-index:99;cursor:pointer;}
 #work-detail-wrapper #work-gal-photo h3{font-weight:800;display:block;font-size:1.7em;color:#ffea00;line-height:1.3em;text-transform:uppercase;margin-bottom:7px;}
-#work-detail-wrapper #work-gal-photo p{color:#eee;line-height:1.5em;width:450px;margin:0 auto;font-size:16px}
+#work-detail-wrapper #work-gal-photo p{color:#eee;line-height:1.5em;width:450px;margin:0 auto;font-size:17px}
 #work-detail-wrapper #work-gal-photo p a{text-decoration:none;text-transform:uppercase;color:#ffea00;-moz-transition:all .3s;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;padding:2px;}
 #work-detail-wrapper #work-gal-photo #pagination{display:block;font-size:1em;margin:0 0 15px;}
 #work-detail-wrapper #work-gal-photo div#divThumbs{position:relative;width:100%;height:80px;background:#000;top:-109%;float:left;text-align:center;margin-top:-120px;border-top:8px solid #ffea00;}
