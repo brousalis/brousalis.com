@@ -156,13 +156,6 @@ $(document).ready(function(){
 	  $('#sections').fadeIn(500);
   });
 
-  $('.thumb').hover(function(){
-    if(cat== null || cat == "none" )
-      $(this).fadeTo(100, 1);
-  }, function(){
-    if(cat== null || cat == "none" )
-      $(this).fadeTo(100, 0.4)
-  });
 
 });
 
