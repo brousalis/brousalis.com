@@ -52,21 +52,22 @@
           </div>
         </div>
         <div id='user-menu'>
-          <a id='login-button'>
+          <a id='contact-button'>
             <span>Contact</span>
             <em></em>
           </a>
           <div style='clear:both'></div>
-          <div id='login-box'>
-            <form action='' id='login' method='post'>
+          <div id='contact-box'>
+            <form id='contact' method='post'>
               <fieldset id='body'>
                 <fieldset>
-                  <input name='user' type='text' value='e-mail address' />
+                  <input id="email" name='email' type='text' value='e-mail address' />
                 </fieldset>
                 <fieldset>
-                  <textarea rows="10" cols="40" name='body' type='text' text='message' /></textarea>
+                  <textarea rows="10" id="msg" cols="40" name='body' type='text' text='message' /></textarea>
                 </fieldset>
-                <input id='login-submit' type='submit' value='send' />
+                <div id="message"></div>
+                <input id='contact-submit' type='submit' value='send' />
               </fieldset>
             </form>
           </div>

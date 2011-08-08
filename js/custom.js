@@ -43,9 +43,9 @@ $(document).ready(function () {
     menu();
 
     function loginmenu() {
-      var button= $('#login-button');
-      var box = $('#login-box');
-      var form = $('#login');
+      var button= $('#contact-button');
+      var box = $('#contact-box');
+      var form = $('#contact');
       button.removeAttr('href');
       button.mouseup(function(login) {
           box.toggle();
@@ -55,7 +55,7 @@ $(document).ready(function () {
           return false;
       });
       $(this).mouseup(function(login) {
-          if(!($(login.target).parent('#login-button').length > 0)) {
+          if(!($(login.target).parent('#contact-button').length > 0)) {
               button.removeClass('active');
               box.hide();
           }
@@ -98,13 +98,30 @@ $(document).ready(function () {
           horizontal.eq(i).data("scrollable").focus();
         },
         next:".lol",
-        prev:".lolp"
+        prev:".lol"
       });
        
       var horizontal = $(".scrollable").scrollable({next:".next",prev:".prev"});
       horizontal.eq(0).data("scrollable").focus();
     }      
     init_gallery();
+
+    $('#contact-submit').click(function(){
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $("#contact").serialize(),
+        success: function() {
+          $('#message').html("<h2>E-mail sent!</h2>")
+          .append("<p>I'll be in touch very soon.</p>")
+          .delay(800)
+          .fadeOut(100);
+          $('#email').attr("value","e-mail address");
+          $('#msg').attr("value","");
+        }
+       });
+      return false; 
+    })
 
 });
    

@@ -53,19 +53,19 @@ h2,h2 a,h3,h3 a,.bold{font-weight:700;}
 #wrap,#footer{width:100%;}
 input,textarea,select,option{font-size:2em;color:#000;margin:0;font-family:proxima-nova-1,proxima-nova-2}
 #user-menu{position:relative;float:left;font-family:proxima-nova-1,proxima-nova-2}
-#login-button{display:inline-block;float:right;position:relative;z-index:30;font-size:100%;background:#222 url(/images/contactw.png) no-repeat 90%;background-size:22px;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;padding:10px 50px 10px 13px;}
-#login-button span{color:#fff;font-weight:700;display:block;}
-#login-button:hover{background:#000 url(/images/contactw.png) no-repeat 90%;background-size:22px;}
-#login-box{position:absolute;top:34px;left:0;display:none;z-index:29;}
-#login-button.active{border-radius:5px 5px 0 0;}
-#login-button.active em{position:absolute;width:100%;height:1px;background:#222;bottom:-1px;}
-#login{width:448px;border-radius:0 5px 5px 5px;-moz-border-radius:0 5px 5px;margin-top:-1px;background:#222;padding:6px;}
-#login fieldset{display:block;border:0;margin:0 0 12px;padding:0;}
+#contact-button{display:inline-block;float:right;position:relative;z-index:30;font-size:100%;background:#222 url(/images/contactw.png) no-repeat 90%;background-size:22px;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;padding:10px 50px 10px 13px;}
+#contact-button span{color:#fff;font-weight:700;display:block;}
+#contact-button:hover{background:#000 url(/images/contactw.png) no-repeat 90%;background-size:22px;}
+#contact-box{position:absolute;top:34px;left:0;display:none;z-index:29;}
+#contact-button.active{border-radius:5px 5px 0 0;}
+#contact-button.active em{position:absolute;width:100%;height:1px;background:#222;bottom:-1px;}
+#contact{width:448px;border-radius:0 5px 5px 5px;-moz-border-radius:0 5px 5px;margin-top:-1px;background:#222;padding:6px;}
+#contact fieldset{display:block;border:0;margin:0 0 12px;padding:0;}
 fieldset#body{background:#fff;border-radius:3px;-moz-border-radius:3px;margin:0;padding:13px;}
-#login #checkbox{width:auto;float:left;border:0;margin:-3px 9px 0 0;padding:0;}
-#login input,#login textarea{width:96%;border:1px solid #899caa;border-radius:3px;-moz-border-radius:3px;box-shadow:inset 0 1px 3px #bbb;-webkit-box-shadow:inset 0 1px 3px #bbb;-moz-box-shadow:inset 0 1px 3px #bbb;font-size:14px;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease;color:#777;padding:8px;}
-#login input:focus, #login textarea:focus{border:1px solid #7ce59a;box-shadow:0 0 6px #abdcff, inset 0 1px 2px rgba(0,0,0,0.08);}
-#login #login-submit,.button {
+#contact #checkbox{width:auto;float:left;border:0;margin:-3px 9px 0 0;padding:0;}
+#contact input,#contact textarea{width:96%;border:1px solid #899caa;border-radius:3px;-moz-border-radius:3px;box-shadow:inset 0 1px 3px #bbb;-webkit-box-shadow:inset 0 1px 3px #bbb;-moz-box-shadow:inset 0 1px 3px #bbb;font-size:14px;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease;color:#777;padding:8px;}
+#contact input:focus, #contact textarea:focus{border:1px solid #7ce59a;box-shadow:0 0 6px #abdcff, inset 0 1px 2px rgba(0,0,0,0.08);}
+#contact #contact-submit,.button {
     cursor:pointer;
     background: #7ce59a; /* Old browsers */
     background: -moz-linear-gradient(top, #7ce59a 0%, #3bc261 100%); /* FF3.6+ */
@@ -85,7 +85,7 @@ fieldset#body{background:#fff;border-radius:3px;-moz-border-radius:3px;margin:0;
     -o-transition: all 0.7s ease;
     transition: all 0.7s ease;
 }
-#login #login-submit:hover,.button:hover{
+#contact #contact-submit:hover,.button:hover{
     background: #99f0b2; /* Old browsers */
     background: -moz-linear-gradient(top, #99f0b2 0%, #3ac160 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#99f0b2), color-stop(100%,#3ac160)); /* Chrome,Safari4+ */
@@ -95,8 +95,8 @@ fieldset#body{background:#fff;border-radius:3px;-moz-border-radius:3px;margin:0;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99F0B2', endColorstr='#3AC160',GradientType=0 ); /* IE6-9 */
     background: linear-gradient(top, #99f0b2 0%,#3ac160 100%); /* W3C */
 }
-#login span{text-align:center;display:block;padding:7px 0 4px;}
-#login span a{color:#fff;font-size:12px;}
+#contact span{text-align:center;display:block;padding:7px 0 4px;}
+#contact span a{color:#fff;font-size:12px;}
 input:focus,textarea:focus{outline:none;}
 form p{position:relative;}
 label{position:absolute;top:0;left:0;}
@@ -129,6 +129,7 @@ div.description h3 a:hover{color:#222}
   box-shadow: 0px 1px 3px rgba(0,0,0,.35);
   border-radius: 3px;
 }
+#message{font-family:proxima-nova-1,proxima-nova-2;margin-bottom:10px;}
 .arrows{margin-right:10px;}
 .prev,.next{background:url('/images/right.png') no-repeat;width:20px;height:18px;display:block;float:left;margin-left:5px;opacity:0.8}
 .prev:hover,.next:hover{opacity:1}
