@@ -1,0 +1,16 @@
+---
+layout: work
+title: MVMA, Inc.
+img1: mvma2.png
+img2: mvma.png
+img3: mvma3.png
+visit: http://mvmainc.com
+
+---
+
+<p>Miami Valley Manufacturing and Assembly, Inc. was looking to refresh their website and implement a quote request system. I designed a system using PHP, allowing them to receive quote requests and respond to them from their website.</p>
+<p class="tags">Frontend, Backend, Design</p>   
+
+
+
+

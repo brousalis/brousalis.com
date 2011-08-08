@@ -1,7 +1,7 @@
 var i = 0;
-$('ul#thumbs li img').clone().appendTo($('#thumbspreload'));
-$('ul#thumbs li img').css('display', 'block');
-$('ul#thumbs li img').each(function() {
+$('.items img').clone().appendTo($('#thumbspreload'));
+$('.items li img').css('display', 'block');
+$('.items li img').each(function() {
   $(this).hide();
   var me = $(this);
   setTimeout(function() {

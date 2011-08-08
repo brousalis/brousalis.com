@@ -3,22 +3,26 @@ layout: default
 summary: The main portfolio portion
 ---
 
-<header id="top-title-bar">
-<h1><a href="http://brousalis.com/">pete brousalis</a> <span>software engineer</span></h1>
-</header>
+{% for post in site.posts %}     
+<div class="page clearfix">
+  <div class="scrollable clearfix">
+    <div class="items">
+      <div><img src="/images/work/{{ post.img1 }}"></div>
+      <div><img src="/images/work/{{ post.img2 }}"></div>
+      <div><img src="/images/work/{{ post.img3 }}"></div>
+    </div>
+    <div class="description clearfix">
+      <h3>
+        <span>{{ post.title }}</span>
+        <span><a href="{{ post.visit }}">{{ post.visit }}</a></span>
+      </h3>
+      <p>{{ post.content }}</p>
+      <p class="arrows">
+        <a href="#" class="prev"></a>
+        <a href="#" class="next"></a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endfor %}
 
-<div id="wrapper">
-	<h1 id="top-work">Brousalis.com</h1>
-  <div id="thumb-wrapper">
-    <section id="work-detail-wrapper">
-    </section>
-    
-    <section id="works" class="launcher">
-    <ul id="thumbs">
-        {% for post in site.posts %}
-        <li class="thumb cat-{{ post.category }}"><a href="{{ post.url }}"><img id="ref" class="grey" src="{{ post.img }}" alt="{{ post.title }}" /></a></li>
-        {% endfor %}
-      </ul>
-    </section><!--end section#works-->
-	</div><!--end div#thumbwrapper-->
-</div><!--end div#wrapper--> 
