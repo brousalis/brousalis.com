@@ -96,10 +96,12 @@ $(document).ready(function () {
         keyboard: 'static',
         onSeek: function(event, i) {
           horizontal.eq(i).data("scrollable").focus();
-        }
+        },
+        next:".lol",
+        prev:".lolp"
       });
        
-      var horizontal = $(".scrollable").scrollable();
+      var horizontal = $(".scrollable").scrollable({next:".next",prev:".prev"});
       horizontal.eq(0).data("scrollable").focus();
     }      
     init_gallery();
