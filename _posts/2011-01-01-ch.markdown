@@ -10,6 +10,8 @@ visit: http://collin-hughes.com
 
 <p>Collin Hughes is portrait and wedding photographer based out of New York City. He site is one it's last stage before release, and I am more than excited to add this to my portfolio. A sneak peak can be seen to the right.</p>
 
+<span style="background:yellow">Coming soon</span>
+
 <p class="tags">Frontend, Wordpress, Design</p>   
 
 
