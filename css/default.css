@@ -30,20 +30,19 @@ img{display:block;margin:0;padding:0;}
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-.box-shadow{-moz-box-shadow:0 0 3px rgba(0,0,0,0.2);-webkit-box-shadow:0 0 3px rgba(0,0,0,0.2);box-shadow:0 0 3px rgba(0,0,0,0.2);}
-.box-shadow-inner{-moz-box-shadow:inset 1px 1px 2px #fff;-webkit-box-shadow:inset 1px 1px 2px #fff;box-shadow:inset 1px 1px 2px #fff;}
 .round{-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;}
 form,input,textarea,select,option{color:#919191;line-height:18px;}
 .sub-menu{margin-left:10px;}
 .current-menu-item a{color:#aaa;}
-.menu{min-width:140px;background:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;position:absolute;z-index:8000;cursor:pointer;}
+.menu{min-width:140px;background:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;position:absolute;z-index:8000;cursor:pointer;-moz-box-shadow:0 0 3px rgba(0,0,0,0.2);-webkit-box-shadow:0 0 3px rgba(0,0,0,0.2);box-shadow:0 0 3px rgba(0,0,0,0.2);}
 .menu:hover{box-shadow:0 0 3px rgba(0,0,0,0.9);}
-.menu-wrap{float:left;width:140px;margin-right:12px}
-.menu-cont{height:34px;float:left;width;140px}
+.menu:active{position:relative;top:1px}
+.menu-wrap{float:left;width:140px;margin-right:12px;height:34px;}
 .menu-inner{padding:10px 50px 10px 13px;font-size:100%;color:#575E62; margin-right: 10px;font-weight:700;font-family:'Helvetica Neue', 'Helvetica', Arial;background-size:20px}
 #seed-menu .menu-inner{background:url('/images/work.png') no-repeat right;}
 #user-menu .menu-inner{background:url('/images/about.png') no-repeat right; color:#fff}
-#showcase-menu .menu-inner{background:url('/images/about.png') no-repeat right;}
+#about-menu .menu-inner{background:url('/images/about.png') no-repeat right;}
+#blog-menu .menu-inner{background:url('/images/blog4.png') no-repeat right;}
 #user-menu .menu-drop a:hover{color:#fff;}
 #user-menu .menu{background:#222}
 .menu-drop{display:none;padding:6px 6px 6px 13px;}
@@ -51,6 +50,7 @@ form,input,textarea,select,option{color:#919191;line-height:18px;}
 .menu-drop a:last{margin-bottom:none}
 h2,h2 a,h3,h3 a,.bold{font-weight:700;}
 #wrap,#footer{width:100%;}
+#wrap{width:980px;margin:0 auto;}
 input,textarea,select,option{font-size:2em;color:#000;margin:0;font-family:proxima-nova-1,proxima-nova-2}
 #user-menu{position:relative;float:left;font-family:proxima-nova-1,proxima-nova-2}
 #contact-button{display:inline-block;float:right;position:relative;z-index:30;font-size:100%;background:#222 url(/images/contactw.png) no-repeat 90%;background-size:22px;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;padding:10px 50px 10px 13px;}
@@ -110,7 +110,7 @@ div.transition {
   -webkit-backface-visibility: hidden;
 }
 
-#main{position:relative;}
+#main{position:relative;width:980px;margin:0 auto;}
 .pages{position:absolute;width:100%;margin-top:60px;}
 .page {margin-bottom:50px;margin-top:60px;margin-left:26px;}
 .page .description {height:522px;background:#eee;width:260px;padding-right:8px;float:left; position:relative;display:block;}
