@@ -30,19 +30,16 @@ img{display:block;margin:0;padding:0;}
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-.round{-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;}
 form,input,textarea,select,option{color:#919191;line-height:18px;}
 .sub-menu{margin-left:10px;}
 .current-menu-item a{color:#aaa;}
-.menu{min-width:140px;background:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;position:absolute;z-index:8000;cursor:pointer;-moz-box-shadow:0 0 3px rgba(0,0,0,0.2);-webkit-box-shadow:0 0 3px rgba(0,0,0,0.2);box-shadow:0 0 3px rgba(0,0,0,0.2);}
+.menu{-moz-box-shadow:0 0 3px rgba(0,0,0,0.2);-webkit-box-shadow:0 0 3px rgba(0,0,0,0.2);box-shadow:0 0 3px rgba(0,0,0,0.2);min-width:140px;background:#fff;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;position:absolute;z-index:8000;cursor:pointer;}
 .menu:hover{box-shadow:0 0 3px rgba(0,0,0,0.9);}
-.menu:active{position:relative;top:1px}
-.menu-wrap{float:left;width:140px;margin-right:12px;height:34px;}
+.menu-wrap{float:left;width:140px;margin-right:12px;height:34px}
 .menu-inner{padding:10px 50px 10px 13px;font-size:100%;color:#575E62; margin-right: 10px;font-weight:700;font-family:'Helvetica Neue', 'Helvetica', Arial;background-size:20px}
 #seed-menu .menu-inner{background:url('/images/work.png') no-repeat right;}
 #user-menu .menu-inner{background:url('/images/about.png') no-repeat right; color:#fff}
 #about-menu .menu-inner{background:url('/images/about.png') no-repeat right;}
-#blog-menu .menu-inner{background:url('/images/blog4.png') no-repeat right;}
 #user-menu .menu-drop a:hover{color:#fff;}
 #user-menu .menu{background:#222}
 .menu-drop{display:none;padding:6px 6px 6px 13px;}
@@ -50,10 +47,9 @@ form,input,textarea,select,option{color:#919191;line-height:18px;}
 .menu-drop a:last{margin-bottom:none}
 h2,h2 a,h3,h3 a,.bold{font-weight:700;}
 #wrap,#footer{width:100%;}
-#wrap{width:980px;margin:0 auto;}
 input,textarea,select,option{font-size:2em;color:#000;margin:0;font-family:proxima-nova-1,proxima-nova-2}
-#user-menu{position:relative;float:left;font-family:proxima-nova-1,proxima-nova-2}
-#contact-button{display:inline-block;float:right;position:relative;z-index:30;font-size:100%;background:#222 url(/images/contactw.png) no-repeat 90%;background-size:22px;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;padding:10px 50px 10px 13px;}
+#contact-menu{position:relative;float:left;font-family:proxima-nova-1,proxima-nova-2}
+#contact-button{width:90px;display:inline-block;float:right;position:relative;z-index:30;font-size:100%;background:#222 url(/images/contactw.png) no-repeat 90%;background-size:22px;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;padding:10px 50px 10px 13px;}
 #contact-button span{color:#fff;font-weight:700;display:block;}
 #contact-button:hover{background:#000 url(/images/contactw.png) no-repeat 90%;background-size:22px;}
 #contact-box{position:absolute;top:34px;left:0;display:none;z-index:29;}
@@ -102,6 +98,7 @@ form p{position:relative;}
 label{position:absolute;top:0;left:0;}
 .tags{padding: 0 0 0 23px;background:url('/images/tags.png') no-repeat;line-height:15px !important;color:#a5a5a5;margin-top:5px}
 .arrows{position:absolute;bottom:0;right:0;}
+.arrows a{cursor:pointer}
 div.transition {
   -moz-transition: all 1s cubic-bezier(0.59, 0, 0, 1);
   -webkit-transition: all 1s cubic-bezier(0.59, 0, 0, 1);
@@ -110,7 +107,7 @@ div.transition {
   -webkit-backface-visibility: hidden;
 }
 
-#main{position:relative;width:980px;margin:0 auto;}
+#main{position:relative;}
 .pages{position:absolute;width:100%;margin-top:60px;}
 .page {margin-bottom:50px;margin-top:60px;margin-left:26px;}
 .page .description {height:522px;background:#eee;width:260px;padding-right:8px;float:left; position:relative;display:block;}
@@ -136,14 +133,4 @@ div.description h3 a:hover{color:#222}
 .prev{background:url('/images/left.png')}
 .disabled{opacity:0.3}
 .disabled:hover{opacity:0.5;}
-
-.keyboard{
-position: absolute;
-right: 60px;
-top: 22px;
-width: 60px;
-height: 50px;
-background: url('/images/keyboard.png') 50% 50% no-repeat;
-cursor: pointer;
-z-index: 8000;
-}
+.keyboard{background:#fdf400 url(/images/keyboard.png) no-repeat 0 0; width:190px;height:54px;position:fixed;bottom:60px;right:6%;z-index:1000;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;opacity:0.9}

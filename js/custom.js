@@ -30,6 +30,8 @@ $.extend({
 
 $(document).ready(function () {
 
+    $(".keyboard").center();
+    
     function menu() {
       $(".menu-drop").hide();
       $(".menu").live("mouseover mouseout", function (e) {
@@ -96,6 +98,7 @@ $(document).ready(function () {
         keyboard: 'static',
         onSeek: function(event, i) {
           horizontal.eq(i).data("scrollable").focus();
+          $(".keyboard").fadeOut(1000);
         },
         next:".lol",
         prev:".lol"
@@ -163,3 +166,26 @@ o.exec(b))?[b[1],b[3]]:[0,0]},asString:function(a){if(a===null||a===undefined)re
 " ").replace(/\'/g,'"')},getHTML:function(a,b){a=f({},a);var c='<object width="'+a.width+'" height="'+a.height+'" id="'+a.id+'" name="'+a.id+'"';if(a.cachebusting)a.src+=(a.src.indexOf("?")!=-1?"&":"?")+Math.random();c+=a.w3c||!i?' data="'+a.src+'" type="application/x-shockwave-flash"':' classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"';c+=">";if(a.w3c||i)c+='<param name="movie" value="'+a.src+'" />';a.width=a.height=a.id=a.w3c=a.src=null;a.onFail=a.version=a.expressInstall=null;for(var d in a)if(a[d])c+=
 '<param name="'+d+'" value="'+a[d]+'" />';a="";if(b){for(var h in b)if(b[h]){d=b[h];a+=h+"="+(/function|object/.test(typeof d)?e.asString(d):d)+"&"}a=a.slice(0,-1);c+='<param name="flashvars" value=\''+a+"' />"}c+="</object>";return c},isSupported:function(a){return g[0]>a[0]||g[0]==a[0]&&g[1]>=a[1]}}),g=e.getVersion();if(n){jQuery.tools=jQuery.tools||{version:"1.2.5"};jQuery.tools.flashembed={conf:j};jQuery.fn.flashembed=function(a,b){return this.each(function(){$(this).data("flashembed",flashembed(this,
 a,b))})}}})();                                                                                                   
+jQuery.fn.center = function (absolute) {
+    return this.each(function () {
+        var t = jQuery(this);
+
+        t.css({
+            position:    absolute ? 'absolute' : 'fixed', 
+            left:        '50%', 
+            top:        '50%', 
+            zIndex:        '99'
+        }).css({
+            marginLeft:    '-' + (t.outerWidth() / 2) + 'px', 
+            marginTop:    '-' + (t.outerHeight() / 2) + 'px'
+        });
+
+        if (absolute) {
+            t.css({
+                marginTop:    parseInt(t.css('marginTop'), 10) + jQuery(window).scrollTop(), 
+                marginLeft:    parseInt(t.css('marginLeft'), 10) + jQuery(window).scrollLeft()
+            });
+        }
+    });
+};
+
