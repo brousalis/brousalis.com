@@ -1,0 +1,28 @@
+---
+layout: default
+summary: The main portfolio portion
+---
+
+{% for post in site.posts %}     
+<div class="page clearfix">
+  <div class="scrollable clearfix">
+    <div class="items">
+      <div><img src="/images/work/{{ post.img1 }}"></div>
+      <div><img src="/images/work/{{ post.img2 }}"></div>
+      <div><img src="/images/work/{{ post.img3 }}"></div>
+    </div>
+    <div class="description clearfix">
+      <h3>
+        <span>{{ post.title }}</span>
+        <span><a href="{{ post.visit }}">{{ post.visit }}</a></span>
+      </h3>
+      <p>{{ post.content }}</p>
+      <p class="arrows">
+        <a class="prev"></a>
+        <a class="next"></a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+

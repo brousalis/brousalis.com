@@ -1,0 +1,18 @@
+---
+layout: work
+title: LC Trails
+img1: mtm.png
+img2: mtm2.png
+img3: mtm3.png
+visit: http://github.com/Mobile-Trail-Mapping
+
+---
+
+<p>The Mobile Trail Mapping project, named afterwards LC Trails, was my senior project at Rose-Hulman Institute of Technology. Our team of 4 created a mobile solution for the trails association of Linn County, Iowa. Their trail maps were converted from paper to an interactive Google Maps system, incorporating an iPhone app, Android app, and web interface.</p>
+<p>We were awarded <strong>Senior Project of the Year</strong> at Rose-Hulman for our work on the project. If you want to see the code for the project, or read more about it, please visit our <a href="http://github.com/Mobile-Trail-Mapping">GitHub page</a>.</p>
+
+
+
+
+
+

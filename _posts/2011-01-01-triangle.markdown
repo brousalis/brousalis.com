@@ -1,0 +1,15 @@
+---
+layout: work
+title: Triangle Fraternity
+img1: triangle.png
+img2: triangle2.png
+img3: triangle3.png
+visit: http://triangle-fraternity.com
+
+---
+
+<p>The Triangle Fraternity chapter at Rose-Hulman was in need of a website to aid in helping alumni keep up with the latest news from the fraternity. I created a solution by using a hand-made frontend and PHP backbone, taking advantage of the Google Calendar and Maps applications.</p>
+
+<p class="tags">Frontend, Design</p>   
+
+
