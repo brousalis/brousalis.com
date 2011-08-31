@@ -1,6 +1,3 @@
-/* 1. RESET
-------------------------------------- */
-
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;} table {border-collapse:collapse;border-spacing:0;} fieldset,img {border:0;} ol,ul {list-style:none;} caption,th {text-align:left;} h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;} q:before,q:after {content:'';} abbr,acronym {border:0;}
 .hide {display:none;}
 .clear {clear:both;}
@@ -8,9 +5,6 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 .clearfix:after {content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}	
 * html .clearfix {height:1%;}
 html[xmlns] .clearfix {display:block;}
-
-/* 2. CORE STYLES
-------------------------------------- */
 
 html,body {overflow-x:hidden;}
 body {background:#f0f0f0; color:#505050; font-size:16px; font-family:proxima-nova-1,proxima-nova-2,Georgia,"Times New Roman",serif; line-height:1.5; }
@@ -51,15 +45,10 @@ span.fancy {font-family:"Hoefler Text",Baskerville,Garamond,"Palatino Linotype",
 .uppercase-title {font-size:12px; font-family:Georgia,"Times New Roman", serif; text-transform: uppercase; letter-spacing: 1px; padding-bottom:24px;}
 .small-title {color:#808080; font-size:11px; font-family: Helvetica,Arial,sans-serif; font-weight:normal; line-height:normal; text-transform:uppercase; padding:0 0 5px 0; display:block;}
 
-
-/* 3. CORE ELEMENTS
-------------------------------------- */
-
 #header-wrapper {background-color:#303030; width:100%; height:40px; border-bottom:1px solid #000; position:relative; z-index:1000; top:0;}
 	#header {width:940px; margin:0 auto; position:relative; height:40px;}
 	#header h1 a#logo{ color:#fff; font-size:24px; font-weight:normal; text-decoration:none; text-transform:uppercase; font-weight:600; letter-spacing:1px; text-shadow:0px 1px 0 #000; position:absolute; top:8px;}
 	#nav {position:absolute; right:0; top:0; height:40px;}
-		/* Top level */
 		#nav ul {}
 		#nav ul li {float:left; height:40px; position:relative;}
 		#nav ul li a.home { border-left:1px dotted #505050; text-indent:-9999px; background:url(images/ui_nav_home.png) center no-repeat; width:30px; }
@@ -68,19 +57,13 @@ span.fancy {font-family:"Hoefler Text",Baskerville,Garamond,"Palatino Linotype",
 		#nav ul li a:active {background-color:#202020; }
 		#nav li.submenu:hover a {background-image:url(images/ui_dropdown_toparrow.png); background-position: center bottom; background-repeat:no-repeat;}
 		#nav li.submenu ul.dropdown a {background-image:none;}
-		/* Dropdown styles */
 		#nav ul.dropdown {border: 1px solid #2a2f33; width:180px; position:absolute; top:-999em; box-shadow:0 3px 8px rgba(0,0,0,0.6); -moz-box-shadow:0 3px 8px rgba(0,0,0,0.6); -webkit-box-shadow:0 3px 8px rgba(0,0,0,0.6);}
-		/* Reset Dropdown list styles */
 		#nav ul.dropdown li {height:auto; padding:0; margin:0; float:none; position:relative; /*lte ie7 */ *display:inline-block; *margin-top:-1px;}
-		/* Dropdown list anchor styles */
 		#nav ul.dropdown li a:link,#nav ul li ul li a:visited {background:#3F4147; color:#c7ced8; font:normal 12px/1 Helvetica, Arial, sans-serif; text-transform:none; padding:11px 15px; border:0; border-bottom:1px solid #494c53; display:block; height:1%;}
 		#nav ul.dropdown li:first-child a {border-top: 3px solid #393a40;}
-		/* Dropdown list anchor hover styles */
 		#nav ul.dropdown li a:hover, #nav ul li ul.dropdown li:hover a, #nav ul li ul li.submenu ul.dropdown li a:hover {background:#2d3337; color:#FFF;}
 		#nav ul.dropdown li.submenu ul.dropdown li a {background:#3F4147;color:#c7ced8;}
-		/* Tier 3 Dropdown Positioning*/
 		#nav ul.dropdown li.submenu ul.dropdown {left:180px; top:-999em;}
-		/* CSS Dropdown Magic */
 		#nav li.submenu:hover ul.dropdown {top:40px;}
 		#nav li.submenu ul.dropdown li.submenu:hover ul.dropdown {top:0;}
 #content-wrapper {width:942px; margin:0 auto 60px; position:relative;}
@@ -89,6 +72,7 @@ border: solid 1px #CCC;
 -webkit-border-radius: 6px;
 -moz-border-radius: 6px;
 -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+margin-top:30px;
 }
 		#breadcrumb {font-family:Georgia,"Times New Roman", serif; font-style:italic; line-height:normal; letter-spacing:-.025em; padding:25px 0;}
 		#search legend {display:none;}
@@ -156,43 +140,19 @@ style-position:outside; padding-left:20px;}
 		#sidebar #popular-tags ul li a {background:#e2e5eb; color:#999da3; font-size:12px; font-style:italic; line-height:1; padding:6px 8px; display:inline-block; margin: 0 8px 8px 0; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; -khtml-border-radius:3px; }  
 		#sidebar #popular-tags ul li a:hover {background:#404040; color:#fff; text-decoration:none;}
 		#sidebar #popular-tags ul li a:active,#sidebar #popular-tags ul li a:focus {background:#282828; color:#fff;}
-#footer-wrapper {border-top:5px solid #ccc; background-color:#202020;position:relative; z-index:1000;}
-	#footer {color:#848484; font-size:14px; width:940px; padding:40px 0; margin:0 auto; overflow:hidden;}
-		#footer .section-title {color:#eee; text-transform: uppercase; font-size: 12px; letter-spacing:1px; }
+#footer-wrapper {background-color:#f5f5f5;position:relative; z-index:1000;}
+	#footer {color:#666; font-size:14px; width:940px; padding:40px 0; margin:0 auto; overflow:hidden;}
+		#footer .section-title {color:#1C9BDC; text-transform: uppercase; font-size: 12px; letter-spacing:1px; }
 		#footer a:link,#footer a:visited {color: #bbb;}
-		#footer a:hover {color:#fff;}
+		#footer a:hover {color:#000;}
 		#footer p, #footer ul {padding-bottom:24px;}
 		#footer .col {width:280px; margin-right:50px; float:left;}
 		#footer .last {margin-right:0;}
 		#footer .two-columns .left {float: left; width:125px; padding-right: 30px;}
 		#socialize li {display:inline;}
 		#socialize li a {float:left; margin-right:5px; display:block; }
-		#flickr {padding-bottom: 20px;}
-			#flickr a:hover img {filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity:0.7; opacity:0.7; }
-			#flickr a img {margin:0 6px 6px 0; -moz-box-shadow:0 0 3px rgba(0,0,0,1); -webkit-box-shadow:0 0 3px rgba(0,0,0,1);}
-		#colophon {color:#606060; font-size:11px;}
-			#colophon a:link, #colophon a:visited {color:#808080;}
-			#colophon a:hover {color:#fff;}
-			#colophon small {font-size:12px; font-style:italic; font-family:"Hoefler Text",Baskerville,Garamond,"Palatino Linotype",Georgia,"Times New Roman", serif;}
-		#quick-contact {padding-bottom:30px;}
-			#quick-contact li{padding-bottom:10px; }
-			#quick-contact legend{display:none; }
-			#quick-contact label{font-size:11px; text-transform:uppercase; padding-bottom:3px; display:block;}
-			#quick-contact .input ,#quick-contact textarea{color:#494949; font-size:13px; font-family:Helvetica,Arial,sans-serif; width:266px; padding:8px 6px; border:1px solid white; -moz-border-radius:2px; -webkit-border-radius:2px; }
-			#quick-contact .input {width:}
-			#quick-contact textarea{height:98px; }	
-			#quick-contact #qc-submit{background-image:url(images/ui_darkbutton_bg.png); color:#c5cacc; border-color:#181818; }
-			#quick-contact #qc-submit:hover{background-position:left -33px; }
-			#quick-contact .error {background: #ffe1e4; border:1px dashed red;}
-			p#qc-thanks { display:none;}
-			p#qc-thanks strong { font-size:14px;}
 
-	
-/* 4. HOME
-------------------------------------- */
- 
-body.home #main-container {border-top:0;}
-#featured-post p {padding-bottom:0;}
+ #featured-post p {padding-bottom:0;}
 #slider {width:1920px; position:absolute; z-index:100; left:-490px; top:0;}
 	#slider #slide-buttons {position:absolute; right:15px; top:15px;}
 	#slider #slide-buttons a {background:url(images/ui_slider_buttons.png) no-repeat; text-indent:-9999px; width:31px; height:25px; display:block; overflow:hidden; outline:none;}
@@ -245,9 +205,6 @@ body.home #main-container {border-top:0;}
 	#latest-news ul li {padding:16px 0;}
 	#latest-news ul li h3 {padding-bottom:15px;}
 	#latest-news ul li p { padding:0;}
-
-/* 5. BLOG / PAGES
-------------------------------------- */
 
 #blog-top {font-size: 14px; height:24px; line-height: 24px; font-style: italic;  margin: 30px 30px 0 30px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 6px 0; overflow: hidden;}
 #blog-top p { padding: 0; }
@@ -360,10 +317,6 @@ body.home #main-container {border-top:0;}
 	.grey-prev span.arrow-prev {border-color:#E2E5EB #999DA3 #E2E5EB transparent;}
 	.grey-next span.arrow-next {border-color:#E2E5EB transparent #E2E5EB #999DA3;}
 
-
-/* 6. FULL WIDTH
-------------------------------------- */
-
 body.full-width #main-container {background:#fff;}
 body.full-width #content {width:auto; float:none;}
 body.full-width #content .post .sidenote {color:#808080; font-family:Helvetica,Arial,sans-serif; width:130px; font-size:12px; line-height:2;}
@@ -393,10 +346,6 @@ body.full-width #content .post .two {width:280px;}
 body.full-width #content .post .three {width:430px;}
 body.full-width #content .post .four {width:580px;}
 body.full-width #content .post .five {width:730px;}
-
-
-/* 7. PORTFOLIO
-------------------------------------- */
 
 body.portfolio #change-view {line-height:24px; float:none; margin-bottom:30px;}
 body.portfolio #change-view {font-style:italic; padding:5px 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
@@ -454,9 +403,6 @@ body.single-project	.related-projects .item a img {width:40px; height:40px; floa
 body.single-project	.related-projects .item a:hover {background-color:#f9f9f9;}
 body.single-project	.related-projects .item a:hover img {filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity:0.8; opacity:0.8;}
 	
-/* 9. CONTACT FORM
-------------------------------------- */
-
 div.error {background:#E13629 url(images/icons/ico_alert.png) 10px 10px no-repeat; color:#fff; font-size:14px; font-style:italic; padding:10px; margin-bottom:28px; display:inline-block; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;} 
 div.error p {line-height:22px; padding:0; margin-left:32px;}
 div.success {background:#c9f661 url(images/icons/ico_check.png) 10px 10px no-repeat; font-size:14px; font-style:italic; padding:10px; margin-bottom:28px; display:inline-block; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;} 
@@ -468,5 +414,3 @@ div.success p {line-height:24px; padding:0; margin-left:36px; }
 	#contact-form ol li.screenReader {position:absolute; left:-9999px; top:-9999px;}
 	#contact-form label span.alert {color:#DA1A0B; font-size:12px; font-family:Helvetica,Arial,sans-serif;}
 	#contact-form textarea {height:140px;}
-
-/* End of CSS */
