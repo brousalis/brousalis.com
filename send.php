@@ -5,10 +5,6 @@
     $email    =   $_POST['email'];
     $message  =   $_POST['body'];
 
-    /*the $header variable is for the additional headers in the mail function,
-     we are asigning 2 values, first one is FROM and the second one is REPLY-TO.
-     That way when we want to reply the email gmail(or yahoo or hotmail...) will know
-     who are we replying to. */
     $headers  = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
 
