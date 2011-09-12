@@ -1,266 +1,96 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" style="zoom:100%">
 <head>
-	<title>brousalis.com &mdash; http://brousalis.com</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  
-	<link rel="stylesheet" href="/css/style.css" media="screen" type="text/css"/>
-	<link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.1.css" type="text/css"/>
-	
-	<style type="text/css">
-		body.full-width #content .post #fullwidth-grid:hover {background:url(demo_images/fullwidth_grid.png) left top repeat-y;}
-	</style>
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
-	<script src="/js/fancybox/jquery.fancybox-1.3.1.pack.js" type="text/javascript"></script>
-	<script src="/js/jquery.easing-1.3.pack.js" type="text/javascript"></script>
-	<script src="/js/jquery.cycle.js" type="text/javascript"></script>
-	<script src="/js/ui.tabs.min.js" type="text/javascript"></script>
-	<script src="/js/scripts.js" type="text/javascript"></script>
-  <script type="text/javascript" src="http://use.typekit.com/fhb0qqm.js"></script> 
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
-	
-	<!--[if IE 6]>
-	<link href="ie.css" rel="stylesheet" media="screen" type="text/css" />
-	<![endif]-->
+  <title>Pete Brousalis : http://brousalis.com</title>
+  <meta name="author" content="Pete Brousalis" />
+  {% if page.summary %}
+  <meta name="description" content="{{ page.summary }}" />
+  {% endif %}
+
+  <link rel="stylesheet" href="/css/default.css" type="text/css" />
+
+  {% for css in page.css %}
+  <link rel="stylesheet" href="/{{ css }}" type="text/css" />
+  {% endfor %}
+  <script type="text/javascript" src="http://use.typekit.com/fhb0qqm.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="/js/libs/modernizr-1.7.min.js"></script>
 </head>
-<body class="full-width page">
-<div id="header-wrapper">
-	<div id="header">
-		<h1>
-      <a id="logo" href="index.html" title="Auguste">PETE BROUSALIS</a>
-		</h1>
-		<div id="nav">
-			<ul>
-				<li><a class="current" href="index.html">Home</a></li>
-				<li class="submenu">
-					<a href="#">Templates</a>
-					<ul class="dropdown">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="fullwidth.html">Full Width</a></li>
-						<li><a href="blog.html">Blog / Archive</a></li>
-						<li><a href="single.html">Blog Single</a></li>
-						<li><a href="page.html">Page</a></li>	
-						<li><a href="portfolio.html">Portfolio</a></li>	
-						<li><a href="portfolio_single.html">Portfolio Single</a></li>
-						<li><a href="contact.php">Contact Page</a></li>	
-						<li class="submenu">
-							<a href="#">Submenu</a>
-							<ul class="dropdown">
-								<li><a href="#">Subpage 1</a></li>
-								<li><a href="#">Subpage 2</a></li>
-								<li><a href="#">Subpage 3</a></li>
-							</ul>
-						</li>
-					</ul>				
-				</li>
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.php">Contact</a></li>
-			</ul>
-		</div><!-- end: #nav -->
-	</div><!-- end: #header -->
-</div><!-- end: #header-wrapper-->
-<div id="content-wrapper">
-	<div id="breadcrumb">
-		<a href="index.html">Home</a> &not;
-	</div>
-	<div id="main-container" class="clearfix">
-		<div id="content">
-			<div class="post">
-				<h1 class="post-title">Full Width Post</h1>
-				<p class="lead">This document's <code>body</code> tag is classed with <code>full-width</code>. You must wrap your content in <code>&lt;div class="post"&gt;&lt;/div&gt;</code> to inherit <a href="single.html">blog post styling</a>.</p>
-				<div class="two-columns">
-					<div class="col">
-						<h4>Creating Columns</h4>
-						<p>To create columned sections, markup your HTML similar to the example on your right. For 2, 3, or 4 columned sections, simply change the parent <code>div</code>'s class to <code>two-columns</code>, <code>three-columns</code>, or <code>four-columns</code> and match the number of child <code>div</code>s. Remember to include the <code>end</code> class on the last column! </p>
-					</div>
-					<div class="col end">
-						<h4>Example:</h4>
-<pre><code>&lt;div class="two-columns"&gt;
-    &lt;div class="col"&gt;content...&lt;/div&gt;
-    &lt;div class="col end"&gt;content...&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-					</div>
-				</div><!-- end .two-columns -->
-				
-<pre><code>&lt;div class="four-columns"&gt;
-    &lt;div class="col"&gt;content...&lt;/div&gt;
-    &lt;div class="col"&gt;content...&lt;/div&gt;
-    &lt;div class="col"&gt;content...&lt;/div&gt;
-    &lt;div class="col end"&gt;content...&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-				
-				<div class="four-columns">
-					<div class="col">
-						<h6>Four Columns:</h6>
-						<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus.</p>
-					</div>
-					<div class="col">
-						<h6>Second Column</h6>
-						<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus.</p>
-					</div>
-					<div class="col">
-						<h6>Third Column</h6>
-						<p>Maecenas ultricies cursus lectus, eget bibendum lacus porttitor eget. Proin magna velit, condimentum eu ullamcorper a, commodo ut justo. Vivamus neque ante, sollicitudin eget mollis quis, adipiscing sodales ligula. Curabitur a mi nisl, et imperdiet nunc.</p>
-					</div>
-					<div class="col end">
-						<h6>Last Column</h6>
-						<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus.</p>
-					</div>
-				</div><!-- end .four-columns -->
-							
-				<div id="fullwidth-grid">
-					<div class="space2left three">
-<pre><code>&lt;div class="space2left three"&gt;
-	content goes here...
-&lt;/div&gt;</code></pre>
-						<h1>Lorem ipsum dolor sit amet&hellip;</h1>
-						<p class="lead">You can play with the <code>spaceXleft</code>, <code>spaceXright</code>, and <code>one, two, three, four, five</code> classes to create some interesting layouts. Keep in mind, this template <strong>does not</strong> utilize an entire <a href="http://960.gs/" rel="nofollow">CSS Grid System</a>. Instead I've brought to you a set of classes that mimic some of their properties and that work with the Full Width Template.</p>
-						<p class="pull1left sidenote">This paragraph was created by combining the classes: <strong>pull1left</strong> and <strong>sidenote</strong></p>
-						<p>Pellentesque eu est a nulla placerat dignissim. Morbi a enim in. Morbi malesuada nulla nec purus convallis consequat. Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl.</p>
-						<p>Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in.</p>
-					</div>
-					<div class="three-columns">
-						<div class="col">
-							<h6>Three Columns:</h6>
-							<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus.</p>
-						</div>
-						<div class="col">
-							<h6>Middle Column</h6>
-							<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus.</p>
-						</div>
-						<div class="col end">
-							<h6>Last Column</h6>
-							<ul>
-								<li>Praesent eget neque eu eros interdum</li>
-								<li>Phasellus molestie magna non est bibendum</li>
-								<li>Praesent id metus massa, ut blandit</li>
-								<li>Aliquam erat volutpat. Mauris vel neque sit</li>
-							</ul>
-						</div>
-					</div><!-- end .three-columns -->
-					
-					
-					<div class="space2left three">
-						<h2>Nam vestibulum, arcu sodales feugiat consectetur.</h2>
-						<p>Vestibulum in mi vel lacus facilisis blandit a ut orci. Maecenas tempus felis quis justo dignissim pellentesque. Integer tincidunt elementum ante, vehicula egestas turpis pharetra eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan vestibulum nulla in fermentum. In vitae turpis et lorem luctus ullamcorper.</p>
-						<h4>Shift objects by a portion of the grid:</h4>
-						<img src="demo_images/test_image3.jpg" alt="" class="pull1left left" />
-						<p>Apply both <code>left</code> and <code>pull1left</code> classes to an <strong>image</strong> to create the effect on your left. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh.</p>
-						<p>Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis.</p>
-						<p>Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra.</p>
-						<div class="pullquote pull1left"><p>"This is a pullquote. Simply enclose a paragraph with a div classed pullquote and pull1left for this effect."</p></div>
-						<p>Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo.</p>
-					</div>
-					
+<body>
+  <div class='keyboard'></div>
+  <div id='wrap'>
+    <div id='header'>
+      <div id='header-inner'>
+        <div class='logo'>
+          <h1><a class='logo' href='http://brousalis.com'>pete brousalis</a></h1>
+        </div>
+        <div class='menu-wrap' id='seed-menu'>
+          <div class='menu'>
+            <div class='menu-inner'>
+              Work
+            </div>
+            <div class='menu-drop'>
+              <a>Websites</a>
+              <a>iOS</a>
+              <a>Android</a>
+              <a>Code</a>
+            </div>
+          </div>
+        </div>
+        <div class='menu-wrap' id='about-menu'>
+          <div class='menu'>
+            <div class='menu-inner'>
+              About
+            </div>
+          </div>
+        </div>
+        <div id='contact-menu'>
+          <a id='contact-button'>
+            <span>Contact</span>
+          </a>
+          <div style='clear:both'></div>
+          <div id='contact-box'>
+            <form id='contact' method='post'>
+              <fieldset id='body'>
+                <fieldset>
+                  <input id="email" name='email' type='text' value='e-mail address' />
+                </fieldset>
+                <fieldset>
+                  <textarea rows="10" id="msg" cols="40" name='body' type='text' text='message' /></textarea>
+                </fieldset>
+                <div id="message"></div>
+                <input id='contact-submit' type='submit' value='send' />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
 
-					<div class="space1left three">
-<pre><code>&lt;div class="space1left three"&gt;
-	content goes here...
-&lt;/div&gt;</code></pre>
-						<h1>Pellentesque eu est a nulla placerat dignissim. Morbi.</h1>
-						<p class="pull1right sidenote">This paragraph was created with the two classes: <strong>pull2right</strong> and <strong>sidenote</strong></p>
-						<p>Pellentesque eu est a nulla placerat dignissim. Morbi a enim in. Morbi malesuada nulla nec purus convallis consequat. Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl.</p>
-						<p>Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in.</p>
-						<p>Vestibulum in mi vel lacus facilisis blandit a ut orci. Maecenas tempus felis quis justo dignissim pellentesque. Integer tincidunt elementum ante, vehicula egestas turpis pharetra eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan vestibulum nulla in fermentum. In vitae turpis et lorem luctus ullamcorper.</p>
-						<div class="darkblock pull1right right"><p>"This was created using the classes <strong>darkblock</strong>, <strong>pull1right</strong> and <strong>right</strong>., a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget."</p></div>
-						<h2>Etiam scelerisque, nunc ac egestas.</h2>
-						<p>Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit.</p>
-						<p>Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt congue sed ut dui. Morbi malesuada nulla nec purus convallis consequat. Vivamus id mollis quam. Morbi ac.</p>
-					</div>
-					
-<pre><code>&lt;div class="three-columns"&gt;
-	&lt;div class="col"&gt;&lt;/div&gt;
-	&lt;div class="col"&gt;&lt;/div&gt;
-	&lt;div class="col end"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-					<div class="three-columns">
-						<div class="col">
-							<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus.</p>
-						</div>
-						<div class="col">
-							<p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. </p>
-						</div>
-						<div class="col end">
-							<p>Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt congue sed ut dui.</p>
-						</div>
-					</div><!-- end .three-columns -->
-					
-					
-					<div class="space1left three">
-					<p>Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac.</p>
-					<h2>The End.</h2>
-					</div>
-					
-				</div><!-- end #fullwidth-grid -->
-				
-			</div><!-- end: .post -->
-		</div><!-- end: #content-->
+  <div id="main">
+     <div class="pages">
+       {{ content }}  
+     </div>
+  </div>
 
-	</div><!-- end: #main-container -->
-</div><!-- end: #content-wrapper -->
+  <script src="/js/libs/jquery-1.6.1.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>  
+  <script src="/js/custom.js"></script>
+  <script src="/js/loader.js"></script>
+  <script>
+    var _gaq=[["_setAccount","UA-9821208-3"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
 
-<div id="footer-wrapper">
-	<div id="footer">
-		<div class="col">
-			<h3 class="section-title">About</h3>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada. Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Pellentesque accumsan vestibulum nulla in fermentum. Donec lacinia mattis nisl, ut fermentum nunc commodo id.</p>
-			<p>Quisque lobortis, ipsum condimentum tempus volutpat, purus dui ultrices arcu, scelerisque dignissim nunc erat.</p>
-			<h3 class="section-title">Connect With Us</h3>
-			<ul id="socialize">
-				<li><a href="#"><img src="images/icons/ico_twitter.png" alt="Twitter" title="Twitter"/></a></li>
-				<li><a href="#"><img src="images/icons/ico_fb.png" alt="Facebook" title="Facebook"/></a></li>
-				<li><a href="#"><img src="images/icons/ico_digg.png" alt="Digg" title="Digg"/></a></li>
-				<li><a href="#"><img src="images/icons/ico_delicious.png" alt="Delicious" title="Delicious"/></a></li>
-			</ul>
-		</div>
-		<div class="col">
-			<h3 class="section-title">Flickr</h3>
-			<div id="flickr">
-				<a href="#"><img src="demo_images/flickr_01.jpg" alt="" /></a>
-				<a href="#"><img src="demo_images/flickr_02.jpg" alt="" /></a>
-				<a href="#"><img src="demo_images/flickr_03.jpg" alt="" /></a>
-				<a href="#"><img src="demo_images/flickr_04.jpg" alt="" /></a>
-				<a href="#"><img src="demo_images/flickr_05.jpg" alt="" /></a>
-				<a href="#"><img src="demo_images/flickr_06.jpg" alt="" /></a>
-				<a href="#"><img src="demo_images/flickr_07.jpg" alt="" /></a>
-				<a href="#"><img src="demo_images/flickr_08.jpg" alt="" /></a>
-			</div>
-			<h3 class="section-title">Colophon</h3>
-			<div id="colophon">
-				<p>Copyright &copy; 2010 All Rights Reserved. Auguste template designed and coded <small>by</small> <a href="http://www.carlofranco.ca">Gian Carlo Franco</a>. Icons <small>by</small> <a href="http://tango.freedesktop.org/Tango_Icon_Library">Tango</a></p>
-				<p>Buy this template at <a href="http://www.themeforest.com">Themeforest.com</a></p>
-			</div>
-		</div>
-		<div class="col last">
-			<h3 class="section-title">Get in Touch</h3>
-			<p id="qc-thanks"></p>
-			<form id="quick-contact" method="post" action="qc_form.php" name="quick-contact">
-				<fieldset>
-					<legend>Please fill in the following form to contact us.</legend>
-					<ol>
-						<li>
-							<label for="qc-name">Name:</label>
-							<input id="qc-name" class="input" name="qc-name" type="text" />
-						</li>
-						<li>
-							<label for="qc-email">Email:</label>
-							<input id="qc-email" class="input" name="qc-email" type="text"/>
-						</li>				
-						<li>
-							<label for="qc-message">Your Message:</label>
-							<textarea id="qc-message" name="qc-message" rows="6" cols="40"></textarea>
-						</li>
-						<li>
-							<input id="qc-submit" type="submit" class="button" value="Send Message"/>
-						</li>
-					</ol>
-				</fieldset>
-			</form>
-		</div>
-	</div><!-- end: #footer -->
-</div><!-- end: #footer-wrapper -->
+  <!--[if lt IE 7 ]>
+  <script src="/js/libs/dd_belatedpng.js"></script>
+  <script>DD_belatedPNG.fix("img, .png_bg");</script>
+  <![endif]-->
+
 </body>
 </html>
