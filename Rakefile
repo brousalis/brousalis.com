@@ -42,6 +42,16 @@ task :install, :theme do |t, args|
   mkdir_p public_dir
 end
 
+# Pushes the source code to Github - use: rake p m="Commit message"
+desc 'Push source code to Github'
+task :p do
+  puts '* Pushing to Github'
+  puts `git add .`
+  puts `git commit -m "#{ENV['m']}" .`
+  puts `git push origin master`
+  puts `git push heroku master`
+end
+
 #######################
 # Working with Jekyll #
 #######################
