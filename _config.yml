@@ -92,7 +92,7 @@ disqus_short_name: brousalis
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-9821208-3
 
 # Facebook Like
 facebook_like: false
