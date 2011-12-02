@@ -1,6 +1,32 @@
 @import "base/helpers"
 @import "compass/css3"
 
+nav#search
+  border-top: 1px solid #fff
+  input[type="text"]
+    font: 1.1em 'proxima-nova-1', 'proxima-nova-2'
+    background: url('/images/search.png') no-repeat 6px 8px #fcfcfc
+    border: 1px solid #d1d1d1
+    color: #666
+    width: 108px
+    padding: 6px 15px 6px 30px
+    margin-left: 17px
+    margin-top: 15px
+    @include border-radius(5px)
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset
+    -webkit-transition: all 0.7s ease 0s
+    -moz-transition: all 0.7s ease 0s
+    -o-transition: all 0.7s ease 0s
+    transition: all 0.7s ease 0s
+
+    &:focus
+      outline: 0
+      border-color: rgba(82,168,236,.8)
+      $shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6)
+      @include box-shadow($shadow)
+ 
 nav#sidebar-wrapper
   background-color: $sidebar-bg-color
   width: $sidebar-width
@@ -42,7 +68,7 @@ nav#sidebar-wrapper
         a
           border-bottom: 1px solid $sidebar-line-color
           text-transform: uppercase
-          font-weight: bold
+          font-weight: 600
           font-size: 1.1em
           color: #4b4b4b
           display: block
@@ -104,7 +130,7 @@ nav#sidebar-wrapper
             @include border-radius(3px)
             @include text-shadow(#fff 0px 1px 0px)
             @include shade($start, $stop, $end)
-            @include transition(.1s linear all)
+            @include transition(0.2s linear all)
             border-top: 1px solid #fff
             &:active 
               $shadow: inset 0 2px 4px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.05)
@@ -113,13 +139,13 @@ nav#sidebar-wrapper
               color: #666
             &.about
               float: left
-              margin-bottom: 10px
+              margin-bottom: 15px
               margin-right: 2px
             &.email
               float: right
             &.lfw
               padding: 0px
-              width: 99%
+              width: 100%
               text-align: center
               float: left
               @include gradientBar(#ee5f5b, #c43c35)
