@@ -1,0 +1,195 @@
+@import "base/helpers"
+@import "compass/css3"
+
+nav#search
+  border-top: 1px solid #fff
+  input[type="text"]
+    font: 1.1em 'proxima-nova-1', 'proxima-nova-2'
+    background: url('/images/search.png') no-repeat 6px 8px #fcfcfc
+    border: 1px solid #d1d1d1
+    color: #666
+    width: 128px
+    padding: 6px 15px 6px 20px
+    margin-left: 17px
+    margin-top: 15px
+    @include border-radius(30px)
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset
+    -webkit-transition: all 0.7s ease 0s
+    -moz-transition: all 0.7s ease 0s
+    -o-transition: all 0.7s ease 0s
+    transition: all 0.7s ease 0s
+
+    &:focus
+      outline: 0
+      border-color: rgba(82,168,236,.8)
+      $shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6)
+      @include box-shadow($shadow)
+ 
+nav#sidebar-wrapper
+  background-color: $sidebar-bg-color
+  width: $sidebar-width
+  position: fixed
+  padding: 0
+  z-index: 100
+  height: 100%
+  float: left
+  border-right: 1px solid $sidebar-line-color
+
+  #sidebar
+    position: fixed
+    border: 0
+    width: $sidebar-width
+
+    #backdrop
+      background: #fff url('/images/logo.png') no-repeat 50% 50%
+      display: block
+      height: 105px
+      border-bottom: 1px solid $sidebar-line-color
+      
+      a#logo
+        padding: 0px 0px 10px 19px
+        margin-top: 40px
+        font-weight: bold
+        font-size: 2em
+        text-transform: uppercase
+        position: absolute
+    
+    nav#primary
+      border-top: 1px solid #fff
+
+      li
+        border-top: 1px solid #fff
+
+        &.current
+          background: url('/images/arrow.png') no-repeat middle right
+
+        a
+          border-bottom: 1px solid $sidebar-line-color
+          text-transform: uppercase
+          font-weight: 600
+          font-size: 1.1em
+          color: #4b4b4b
+          display: block
+          padding: 5px 15px
+          padding-left: 42px
+          @include text-shadow(#fff 0 2px 0) 
+
+          &.current
+            color: #da4848
+
+          &.blog
+            background: url('/images/blog.png') no-repeat $sidebar-icon-x $sidebar-icon-y
+            &:hover, &:active, &.current
+              background: url('/images/blog_red.png') no-repeat $sidebar-icon-x $sidebar-icon-y
+
+          &.projects
+            background: url('/images/projects.png') no-repeat $sidebar-icon-x $sidebar-icon-y
+            &:hover, &:active, &.current  
+              background: url('/images/projects_red.png') no-repeat $sidebar-icon-x $sidebar-icon-y
+
+          &.portfolio
+            background: url('/images/portfolio.png') no-repeat $sidebar-icon-x $sidebar-icon-y
+            &:hover, &:active, &.current  
+              background: url('/images/portfolio_red.png') no-repeat $sidebar-icon-x $sidebar-icon-y
+
+          &.activity
+            background: url('/images/activity.png') no-repeat $sidebar-icon-x $sidebar-icon-y
+            &:hover, &:active, &.current  
+              background: url('/images/activity_red.png') no-repeat $sidebar-icon-x $sidebar-icon-y
+
+          &:hover
+            color: #da4848
+
+        &:first-child
+          border-top: none
+
+    $start: #eee
+    $stop: #ddd
+    $end: #bbb
+    nav#secondary
+      ul
+        padding: 18px 12px
+        padding-bottom: 17px
+        border-bottom: 1px solid $sidebar-line-color
+        border-top: 1px solid #fff
+        li
+          a
+            text-decoration: none
+            text-transform: lowercase
+            cursor: pointer
+            padding: 0px 17px
+            -webkit-appearance: none
+            font-size: 1em
+            font-weight: 600
+            color: #555
+            height: 23px
+            line-height: 24px
+            text-transform: uppercase
+            @include border-radius(3px)
+            @include text-shadow(#fff 0px 1px 0px)
+            @include shade($start, $stop, $end)
+            @include transition(0.2s linear all)
+            border-top: 1px solid #fff
+            &:active 
+              $shadow: inset 0 2px 4px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.05)
+              @include box-shadow($shadow)
+            &:hover
+              color: #666
+            &.about
+              float: left
+              margin-bottom: 15px
+              margin-right: 2px
+            &.email
+              float: right
+            &.lfw
+              padding: 0px
+              width: 100%
+              text-align: center
+              float: left
+              @include gradientBar(#ee5f5b, #a62e2e)
+              color: #fff
+              border: 1px solid rgba(166,46,46,1)
+              border-top: 1px solid #000
+              //@include shade(#ea5f5f, #b80000)
+              @include text-shadow(#000 0px -1px 0px)
+
+    nav#social
+      ul
+        padding-top: 12px
+        padding-left: 13px
+        border-bottom: 1px solid $sidebar-line-color
+        border-top: 1px solid #fff
+        height: 43px
+        li
+          float: left
+          margin-right: 3px
+          a
+            display: block
+            width: 30px
+            height: 30px
+            text-indent: -9999px
+            @include transition(.1s linear all)
+            &:active
+              position: relative
+            &.github
+              background: url('/images/github.png') no-repeat
+              &:active
+                background: url('/images/github_on.png') no-repeat
+            &.twitter
+              background: url('/images/twitter.png') no-repeat
+              &:active
+                background: url('/images/twitter_on.png') no-repeat
+            &.facebook
+              background: url('/images/facebook.png') no-repeat
+              &:active
+                background: url('/images/facebook_on.png') no-repeat
+            &.dribbble
+              background: url('/images/dribbble.png') no-repeat
+              &:active
+                background: url('/images/dribbble_on.png') no-repeat
+            &.rss
+              background: url('/images/rss.png') no-repeat
+              &:active
+                background: url('/images/rss_on.png') no-repeat

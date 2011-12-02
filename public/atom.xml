@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Pete Brousalis]]></title>
+  <link href="http://brousalis.heroku.com/atom.xml" rel="self"/>
+  <link href="http://brousalis.heroku.com/"/>
+  <updated>2011-12-02T01:13:16-06:00</updated>
+  <id>http://brousalis.heroku.com/</id>
+  <author>
+    <name><![CDATA[Pete Brousalis]]></name>
+    <email><![CDATA[brousapg@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
