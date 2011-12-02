@@ -68,11 +68,8 @@ $.domReady(function() {
   getNav();
   addSidebarToggler();
 });
+(function($){
 
-// iOS scaling bug fix
-// Rewritten version
-// By @mathias, @cheeaun and @jdalton
-// Source url: https://gist.github.com/901295
 (function(doc) {
   var addEvent = 'addEventListener',
       type = 'gesturestart',

@@ -1,5 +1,19 @@
-@import "compass";
+@import "compass";  
+@import "compass/css3";
 @include global-reset;
 @include reset-html5;
 
-@import "base";
+@import "base/reset";
+@import "base/fonts";
+@import "base/styles";
+@import "base/helpers";
+@import "base/media";
+
+@import "base"; 
+
+@mixin base {
+  @include base-reset;
+  @include base-fonts;
+  @include base-styles;
+  @include base-helpers;
+}              

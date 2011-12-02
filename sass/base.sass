@@ -1,0 +1,37 @@
+$content-width: 530px
+
+$sidebar-bg-color: #f4f4f4
+$sidebar-width: 188px
+$sidebar-line-color: #dfdfdf
+$sidebar-icon-x: 7%
+$sidebar-icon-y: 43%
+ 
+@import "base/sidebar"
+@import "base/posts"
+
+body
+  color: #444
+  font-family: 'proxima-nova-1', 'proxima-nova-2', 'Helvetica Neue', 'Helvetica', Arial, sans-serif
+  height: 100%
+  font-size: 13px
+  line-height: 27px
+  overflow-x: hidden
+  position: relative
+
+  #main-wrapper
+    width: $content-width
+    position: relative
+    
+    #content-wrapper
+      width: $content-width
+      position: relative
+      float: left
+      margin-left: 200px
+      padding: 0 0 0 30px
+
+a
+  color: #444
+  font-weight: bold
+  text-decoration: none
+
+  
