@@ -36,6 +36,9 @@ nav#sidebar-wrapper
       li
         border-top: 1px solid #fff
 
+        &.current
+          background: url('/images/arrow.png') no-repeat middle right
+
         a
           border-bottom: 1px solid $sidebar-line-color
           text-transform: uppercase
@@ -47,24 +50,27 @@ nav#sidebar-wrapper
           padding-left: 42px
           @include text-shadow(#fff 0 2px 0) 
 
+          &.current
+            color: #da4848
+
           &.blog
             background: url('/images/blog.png') no-repeat $sidebar-icon-x $sidebar-icon-y
-            &:hover
+            &:hover, &:active, &.current
               background: url('/images/blog_red.png') no-repeat $sidebar-icon-x $sidebar-icon-y
 
           &.projects
             background: url('/images/projects.png') no-repeat $sidebar-icon-x $sidebar-icon-y
-            &:hover
+            &:hover, &:active, &.current  
               background: url('/images/projects_red.png') no-repeat $sidebar-icon-x $sidebar-icon-y
 
           &.portfolio
             background: url('/images/portfolio.png') no-repeat $sidebar-icon-x $sidebar-icon-y
-            &:hover
+            &:hover, &:active, &.current  
               background: url('/images/portfolio_red.png') no-repeat $sidebar-icon-x $sidebar-icon-y
 
           &.activity
             background: url('/images/activity.png') no-repeat $sidebar-icon-x $sidebar-icon-y
-            &:hover
+            &:hover, &:active, &.current  
               background: url('/images/activity_red.png') no-repeat $sidebar-icon-x $sidebar-icon-y
 
           &:hover
@@ -93,29 +99,18 @@ nav#sidebar-wrapper
             font-weight: 600
             color: #555
             height: 23px
-            line-height: 23px
+            line-height: 24px
             text-transform: uppercase
-            @include shade($start, $stop, $end)
             @include border-radius(3px)
             @include text-shadow(#fff 0px 1px 0px)
+            @include shade($start, $stop, $end)
+            @include transition(.1s linear all)
             border-top: 1px solid #fff
+            &:active 
+              $shadow: inset 0 2px 4px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.05)
+              @include box-shadow($shadow)
             &:hover
               color: #666
-            &:active
-              background-repeat: repeat-x
-              background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $end), color-stop(100%, $stop))
-              background-image: -webkit-linear-gradient($end, $stop)
-              background-image: -moz-linear-gradient($end, $stop)
-              background-image: -ms-linear-gradient($end, $stop)
-              background-image: -o-linear-gradient($end, $stop)
-              background-image: linear-gradient($end, $stop)
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$end', endColorstr='$stop', GradientType=0)
-              text-shadow: 0 1px 1px #fff
-              -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px white, transparent 0 0 0, transparent 0 0 0
-              -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px white, transparent 0 0 0, transparent 0 0 0
-              box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px white, transparent 0 0 0, transparent 0 0 0            
-              border-top: 1px solid #fff
-              color: #000
             &.about
               float: left
               margin-bottom: 10px
@@ -127,10 +122,11 @@ nav#sidebar-wrapper
               width: 99%
               text-align: center
               float: left
-              //color: #fff
+              @include gradientBar(#ee5f5b, #c43c35)
+              color: #fff
               //border: 1px solid #be3535
               //@include shade(#ea5f5f, #b80000)
-              //@include text-shadow(#000 0px -1px 0px)
+              @include text-shadow(#000 0px -1px 0px)
 
     nav#social
       ul
@@ -147,13 +143,26 @@ nav#sidebar-wrapper
             width: 30px
             height: 30px
             text-indent: -9999px
+            @include transition(.1s linear all)
+            &:active
+              position: relative
             &.github
               background: url('/images/github.png') no-repeat
+              &:active
+                background: url('/images/github_on.png') no-repeat
             &.twitter
               background: url('/images/twitter.png') no-repeat
+              &:active
+                background: url('/images/twitter_on.png') no-repeat
             &.facebook
               background: url('/images/facebook.png') no-repeat
+              &:active
+                background: url('/images/facebook_on.png') no-repeat
             &.dribbble
               background: url('/images/dribbble.png') no-repeat
+              &:active
+                background: url('/images/dribbble_on.png') no-repeat
             &.rss
               background: url('/images/rss.png') no-repeat
+              &:active
+                background: url('/images/rss_on.png') no-repeat
