@@ -1,34 +1,24 @@
 body > nav {
   position: relative;
-  background-color: $nav-bg;
-  @include background($nav-bg-front, $nav-bg-back);
-  border: {
-    top: 1px solid $nav-border-top;
-    bottom: 1px solid $nav-border-bottom; }
-  padding-top: .35em;
-  padding-bottom: .35em;
+  z-index: 10;
+  margin: 0;
+  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  background: #202020;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px 8px 0 0;
   form {
-    @include background-clip(padding-box);
     margin: 0; padding: 0;
     .search {
       padding: .3em .5em 0;
-      font-size: .85em;
+      font-size: .75em;
       @extend .sans;
       line-height: 1.1em;
       width: 95%;
-      @include border-radius(.5em);
-      @include background-clip(padding-box);
-      @include box-shadow(lighten($nav-bg, 2) 0 1px);
-      background-color: lighten($nav-bg, 15);
-      border: 1px solid $nav-border;
       color: #888;
-      &:focus {
-        color: #444;
-        border-color: #80b1df;
-        @include box-shadow(#80b1df 0 0 4px, #80b1df 0 0 3px inset);
-        background-color: #fff;
-        outline: none;
-      }
+      opacity: 0.8;
     }
   }
   fieldset[role=search]{ float: right; width: 48%; }
@@ -42,7 +32,6 @@ body > nav {
       @include horizontal-list(0);
       float: left;
       display: block;
-      padding-top: .15em;
     }
     ul.subscription {
       margin-left: .8em;
@@ -53,21 +42,32 @@ body > nav {
       margin: 0;
     }
     a {
-      @include link-colors($nav-color, $nav-color-hover, $visited: $nav-color);
-      @extend .sans;
-      text-shadow: lighten($nav-bg, 12) 0 1px;
+      font-family: "proxima-nova-1", "proxima-nova-2";
+      font-weight: 500;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
       float: left;
       text-decoration: none;
       font-size: 1.1em;
-      padding: .1em 0;
-      line-height: 1.5em;
+      line-height: 1.5em; 
+      color: #ddd;
+      padding: .35em .5em;
+      &:visited {
+        color: #bfbfbf;
+      }
+      &:hover {
+        color: #fff;
+        background-color: #222;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      &.active {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
     }
     li + li {
-      border-left: 1px solid $nav-border-left;
-      margin-left: .8em;
+      margin-left: 0em;
       a {
         padding-left: .8em;
-        border-left: 1px solid $nav-border-right;
       }
     }
     form {

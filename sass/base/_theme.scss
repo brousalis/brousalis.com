@@ -9,10 +9,10 @@ $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 
 // Main Section Colors
 $main-bg: #f8f8f8 !default;
-$page-bg: #252525 !default;
+$page-bg: #2f2f2f !default;
 $article-border: #eeeeee !default;
 
-$header-bg: #333 !default;
+$header-bg: #eee !default;
 $header-border: lighten($header-bg, 15) !default;
 $title-color: #f2f2f2 !default;
 $subtitle-color: #aaa !default;
@@ -68,7 +68,7 @@ aside.sidebar a {
   @include link-colors($sidebar-link-color, $hover: $sidebar-link-color-hover, $focus: $sidebar-link-color-hover, $active: $sidebar-link-color-active);
 }
 a {
-  @include transition(color .3s);
+  @include transition(all .3s);
 }
 
 html {
