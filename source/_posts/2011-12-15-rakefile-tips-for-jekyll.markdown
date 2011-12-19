@@ -3,12 +3,13 @@ layout: post
 title: "Rakefile Tips for Jekyll"
 date: 2011-12-15 19:56
 comments: true
-categories: 
+categories: ruby
+tags: [ruby]
 ---
 
 This is a basic Rakefile I use for most of my projects, including this one. It requires Ruby. This one handles uploading to the server, as well as some other misc tasks that are involved in maintaining this blog. To use this, simply type in 
 
-``` bash
+``` bash bash
 rake taskname
 ```
 
@@ -33,7 +34,8 @@ task :build do
   puts `jekyll`
 end
   
-# Uploads the site to your server - Make sure you replace the username and password
+# Uploads the site to your server
+# NOTE: Replace you@domain.com
 desc 'rsync the contents of ./_site to the server'
 task :sync do
   puts '* Publishing files to live server'

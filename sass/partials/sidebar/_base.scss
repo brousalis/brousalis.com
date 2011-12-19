@@ -9,7 +9,7 @@ aside.sidebar {
     @extend .sans;
     font-size: .8em;
     line-height: 1.4em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5em; 
     h1 {
       margin: 1.5em 0 0;
       padding-bottom: .2em;
@@ -17,6 +17,38 @@ aside.sidebar {
       @extend .side-shadow-border;
       + p {
         padding-top: .4em;
+      }
+    }
+    &.light {
+      margin-top: 1.2em;
+      ul {
+        li {
+          display: inline-block;
+          @include border-radius(5px);
+          padding: 4px 8px;
+          width: 42%;
+          text-align: center;
+          -moz-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
+          -webkit-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
+          -o-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
+          box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
+          text-shadow: 0 1px 1px #fff;
+          background: white;
+          background-color: rgba(0, 0, 0, 0.04);
+          @include transition(all .3s);
+          a {
+            color: #000;
+            &:hover {
+              color: #000;
+            }
+          }
+          &:first-child {
+            margin-right: 5px;
+          }
+          &:hover {
+            background-color: #d9d9d9;
+          }
+        }
       }
     }
   }
@@ -38,12 +70,6 @@ aside.sidebar {
     p:last-child {
       margin-bottom: 0;
     }
-  }
-}
-.aside-alt-link {
-  color: $sidebar-link-color-subdued;
-  &:hover {
-    color: $sidebar-link-color-subdued-hover;
   }
 }
 

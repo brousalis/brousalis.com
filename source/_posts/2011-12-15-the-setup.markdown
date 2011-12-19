@@ -3,7 +3,8 @@ layout: post
 title: "The Setup"
 date: 2011-12-15 19:54
 comments: true
-categories: Personal
+categories: [ruby, personal]
+tags: [ruby, personal]
 ---
 
 Inspired by [The Setup](http://usesthis.com/), a website filled with interviews dedicated to finding out how prominent designers and developers use to get their work done. My career has only just begun, but I thought I'd share what I use.

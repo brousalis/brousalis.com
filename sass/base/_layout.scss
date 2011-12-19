@@ -130,7 +130,8 @@ body.sidebar-footer {
   #main {
     @extend .group;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto; 
+    border-top: 5px solid #feb41c;
   }
   #content {
     @extend .group;

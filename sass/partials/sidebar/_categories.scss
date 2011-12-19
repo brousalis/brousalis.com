@@ -1,0 +1,39 @@
+aside.sidebar {
+  #categories {
+    ul {
+      margin-top: 8px;
+      li {  
+        border-bottom: none;
+        @include box-shadow(none);
+        position: relative;
+        padding: .2em 0;
+        margin-bottom: 2px;
+        a {
+          position: relative;
+          display: block;
+          z-index: 1;
+          padding-left: 12px;
+        }
+        em {
+          float: right;
+          font-style: normal;
+          font-size: 11px;
+          opacity: 0.5;
+        }
+        span {
+          position: absolute;
+          top: 20%;
+          left: 0;
+          min-width: 12%;
+          padding: 3px 6px;
+          height: 49%;
+          text-indent: -9999px;
+          display: block;
+          overflow: hidden;
+          background: #ddd;
+          @include border-radius(100px);
+        }
+      }
+    }
+  }
+}
