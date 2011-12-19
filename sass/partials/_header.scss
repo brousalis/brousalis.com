@@ -1,16 +1,8 @@
 body > header {
-  h1 {
-    display: inline-block;
-    margin: 0;
-    a, a:visited, a:hover {
-      color: #fff;
-      text-shadow: 0px 0px 7px rgba(0,0,0,.4), 0px 1px 4px rgba(0,0,0,.2), 0px 0px 9px rgba(0,0,0,.1);
-      color: $title_color;
-      text-decoration: none;
-      text-transform: uppercase;  
-      font-weight: 700;
-      font-size: 0.8em;
-    }
+  margin-bottom: 20px;
+  a, a:visited, a:hover {
+    background: #000;
+    padding: 13px 13px 6px 13px;
   }
   h2 {
     margin: .2em 0 0;
