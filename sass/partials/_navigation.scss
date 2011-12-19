@@ -1,0 +1,176 @@
+body > nav {
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+  background: #202020;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px 8px 0 0;
+  form {
+    margin: 0; padding: 0;
+    .search {
+      line-height: 1.0em;
+      margin-top: .7em;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -o-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -khtml-border-radius: 4px;
+      border-radius: 4px;
+      -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+      -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+      -o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+      box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+      background: #202020;
+      background-color: rgba(0, 0, 0, 0.3);
+      background: image-url('search.png') .6em .5em no-repeat;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 0;
+      padding: 6px 8px 5px 31px;
+      float: right;
+      position: relative;
+      font: 13px "proxima-nova-1", "proxima-nova-2" !important;
+      color: #ccc;  
+      width: 42% !important;
+      opacity: 0.8;
+      @include transition(all .5s);
+      &:focus {
+        outline: none;
+        width: 85% !important;
+      }
+    }
+  }
+  fieldset[role=search]{ float: right; width: 48%; }
+  fieldset.mobile-nav{ float: left; width: 48%;
+    select{ width: 100%; font-size: .8em; border: 1px solid #888;}
+  }
+  ul { display: none; }
+  @media only screen and (min-width: 550px) {
+    font-size: .9em;
+    ul {
+      @include horizontal-list(0);
+      float: left;
+      display: block;
+    }
+    ul.subscription {
+      margin-left: .4em;
+      margin-top: .6em;
+      float: right;
+      li:last-child a { padding-right: 0; }
+    }
+    ul li {
+      margin: 0;
+    }
+    a {
+      font-family: "proxima-nova-1", "proxima-nova-2";
+      font-weight: 500;
+      padding: 6px 14px 3px 10px;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+      font-size: 1.1em;
+      line-height: 33px;
+      color: #ddd; 
+      float: left;
+      @include transition(all .3s);
+      &:visited {
+        color: #bfbfbf;
+      }
+      &.logo {  
+        text-indent: -9999px;
+        position: relative;
+        background: #000 url('/images/logo_name.png') no-repeat 14px 10px;
+        width: 182px;
+      }
+      &:hover {
+        color: #fff;
+        background-color: #222;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      &.active {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+    li + li {
+      margin-left: 0em;
+      a {
+        padding-left: .8em;
+      }
+    }
+    form {
+      float: right;
+      text-align: left;
+      padding-left: .8em;
+      width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium + 20px;
+      .search {
+        width: 93%;
+        font-size: .95em;
+        line-height: 1.2em;
+      }
+    }
+    ul[data-subscription$=email] + form {
+      width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium - 58px;
+      .search { width: 91%; }
+    }
+    fieldset.mobile-nav { display: none; }
+    fieldset[role=search]{ width: 99%; }
+  }
+  @media only screen and (min-width: 992px) {
+    form {
+      width: $sidebar-width-wide - $pad-wide - $sidebar-pad-wide*2 + 10px;
+    }
+    ul[data-subscription$=email] + form {
+      width: $sidebar-width-wide - $pad-wide - $sidebar-pad-wide*2 - 58px;
+    }
+  }
+}
+input::-webkit-input-placeholder {
+    color: $nav-placeholder-color; 
+}
+input:-moz-placeholder {
+    color: $nav-placeholder-color;
+}
+.no-placeholder {
+  body > nav .search {
+    background: lighten($nav-bg, 15) image-url('search.png') .3em .25em no-repeat;
+    text-indent: 1.3em;
+  }
+}
+@mixin mask-subscription-nav($feed: 'rss.png'){
+  position: relative; top: 0px;
+  text-indent: -999999em;
+  background-color: #000;
+  border: 0;
+  padding: 0;
+  @include transition(all .3s);
+  &,&:after { @include mask-image($feed); }
+  &:after {
+    content: "";
+    position: absolute; top: -1px; left: 0;
+    background-color: #ccc;
+  }
+  &:hover:after { background-color: #f9f9f9; }
+}
+.maskImage {
+  body > nav {
+    @media only screen and (min-width: 550px) {
+      ul[data-subscription$=email] + form {
+        width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium - 32px;
+      }
+    }
+    @media only screen and (min-width: 992px) {
+      ul[data-subscription$=email] + form {
+        width: $sidebar-width-wide - $pad-wide - $sidebar-pad-wide*2 - 32px;
+      }
+    }
+  }
+  ul.subscription { position: relative; top: .2em; li, a { border: 0; padding: 0; margin-left: 6px; }}
+  a[rel=subscribe-rss]{ @include mask-subscription-nav('rss.png'); }
+  a[rel=subscribe-email]{ @include mask-subscription-nav('contact.png'); }
+}

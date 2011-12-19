@@ -1,0 +1,14 @@
+body > header {
+  margin-bottom: 20px;
+  a, a:visited, a:hover {
+    background: #000;
+    padding: 13px 13px 6px 13px;
+  }
+  h2 {
+    margin: .2em 0 0;
+    @extend .sans;
+    font-size: 1em;
+    color: $subtitle-color;
+    font-weight: normal;
+  }
+}
