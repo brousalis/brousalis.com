@@ -28,13 +28,7 @@ aside.sidebar {
           padding: 4px 8px;
           width: 42%;
           text-align: center;
-          -moz-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
-          -webkit-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
-          -o-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
-          box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.5) 0 1px 3px 0px inset;
-          text-shadow: 0 1px 1px #fff;
-          background: white;
-          background-color: rgba(0, 0, 0, 0.04);
+          @include inset();
           @include transition(all .3s);
           a {
             color: #000;
