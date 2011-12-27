@@ -67,6 +67,21 @@ aside.sidebar {
   }
 }
 
+.post-icon {
+  position: absolute;
+  top: 5px;
+  left: 125px;
+  opacity: 0.2;
+  li {
+    list-style-type: none;
+    margin-right: 9px;
+    width: 16px; 
+    height: 16px; 
+    float: left;
+    text-indent: -9999px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .toggle-sidebar {
     outline: none;

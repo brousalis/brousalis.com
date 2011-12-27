@@ -1,4 +1,9 @@
 #tweets {
+  @include inset();
+  @include border-radius(10px);
+  padding: .5em 1.0em;
+  margin-top: 1.2em;
+    li { border-bottom: none; @include box-shadow(none); } 
   .loading {
     background: inline-image('bird_32_gray.png') no-repeat center .5em;
     color: darken($sidebar-bg, 18);
@@ -29,4 +34,7 @@
     @extend .aside-alt-link;
     @include hover-link;
   }
+}
+.twitter-follow-button {
+  margin: 0 auto;
 }

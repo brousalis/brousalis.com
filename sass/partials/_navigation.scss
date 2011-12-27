@@ -32,16 +32,17 @@ body > nav {
       -ms-box-sizing: border-box;
       box-sizing: border-box;
       border: 0;
-      padding: 6px 8px 5px 31px;
+      padding: 6px 8px 5px 21px;
       float: right;
       position: relative;
       font: 13px "proxima-nova-1", "proxima-nova-2" !important;
       color: #ccc;  
-      width: 42% !important;
+      width: 8% !important;
       opacity: 0.8;
       @include transition(all .5s);
       &:focus {
         outline: none;
+        padding: 6px 8px 5px 31px;
         width: 85% !important;
       }
     }
@@ -59,7 +60,7 @@ body > nav {
       display: block;
     }
     ul.subscription {
-      margin-left: .4em;
+      margin-left: .2em;
       margin-top: .6em;
       float: right;
       li:last-child a { padding-right: 0; }

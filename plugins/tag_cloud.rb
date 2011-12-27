@@ -8,12 +8,13 @@ module Jekyll
         unless cats.nil?
           s << "<ul>"
           sorted = {}
+          post_count = context['site']['posts'].size.to_i
           cats.each do |cat|
             sorted[cat[0]] = cat[1].size
           end
           sorted = sorted.sort_by {|k,v| v}.reverse!
           sorted.each do |k,v|
-            s << "<li><em>#{v}</em><a href=\"#{k}\">#{k}</a><span style=\"width:#{v*10}%\">bar</span></li>"
+            s << "<li><em>#{v}</em><a href=\"#{k}\">#{k}</a><span style=\"width:#{v * 100 / post_count}%\">bar</span><div class=\"#{k}\"></div></li>"
           end
           s << "</ul>"
         end

@@ -116,6 +116,12 @@ function renderDeliciousLinks(items) {
   $('#delicious').html(output);
 }
 
+function removeClassByPrefix(el, prefix) {
+  var regx = new RegExp('\\b' + prefix + '.*?\\b', 'g');
+  el.className = el.className.replace(regx, '');
+  return el;
+}
+
 $.domReady(function() {
   testFeatures();
   wrapFlashVideos();
@@ -123,8 +129,31 @@ $.domReady(function() {
   addCodeLineNumbers();
   getNav();
   addSidebarToggler();
-});
 
+  c = 0
+  function changeColor() {
+    if (c > 1700) c = 0;
+    else c = c + 100;
+    $('body').css('background-color','hsl('+c+', 40%, 35%)');
+    setTimeout(changeColor,5000);
+  }  
+
+  function categoryHover() {
+    var w;
+    $('#categories ul li').hover(function () {
+      w = $(this).find('span').css('width');
+      $(this).find('em').css('top','5px');
+      $(this).find('span').css('width', '96%');
+      $(this).find('div').css('top', '40px');
+    }, function () {
+      $(this).find('div').css('top', '6px');
+      $(this).find('em').css('top','40px');
+      $(this).find('span').css('width', w);
+    });
+  }
+  categoryHover();
+
+});
 // iOS scaling bug fix
 // Rewritten version
 // By @mathias, @cheeaun and @jdalton
