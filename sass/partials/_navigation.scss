@@ -67,6 +67,17 @@ body > nav {
     }
     ul li {
       margin: 0;
+      &.mouse {
+        text-indent: -9999px;
+        position: relative;
+        background: url('/images/logo_white.png') no-repeat 10px 7px;
+        padding: 0;
+        width: 43px;
+        height: 43px;
+        @include transition(all 1s !important);
+        a { text-indent: -9999px; }
+        &:hover { background-color: none; }
+      } 
     }
     a {
       font-family: "proxima-nova-1", "proxima-nova-2";
@@ -88,6 +99,7 @@ body > nav {
         background: #000 url('/images/logo_name.png') no-repeat 14px 10px;
         width: 182px;
       }
+     
       &:hover {
         color: #fff;
         background-color: #222;

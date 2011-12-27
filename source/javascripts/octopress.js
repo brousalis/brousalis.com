@@ -134,9 +134,10 @@ $.domReady(function() {
   function changeColor() {
     if (c > 1700) c = 0;
     else c = c + 100;
-    $('body').css('background-color','hsl('+c+', 40%, 35%)');
-    setTimeout(changeColor,5000);
-  }  
+    $('.mouse').css('background-color','hsl('+c+', 40%, 35%)');
+    setTimeout(changeColor,1000);
+  } 
+  changeColor();
 
   function categoryHover() {
     var w;
