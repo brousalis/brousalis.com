@@ -118,7 +118,7 @@ $.domReady(function() {
     if (c > 1700) c = 0;
     else c = c + 100;
     $('.mouse').css('background-color','hsl('+c+', 40%, 35%)');
-    setTimeout(changeColor,1000);
+    setTimeout(changeColor,1200);
   } 
   changeColor();
 
