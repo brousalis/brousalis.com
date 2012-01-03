@@ -1,0 +1,52 @@
+#work {
+  .work-wrapper {
+    @include inset();
+    @include border-radius(10px);
+    margin-top: 1.2em;
+
+    ul {
+      margin-bottom: 0;
+      li {
+        float: left;
+        width: 130px;
+        height: 105px;
+        display: inline;
+        border-bottom: none;
+        padding: 0;
+        &:first-child { @include border-radius(10px 0px 0px 0px) }
+        &:last-child { @include border-radius(0px 10px 0px 0px) }
+      }
+    }
+
+    $top: #3a3a3a;
+    $bot: #202020;
+    .ad {
+      position: relative;
+      margin-top: -1px;
+      clear: both;
+      display: block;
+      @include border-radius(0px 0px 10px 10px);
+      @include text-shadow(0px 1px 1px #000);
+      padding: .5em 1em;
+      font-size: 1.1em;
+      color: #fff;
+      text-align: center;
+      font-weight: 500;
+      border-top: 1px solid #000;
+      background: #222;
+      background-repeat: repeat-x;
+      background-image: -khtml-gradient(linear, left top, left bottom, from($top), to($bot));
+      background-image: -moz-linear-gradient(top, $top, $bot);
+      background-image: -ms-linear-gradient(top, $top, $bot);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bot));
+      background-image: -webkit-linear-gradient(top, $top, $bot);
+      background-image: -o-linear-gradient(top, $top, $bot);
+      background-image: linear-gradient(top, $top, $bot);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$bot', GradientType=0);
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+      border-image: initial;
+    }
+  }
+}
