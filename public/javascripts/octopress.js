@@ -38,22 +38,6 @@ function addSidebarToggler() {
   if (sections.length >= 3){ $('aside.sidebar').addClass('thirds'); }
 }
 
-function testFeatures() {
-  var features = ['maskImage'];
-  $(features).map(function(feature) {
-    if (Modernizr.testAllProps(feature)) {
-      $('html').addClass(feature);
-    } else {
-      $('html').addClass('no-'+feature);
-    }
-  });
-  if ("placeholder" in document.createElement("input")) {
-    $('html').addClass('placeholder');
-  } else {
-    $('html').addClass('no-placeholder');
-  }
-}
-
 function addCodeLineNumbers() {
   if (navigator.appName === 'Microsoft Internet Explorer') { return; }
   $('div.gist-highlight').each(function(code) {
@@ -123,7 +107,6 @@ function removeClassByPrefix(el, prefix) {
 }
 
 $.domReady(function() {
-  testFeatures();
   wrapFlashVideos();
   flashVideoFallback();
   addCodeLineNumbers();
