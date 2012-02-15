@@ -68,12 +68,15 @@ $header-padding-bottom: .5em;
 /* Core theme application */
 
 a {
-  @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color, $visited: $link-color, $active: $link-color);
+  color: $link-color;
   text-decoration: none;
+  &:hover { color: $link-color-hover }
+  &:focus { color: $link-color }
+  &:active { color: $link-color }
 }
 
 a {
-  @include transition(color .3s);
+  @include transition(color .4s);
 }
 
 html {
