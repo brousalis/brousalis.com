@@ -1,18 +1,19 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
 
-group :development do
-  gem 'rake'
-  gem 'rack'
-  gem 'jekyll'
-  gem 'rdiscount'
-  gem 'pygments.rb'
-  gem 'RedCloth'
-  gem 'haml', '>= 3.1'
-  gem 'compass', '>= 0.11'
-  gem 'rubypants'
-  gem 'rb-fsevent'
-  gem 'stringex'
-  gem 'liquid', '2.2.2'
+gem 'rails', '3.2.0'
+gem 'sqlite3'
+gem 'rdiscount'
+gem 'stringex', :git => 'git://github.com/rsl/stringex.git'
+gem 'kaminari'
+gem 'capistrano'
+
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'sinatra', '1.2.6'
+group :production do
+	gem 'pg'
+end
+
+gem 'jquery-rails'
