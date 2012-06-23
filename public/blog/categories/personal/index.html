@@ -23,6 +23,7 @@
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/github.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <script type="text/javascript" src="http://use.typekit.com/pgq1wgn.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -60,7 +61,7 @@
 <ul class="main-navigation">
   <li class="mouse"><a href="/"></a></li>
   <li><a class="logo" href="/"><img src="/images/logo_name.png"></a></li>
-  <li><a class="active" href="/">Blog</a></li>
+  <li><a class="blog" href="/">Blog</a></li>
   <li><a href="/about">About</a></li>
   <li><a href="/projects">Projects</a></li>
   <li><a href="/work">Work</a></li>
@@ -85,25 +86,11 @@
 
 <article>
   
-<h1><a href="/blog/2011/12/19/test-post-1/">Test post 1</a></h1>
-<time datetime="2011-12-19T00:30:00-06:00" pubdate><span class='month'>Dec</span> <span class='day'>19</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/experiment/'>experiment</a>, <a class='category' href='/blog/categories/freebie/'>freebie</a>, <a class='category' href='/blog/categories/jquery/'>jquery</a>, <a class='category' href='/blog/categories/personal/'>personal</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2011/12/15/the-setup/">The Setup</a></h1>
+<h1><a href="/blog/2011/12/15/the-setup/">My Setup</a></h1>
 <time datetime="2011-12-15T19:54:00-06:00" pubdate><span class='month'>Dec</span> <span class='day'>15</span> <span class='year'>2011</span></time>
 
 <footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/personal/'>personal</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
+  <span class="categories">posted in <a class='category' href='/blog/categories/personal/'>personal</a></span>
 </footer>
 
 
@@ -119,7 +106,7 @@
 <aside class="sidebar">
   
     <section class="light">
-  <p>I'm a 23 year-old software developer and UI enthusiast from Chicago, IL. I'm a recent graduate of <a href="http://rose-hulman.edu">Rose-Hulman</a> and employed at <a href="#">Enova</a>.</p>
+  <p>I'm a 23 year-old software engineer and UI enthusiast from Chicago, IL. I'm a recent graduate of <a href="http://rose-hulman.edu">Rose-Hulman</a> and employed at <a href="#">Enova</a>.</p>
   <ul>
     <li><a href="#">Read more</a></li>
     <li><a href="#">Contact</a></li>
@@ -127,30 +114,15 @@
 </section>
 <section id="categories">
   <h1>Categories</h1>
-  <ul><li><em>3</em><a href="ruby">ruby</a><span style="width:75%">bar</span><div class="ruby"></div></li><li><em>2</em><a href="personal">personal</a><span style="width:50%">bar</span><div class="personal"></div></li><li><em>2</em><a href="css">css</a><span style="width:50%">bar</span><div class="css"></div></li><li><em>1</em><a href="experiment">experiment</a><span style="width:25%">bar</span><div class="experiment"></div></li><li><em>1</em><a href="freebie">freebie</a><span style="width:25%">bar</span><div class="freebie"></div></li><li><em>1</em><a href="jquery">jquery</a><span style="width:25%">bar</span><div class="jquery"></div></li></ul>
+  <ul><li><em>1</em><a href="personal">personal</a><span style="width:100%">bar</span><div class="personal"></div></li></ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <span>Dec 19</span>
-        <a href="/blog/2011/12/19/test-post-2/">Test post 2</a>
-      </li>
-    
-      <li class="post">
-        <span>Dec 19</span>
-        <a href="/blog/2011/12/19/test-post-1/">Test post 1</a>
-      </li>
-    
-      <li class="post">
         <span>Dec 15</span>
-        <a href="/blog/2011/12/15/rakefile-tips-for-jekyll/">Rakefile Tips for Jekyll</a>
-      </li>
-    
-      <li class="post">
-        <span>Dec 15</span>
-        <a href="/blog/2011/12/15/the-setup/">The Setup</a>
+        <a href="/blog/2011/12/15/the-setup/">My Setup</a>
       </li>
     
   </ul>
@@ -159,21 +131,21 @@
 <section id="work">
   <div class="work-wrapper">
     <ul>
-      <li style="background:url('http://placekitten.com/130/105/') no-repeat"></li>
-      <li style="background:url('http://placekitten.com/130/105/') no-repeat"></li>
+      <li style="background:url('/images/left.png') no-repeat"></li>
+      <li style="background:url('/images/right.png') no-repeat"></li>
     </ul>
     <a class="contact" href="/contact">Need a website? Let's talk</a>
   </div>
 </section>
 
 <section>
-  <h1>Latest Tweet</h1>
+  <h1>Latest Tweets</h1>
   <ul id="tweets">
     <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("brousalis", 1, false);
+      getTwitterFeed("brousalis", 3, false);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>
@@ -192,11 +164,6 @@
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Pete Brousalis -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>           
-</footer>
   
 
 

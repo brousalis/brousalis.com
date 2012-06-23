@@ -142,3 +142,8 @@ article + article {
     }
   }
 }
+article[role="article"] { 
+  header {
+    padding-top: 0 !important;
+  }
+}

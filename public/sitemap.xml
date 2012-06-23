@@ -2,30 +2,22 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://brousalis.com/blog/2011/12/15/the-setup/</loc>
-        <lastmod>2011-12-26T23:23:40-06:00</lastmod>
-    </url>
-    <url>
-        <loc>http://brousalis.com/blog/2011/12/15/rakefile-tips-for-jekyll/</loc>
-        <lastmod>2011-12-26T23:23:40-06:00</lastmod>
-    </url>
-    <url>
-        <loc>http://brousalis.com/blog/2011/12/19/test-post-1/</loc>
-        <lastmod>2011-12-26T23:23:40-06:00</lastmod>
-    </url>
-    <url>
-        <loc>http://brousalis.com/blog/2011/12/19/test-post-2/</loc>
-        <lastmod>2011-12-26T23:23:40-06:00</lastmod>
+        <lastmod>2012-06-23T07:54:13-05:00</lastmod>
     </url>
     <url>
         <loc>http://brousalis.com/about/</loc>
-        <lastmod>2012-01-04T00:24:12-06:00</lastmod>
+        <lastmod>2012-06-21T06:27:11-05:00</lastmod>
     </url>
     <url>
         <loc>http://brousalis.com/blog/archives/</loc>
-        <lastmod>2011-12-26T23:23:40-06:00</lastmod>
+        <lastmod>2012-06-23T07:54:13-05:00</lastmod>
     </url>
     <url>
         <loc>http://brousalis.com/</loc>
-        <lastmod>2011-12-26T23:23:40-06:00</lastmod>
+        <lastmod>2012-06-23T07:54:13-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://brousalis.com/projects/</loc>
+        <lastmod>2012-06-21T09:38:54-05:00</lastmod>
     </url>
 </urlset>

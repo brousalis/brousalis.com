@@ -1,26 +1,24 @@
 ---
 layout: post
-title: "The Setup"
+title: "My Setup"
 date: 2011-12-15 19:54
 comments: true
-categories: [ruby, personal]
-tags: [ruby, personal]
+categories: [personal]
+tags: [personal]
 ---
 
-Inspired by [The Setup](http://usesthis.com/), a website filled with interviews dedicated to finding out how prominent designers and developers use to get their work done. My career has only just begun, but I thought I'd share what I use.
+Inspired by [The Setup](http://usesthis.com/), a website filled with interviews dedicated to finding out how and what designers and developers use to get their work done. My career has only just begun, but I thought I'd share what I use.
 
 ### Hardware
 
-The [15" MacBook Pro](http://www.apple.com/macbookpro/) has been my trusty companion for the last few years of my life. The flexibility and efficiency the Mac has gave me helped me succeed through 4 years at a tough engineering school. During school, I was surprised to see near 80% of the professors in the software engineering department use Macs, and would have not taken the job if they weren't allowed to. Now I can see why.
+The [15" MacBook Pro](http://www.apple.com/macbookpro/) has been my trusty companion for the last few years of my life. At [Enova](http://enova.com), the company I work for, they provide us the newest hardware available, so my baby runs a 2.2 GHz i7 with 8gigs of ram and a shiny SSD.
 
-At home and work I operate on a [27" iMac](http://www.apple.com/imac/). The resolution, sharpness and colours from this display are the best I've ever seen, and doing my daily work on them now is an enjoyable experience.
-
-All my input devices are wireless. I prefer wireless for minimizing clutter on my desktop. 
+At home, I connect my laptop to a [27" iMac](http://www.apple.com/imac/). The resolution, sharpness and colours from this display are the best I've ever seen, and using any other monitor is depressing.
 
 ### Software
 
-I switched to [Mac OS X](http://www.apple.com/macosx/) in 2009 after using Windows XP and [various](http://www.gentoo.org/) [flavours](http://www.ubuntu.com/) of [Linux](http://www.debian.org/). The Mac community for developing in iOS is partially why I chose to switch permanently, especially after seeing my professors rant and rave about the operating system. I've never looked back.
+I switched to [Mac OS X](http://www.apple.com/macosx/) in 2009 after using Windows XP and [various](http://www.ubuntu.com/) [flavours](http://www.gentoo.org/) of [Linux](http://www.debian.org/). I do miss [Awesome](http://awesome.naquadah.org/) window manager, as I prefer never to use my mouse, but by using some special keybindings and apps I can emulate it well enough on Lion.
 
-All of the blogging and developing I do happens primarily in [TextMate](http://macromates.com/). When I'm feeling frisky, I'll give ol' [Xcode](http://developer.apple.com/tools/xcode/) a run, and create some memory errors. I use [iTerm](http://iterm.com) with zsh and some heavily modified [scripts](http://github.com/dpick/) for absolutely everything. I use [Reeder](http://reeder.com) for my daily RSS feeds, and use [Gmail](http://gmail.com) for all of my busy work. Naturally, [Photoshop CS5](http://adobe.com) is used on a daily basis for any and all of my artistic needs.
+All of my developing and editing is done in [VIM](http://vim.org). After using countless IDEs, I was forced to learn to use VIM for several work environments, and now cannot use anything else. The learning curve is very high, but once you've got the hang of it - there's no looking back. I use [iTerm](http://iterm.com) with zsh and some heavily modified [dotfiles](http://github.com/brousalis/dotfiles) for absolutely everything. I use [Reeder](http://reeder.com) for my daily RSS feeds, and use [Gmail](http://gmail.com) for all of my busy work. Naturally, [Photoshop CS6](http://adobe.com) is used on a daily basis for any and all of my artistic needs.
 
-This site is run on [Jekyll](http://jekyllrb.com), a static-site generator, turning markdown posts into what you see right now, using Sinatra/Ruby. I use [TypeKit](http://typekit.com) for all of the fonts, and the one you are most likely seeing is _Proxima Nova_. The site was built around the [HTML5Boilerplate](http://html5boilerplate.com), using [jQuery](http://jquery.com) and some custom scripts.
+This site is run on [Octopress](http://octopress.org), a static-site generator, turning markdown posts into what you see right now. I use [TypeKit](http://typekit.com) for all of the fonts, and the one you are most likely seeing is _Proxima Nova_ (sans) and _Adele_ (serif). 

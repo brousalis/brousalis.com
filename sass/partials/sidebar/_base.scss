@@ -1,5 +1,5 @@
 .side-shadow-border {
-  @include box-shadow(lighten($sidebar-bg, 5) 0 1px);
+//  @include box-shadow(lighten($sidebar-bg, 5) 0 1px);
 }
 aside.sidebar {
   color: $sidebar-color;
@@ -13,7 +13,7 @@ aside.sidebar {
     h1 {
       margin: 1.5em 0 0;
       padding-bottom: .2em;
-      border-bottom: 1px solid $sidebar-border;
+      //border-bottom: 1px solid $sidebar-border;
       @extend .side-shadow-border;
       + p {
         padding-top: .4em;
@@ -21,6 +21,7 @@ aside.sidebar {
     }
     &.light {
       margin-top: 1.2em;
+      color: #666;
       ul {
         li {
           display: inline-block;
@@ -79,6 +80,7 @@ aside.sidebar {
     height: 16px; 
     float: left;
     text-indent: -9999px;
+    margin-top: -2px;
   }
 }
 

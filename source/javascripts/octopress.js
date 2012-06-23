@@ -137,6 +137,16 @@ $.domReady(function() {
   }
   categoryHover();
 
+  var url = window.location.pathname, 
+  urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); 
+  $('.main-navigation li a').each(function(){
+    if(urlRegExp == "/$/") {
+      $('.main-navigation li a.blog').addClass('active');
+    } else if(urlRegExp.test(this.href.replace(/\/$/,''))) {
+        $(this).addClass('active');
+    }
+  });
+
 });
 // iOS scaling bug fix
 // Rewritten version

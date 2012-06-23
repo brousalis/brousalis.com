@@ -1,9 +1,18 @@
 #tweets {
-  @include inset();
-  @include border-radius(10px);
-  padding: .5em 1.0em;
-  margin-top: 1.2em;
-    li { border-bottom: none; @include box-shadow(none); } 
+  padding: .5em 0;
+  margin-top: .2em;
+    li {
+      color: #797d80; 
+      font-size: 0.975em;
+      line-height: 1.5em;
+      padding: 1em;
+      background: #fff; 
+      margin-bottom: 1.2em;
+      @include border-radius(4px);
+      -webkit-box-shadow: 0 0.3125em 0.575em -0.3125em rgba(0, 0, 0, .5);
+      -moz-box-shadow: 0 0.3125em 0.575em -0.3125em rgba(0, 0, 0, .5);
+      box-shadow: 0 0.3125em 0.575em -0.3125em rgba(0, 0, 0, .5);
+    }
   .loading {
     background: inline-image('bird_32_gray.png') no-repeat center .5em;
     color: darken($sidebar-bg, 18);
