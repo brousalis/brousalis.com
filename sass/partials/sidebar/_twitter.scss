@@ -1,18 +1,18 @@
 #tweets {
   padding: .5em 0;
   margin-top: .2em;
-    li {
-      color: #797d80; 
-      font-size: 0.975em;
-      line-height: 1.5em;
-      padding: 1em;
-      background: #fff; 
-      margin-bottom: 0;
-      @include border-radius(5px);
-      @include box-shadow(0 0.2em 0.5em -0.2em rgba(0, 0, 0, .5));
-    }
+  li {
+    color: #797d80; 
+    font-size: 0.975em;
+    line-height: 1.5em;
+    padding: 1em;
+    background: #e9e9e9; 
+    margin-bottom: 0;
+    @include border-radius(5px);
+    //@include box-shadow(0 0.2em 0.5em -0.2em rgba(0, 0, 0, .5));
+  }
   .loading {
-    background: inline-image('bird_32_gray.png') no-repeat center .5em;
+    background: #e9e9e9 inline-image('bird_32_gray.png') no-repeat center .5em;
     color: darken($sidebar-bg, 18);
     text-shadow: $main-bg 0 1px;
     text-align: center;
@@ -28,11 +28,16 @@
   a[href*=status]:first-child {
     float: right;
     padding: 0 0 .1em 1em;
-    position: relative; right: -1.3em;
-    text-shadow: #fff 0 1px;
+    position: relative; 
+    right: -2em;
     font-size: .7em;
     span { font-size: 1.5em; }
     text-decoration: none;
+    text-indent: -9999px;
+    background: image-url('time.png') no-repeat;
+    width: 12px;
+    height: 12px;
+    @include opacity(20);
     &:hover {
       text-decoration: none;
     }

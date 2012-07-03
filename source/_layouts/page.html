@@ -3,7 +3,6 @@ layout: default
 ---
 
 <div>
-<article role="article">
   {{ content }}
   {% unless page.footer == false %}
     <footer>
@@ -17,7 +16,6 @@ layout: default
       {% endunless %}
     </footer>
   {% endunless %}
-</article>
 {% if site.disqus_short_name and page.comments == true %}
   <section>
     <h1>Comments</h1>
@@ -27,7 +25,9 @@ layout: default
 </div>
 {% unless page.sidebar == false %}
 <aside class="sidebar">
-  {% if site.page_asides.size %}
+  {% if page.about == true %}
+    {% include_array about_asides %}
+  {% elsif site.page_asides.size %}
     {% include_array page_asides %}
   {% else %}
     {% include_array default_asides %}

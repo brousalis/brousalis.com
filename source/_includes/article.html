@@ -2,12 +2,12 @@
   <header>
     {% unless page.meta == false %}
       <div class="meta">
+        {% include post/date.html %}{{ time }}  
         <ul class="post-icon">
           {% for cat in post.categories %}
             <li class="{{ cat }}"></li>
           {% endfor %}
         </ul> 
-        {% include post/date.html %}{{ time }}  
       </div>
     {% endunless %} 
     {% if index %}

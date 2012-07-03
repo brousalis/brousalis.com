@@ -15,7 +15,7 @@ var o = {
     return Math.floor((Math.random()*(u-l+1))+l);
   },
   diagram: function(){
-    var w = 400, h = 400,
+    var w = 280, h = 300,
         _x = 150, _y = 130,
         stroke = 20;
 
@@ -26,7 +26,7 @@ var o = {
 
     $('#diagram').css({ width: w, height: h });
     
-    r.circle(_x, _y, 30).attr({ stroke: 'none', fill: '#193340' });
+    r.circle(_x, _y, 30).attr({ stroke: 'none', fill: '#244143' });
     
     var title = r.text(_x, _y, defaultText).attr({
       fill: '#fff'
@@ -46,7 +46,7 @@ var o = {
       return { path: path, stroke: color }
     }
     
-    $('.get').find('.arc').each(function(i){
+    $('.get').find('.arc').each(function(i) {
       var t = $(this), 
         color = t.find('.color').val(),
         value = t.find('.percent').val(),
@@ -55,20 +55,20 @@ var o = {
       rad += stroke + 3;  
       var z = r.path().attr({ arc: [value, color, rad], 'stroke-width': stroke });
       
-      z.mouseover(function(){
-                this.animate({ 'stroke-width': stroke + 2, opacity: .75 }, 1000, 'elastic');
-                if(Raphael.type != 'VML') //solves IE problem
-      this.toFront();
+      z.mouseover(function() {
+        this.animate({ 'stroke-width': stroke + 2, opacity: .55 }, 1000, 'elastic');
+        if(Raphael.type != 'VML') //solves IE problem
+        this.toFront();
 
-        title.stop().animate({ opacity: 0 }, speed, '>', function(){
-          this.attr({ text: text }).animate({ opacity: 1 }, speed, '<');
+        title.stop().animate({ opacity: 0 }, 50, '>', function(){
+          this.attr({ text: text }).animate({ opacity: 1 }, 50, '<');
         });
-            }).mouseout(function(){
+      }).mouseout(function(){
         this.stop().animate({ 'stroke-width': stroke, opacity: 1 }, speed*4, 'elastic');
         title.stop().animate({ opacity: 0 }, speed, '>', function(){
           title.attr({ text: defaultText }).animate({ opacity: 1 }, speed, '<');
         }); 
-            });
+      });
     });
     
   }

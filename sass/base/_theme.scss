@@ -1,8 +1,8 @@
-$noise-bg: image-url('blank.png') top left !default;
+$noise-bg: image-url('noise.png') top left !default;
 $img-border: inline-image('dotted-border.png');
 
 // Main Link Colors
-$link-color: #5e7c88;
+$link-color: #7293a1;
 $link-color-hover: #363f45;
 
 // Main Section Colors
@@ -70,7 +70,7 @@ $header-padding-bottom: .5em;
 a {
   color: $link-color;
   text-decoration: none;
-  &:hover { color: $link-color-hover }
+  &:hover { text-decoration: none; color: $link-color-hover }
   &:focus { color: $link-color }
   &:active { color: $link-color }
 }

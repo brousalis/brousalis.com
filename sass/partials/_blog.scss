@@ -26,6 +26,7 @@ article {
         color: $text-color-light;
         @extend .sans;
         text-transform: uppercase;
+        time { float: left; margin-right: 5px }
       } 
     }
       
@@ -35,6 +36,19 @@ article {
       background: $img-border bottom left repeat-x;
     }
   }
+  .post-icon {
+    margin-top: 6px;
+    opacity: 0.2;
+    li {
+      list-style-type: none;
+      margin-left: 9px;
+      width: 16px; 
+      height: 16px; 
+      float: left;
+      text-indent: -9999px;
+      margin-top: -1px;
+    }
+  } 
   h2 {
     padding-top: 0.8em;
     background: $img-border top left repeat-x;
@@ -95,6 +109,7 @@ article + article {
   }
 }
 div.line + div.line {
+  padding: 2em 2em 0 2em;
   background: $img-border top left repeat-x;
 }
 #content .blog-index {

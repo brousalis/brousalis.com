@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: css | Pete Brousalis]]></title>
+  <link href="http://brousalis.com/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://brousalis.com/"/>
+  <updated>2012-07-03T15:00:37-05:00</updated>
+  <id>http://brousalis.com/</id>
+  <author>
+    <name><![CDATA[Pete Brousalis]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SASS better box-shadow mixin]]></title>
+    <link href="http://brousalis.com/blog/2012/07/03/sass-better-box-shadow-mixin/"/>
+    <updated>2012-07-03T13:12:00-05:00</updated>
+    <id>http://brousalis.com/blog/2012/07/03/sass-better-box-shadow-mixin</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
+
