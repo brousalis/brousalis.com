@@ -169,6 +169,20 @@ body.sidebar-footer {
       @include collapse-sidebar;
     }
   }
+  .post-icon {
+    float: left;
+    margin-top: 6px;
+    opacity: 0.2;
+    li {
+      list-style-type: none;
+      margin-right: 9px;
+      width: 16px; 
+      height: 16px; 
+      float: left;
+      text-indent: -9999px;
+      margin-top: -1px;
+    }
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -195,3 +209,4 @@ body.sidebar-footer {
     ul, ol { margin-left: 0; }
   }
 }
+

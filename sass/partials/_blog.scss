@@ -18,12 +18,16 @@ article {
       &.meta {
         @extend .sans;
         text-transform: uppercase;
-        position: absolute; top: 0;
-      }
-      a.post-icon {
       }
     }
-  
+
+    div {
+     &.meta {
+        color: $text-color-light;
+        @extend .sans;
+        text-transform: uppercase;
+      } 
+    }
       
     @media only screen and (min-width: 768px) {
       margin-bottom: 1.5em;
@@ -90,12 +94,18 @@ article + article {
     background: $img-border top left repeat-x;
   }
 }
+div.line + div.line {
+  background: $img-border top left repeat-x;
+}
 #content .blog-index {
   padding: { top: 0; bottom: 0; }
-  article { padding-top: 2em; }
-  article header { background: none; padding-bottom: 0; }
+  article { 
+    padding-top: 2em;
+  }
+  article header { padding-top: 0; background: none; padding-bottom: 0; }
   article h1 {
     font-size: 2.2em;
+    clear: both;
     a { color: inherit; &:hover { color: $link-color-hover; } }
   }
   a[rel=full-article] {
@@ -147,3 +157,5 @@ article[role="article"] {
     padding-top: 0 !important;
   }
 }
+
+
