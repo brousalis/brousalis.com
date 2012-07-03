@@ -7,11 +7,9 @@
       line-height: 1.5em;
       padding: 1em;
       background: #fff; 
-      margin-bottom: 1.2em;
+      margin-bottom: 0;
       @include border-radius(4px);
-      -webkit-box-shadow: 0 0.3125em 0.575em -0.3125em rgba(0, 0, 0, .5);
-      -moz-box-shadow: 0 0.3125em 0.575em -0.3125em rgba(0, 0, 0, .5);
-      box-shadow: 0 0.3125em 0.575em -0.3125em rgba(0, 0, 0, .5);
+      @include box-shadow(0 0.2em 0.5em -0.2em rgba(0, 0, 0, .5));
     }
   .loading {
     background: inline-image('bird_32_gray.png') no-repeat center .5em;

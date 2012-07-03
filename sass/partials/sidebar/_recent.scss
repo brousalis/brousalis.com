@@ -9,7 +9,7 @@ aside.sidebar {
           opacity: 0.4;
           @include text-shadow(0px 1px 0px #fff);
           font-size: .8em;
-          float: right;
+          margin-right: 5px;
         }
         &:last-child { border-bottom: 0; @include box-shadow(none); }
       }

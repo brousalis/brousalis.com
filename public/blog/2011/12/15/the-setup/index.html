@@ -48,7 +48,6 @@
 <body   >
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  <li><a href="" rel="subscribe-email" title="subscribe via email">Email</a></li>
 </ul>
   
 <form action="http://google.com/search" method="get">
@@ -164,9 +163,17 @@
     <p class="meta">
       
       
+        <a class="basic-alignment right" href="/blog/2012/06/25/test-post/" title="next Post: Personal dotfiles and scripts">Personal dotfiles and scripts &raquo;</a>
+      
     </p>
   </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -181,11 +188,16 @@
 </section>
 <section id="categories">
   <h1>Categories</h1>
-  <ul><li><em>1</em><a href="personal">personal</a><span style="width:100%">bar</span><div class="personal"></div></li></ul>
+  <ul><li><em>2</em><a href="personal">personal</a><span style="width:100%">bar</span><div class="personal"></div></li></ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <span>Jun 25</span>
+        <a href="/blog/2012/06/25/test-post/">Personal dotfiles and scripts</a>
+      </li>
     
       <li class="post">
         <span>Dec 15</span>
@@ -195,16 +207,6 @@
   </ul>
 </section>
 
-<section id="work">
-  <div class="work-wrapper">
-    <ul>
-      <li style="background:url('/images/left.png') no-repeat"></li>
-      <li style="background:url('/images/right.png') no-repeat"></li>
-    </ul>
-    <a class="contact" href="/contact">Need a website? Let's talk</a>
-  </div>
-</section>
-
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
@@ -212,7 +214,7 @@
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("brousalis", 3, false);
+      getTwitterFeed("brousalis", 1, false);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>
@@ -222,9 +224,6 @@
 </section>
 
 
-
-
-
   
 </aside>
 
@@ -232,6 +231,22 @@
     </div>
   </div>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'brousalis';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://brousalis.com/blog/2011/12/15/the-setup/';
+        var disqus_url = 'http://brousalis.com/blog/2011/12/15/the-setup/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
