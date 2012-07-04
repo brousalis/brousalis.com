@@ -1,0 +1,66 @@
+---
+layout: post
+title: "Personal dotfiles and scripts"
+date: 2012-05-25 20:34
+comments: true
+categories: [personal, lab]
+---
+
+I have spent about a year slowly configuring and adding to my personal set of dotfiles. I've hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty handy tricks I've picked up in my obsession with my dev environment, and I'd like to share a few.
+
+##Using Dropbox
+<a class="dropbox" href="http://dropbox.com">Dropbox</a>I have a laptop for work, my iMac at home, several development machines hosted on Xen slices, and several virtual machines I use for testing. These machines are composed of Mac and Debian operating systems. To keep maintance of my config files easier between these environments, I have the Github repo cloned inside of my ~/Dropbox folder.  By doing this, each time you make a chance it is automatically updated on each environment. 
+
+##Setting up your files
+{% codeblock bootstrap.sh lang:bash https://github.com/brousalis/dotfiles/blob/master/bootstrap.sh github %}
+#!/bin/bash
+
+FOLDER="$HOME"/dotfiles
+
+# install vim
+if [ "$1" == "vim" ]
+then
+  source vim.sh    
+  echo "Setup vim install"
+fi
+
+# dotfiles
+cd      "$FOLDER"
+ln -sf  "$FOLDER"/vimrc         "$HOME"/.vimrc
+ln -sf  "$FOLDER"/bashrc        "$HOME"/.bashrc
+ln -sf  "$FOLDER"/bash_profile  "$HOME"/.bash_profile
+ln -sf  "$FOLDER"/vim           "$HOME"/.vim
+ln -sf  "$FOLDER"/screenrc      "$HOME"/.screenrc
+ln -sf  "$FOLDER"/tmuxconf      "$HOME"/.tmux.conf
+ln -sf  "$FOLDER"/gitconfig     "$HOME"/.gitconfig
+echo    "Setup symlinks"
+
+# vim
+mkdir -p "$HOME"/.vimbackup
+mkdir -p "$HOME"/.vimtmp
+echo "Setup vim temp"
+{% endcodeblock %}
+
+By running this file <span class="bash">./bootstrap</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.
+
+##Aliases
+There are some handy aliases in my bashrc file, particularly these:
+
+{% codeblock bashrc lang:bash https://github.com/brousalis/dotfiles/blob/master/bashrc github %}
+function bugscreen() { export BUG=$1; screen -R $1; }
+function u() { NUM=${1:-1}; for (( start = 1; start <= $NUM; start++ )); do cd ..; done; }
+alias gitrem="git ls-files --deleted | xargs git rm"
+alias dsremove="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
+{% endcodeblock %}
+
+<span class="bash">bugscreen 123456</span> loads a preconfigured screen session from the /screens/ folder. Read below to find out more.
+
+<span class="bash">u 3</span> goes up 3 directories from where you are.
+
+<span class="bash">gitrem</span> removes files you may have forgot to git rm in a folder
+
+<span class="bash">dsremove</span> deletes all .DS_Store files from a directory
+
+
+##Preconfigured screens
+Located in the /screen/ folder, is an example of how to setup a screen sessionwith preconfigured tabs. Then in my .screenrc
