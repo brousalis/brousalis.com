@@ -212,6 +212,7 @@ figure.code {
   padding: 0;
   border: 0;
   margin-bottom: 1.5em;
+  .line { padding: 0 !important; }
   pre { margin-bottom: 0; }
   figcaption {
     position: relative;

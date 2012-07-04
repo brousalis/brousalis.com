@@ -228,12 +228,102 @@
       </div>
      
     
-      <h1 class="entry-title"><a href="/blog/2012/05/25/test-post/">Personal dotfiles and scripts</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/05/25/dotfiles/">Personal dotfiles and scripts</a></h1>
     
   </header>
   
 
-  <div class="entry-content">
+  <div class="entry-content"><p>I have spent about a year slowly configuring and adding to my personal set of dotfiles. I&#8217;ve hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty handy tricks I&#8217;ve picked up in my obsession with my dev environment, and I&#8217;d like to share a few.</p>
+
+<h2>Using Dropbox</h2>
+
+<p><a class="dropbox" href="http://dropbox.com">Dropbox</a>I have a laptop for work, my iMac at home, several development machines hosted on Xen slices, and several virtual machines I use for testing. These machines are composed of Mac and Debian operating systems. To keep maintance of my config files easier between these environments, I have the Github repo cloned inside of my ~/Dropbox folder.  By doing this, each time you make a chance it is automatically updated on each environment.</p>
+
+<h2>Setting up your files</h2>
+
+<figure class='code'><figcaption><span>bootstrap.sh </span><a href='https://github.com/brousalis/dotfiles/blob/master/bootstrap.sh'>github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">FOLDER</span><span class="o">=</span><span class="s2">&quot;$HOME&quot;</span>/dotfiles
+</span><span class='line'>
+</span><span class='line'><span class="c"># install vim</span>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$1&quot;</span> <span class="o">==</span> <span class="s2">&quot;vim&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">source </span>vim.sh
+</span><span class='line'>  <span class="nb">echo</span> <span class="s2">&quot;Setup vim install&quot;</span>
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># dotfiles</span>
+</span><span class='line'><span class="nb">cd</span>      <span class="s2">&quot;$FOLDER&quot;</span>
+</span><span class='line'>ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/vimrc         <span class="s2">&quot;$HOME&quot;</span>/.vimrc
+</span><span class='line'>ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/bashrc        <span class="s2">&quot;$HOME&quot;</span>/.bashrc
+</span><span class='line'>ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/bash_profile  <span class="s2">&quot;$HOME&quot;</span>/.bash_profile
+</span><span class='line'>ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/vim           <span class="s2">&quot;$HOME&quot;</span>/.vim
+</span><span class='line'>ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/screenrc      <span class="s2">&quot;$HOME&quot;</span>/.screenrc
+</span><span class='line'>ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/tmuxconf      <span class="s2">&quot;$HOME&quot;</span>/.tmux.conf
+</span><span class='line'>ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/gitconfig     <span class="s2">&quot;$HOME&quot;</span>/.gitconfig
+</span><span class='line'><span class="nb">echo</span>    <span class="s2">&quot;Setup symlinks&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># vim</span>
+</span><span class='line'>mkdir -p <span class="s2">&quot;$HOME&quot;</span>/.vimbackup
+</span><span class='line'>mkdir -p <span class="s2">&quot;$HOME&quot;</span>/.vimtmp
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Setup vim temp&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>By running this file <span class="bash">./bootstrap</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.</p>
+
+<h2>Aliases</h2>
+
+<p>There are some handy aliases in my bashrc file, particularly these:</p>
+
+<figure class='code'><figcaption><span>bashrc </span><a href='https://github.com/brousalis/dotfiles/blob/master/bashrc'>github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">function </span>bugscreen<span class="o">()</span> <span class="o">{</span> <span class="nb">export </span><span class="nv">BUG</span><span class="o">=</span><span class="nv">$1</span>; screen -R <span class="nv">$1</span>; <span class="o">}</span>
+</span><span class='line'><span class="k">function </span>u<span class="o">()</span> <span class="o">{</span> <span class="nv">NUM</span><span class="o">=</span><span class="k">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">1</span><span class="k">}</span>; <span class="k">for</span> <span class="o">((</span> <span class="nv">start</span> <span class="o">=</span> 1; start &lt;<span class="o">=</span> <span class="nv">$NUM</span>; start++ <span class="o">))</span>; <span class="k">do </span><span class="nb">cd</span> ..; <span class="k">done</span>; <span class="o">}</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">gitrem</span><span class="o">=</span><span class="s2">&quot;git ls-files --deleted | xargs git rm&quot;</span>
+</span><span class='line'><span class="nb">alias </span><span class="nv">dsremove</span><span class="o">=</span><span class="s2">&quot;find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><span class="bash">bugscreen 123456</span> loads a preconfigured screen session from the /screens/ folder. Read below to find out more.</p>
+
+<p><span class="bash">u 3</span> goes up 3 directories from where you are.</p>
+
+<p><span class="bash">gitrem</span> removes files you may have forgot to git rm in a folder</p>
+
+<p><span class="bash">dsremove</span> deletes all .DS_Store files from a directory</p>
+
+<h2>Preconfigured screens</h2>
+
+<p>Located in the /screen/ folder, is an example of how to setup a screen sessionwith preconfigured tabs. Then in my .screenrc</p>
 </div>
   
   
@@ -337,7 +427,7 @@
     
       <li class="post">
         <span>May 25</span>
-        <a href="/blog/2012/05/25/test-post/">Personal dotfiles and scripts</a>
+        <a href="/blog/2012/05/25/dotfiles/">Personal dotfiles and scripts</a>
       </li>
     
       <li class="post">

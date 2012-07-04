@@ -182,5 +182,6 @@ article[role="article"] {
     padding-top: 0 !important;
   }
 }
-
+.dropbox { float: left; text-indent: -9999px; position: relative; margin: 20px 30px 3px 20px; background: image-url('dropbox.png') no-repeat; height: 43px; width: 42px; } 
+.bash { font-family: proxima-nova-1; background: #F1F1F1 $noise-bg !important; color: #586E75 !important; padding: 3px 6px; @include box-shadow(rgba(0, 0, 0, 0.06) 0 0 10px); border: 1px solid #ECECEC !important}
 h4 { display: none !important; }

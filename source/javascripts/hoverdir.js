@@ -36,7 +36,7 @@
           $hoverElem.hide().addClass( hoverClasses.from );
 
           var c = Math.floor(Math.random()*1699)
-          $hoverElem.css('background','hsla('+c+', 40%, 35%, 0.5) url("images/glow.png") no-repeat');
+          $hoverElem.css('background','hsla('+c+', 40%, 35%, 0.5)');
 
           clearTimeout( _self.tmhover );
           
