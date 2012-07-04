@@ -4,27 +4,26 @@ single: true
 ---
 
 <div class="blog-index">
-<article>
-  {% unless page.sharing == false %}
-    {% include post/sharing.html %}
-  {% endunless %}     
-  {% include article.html %}
-</article>
-<footer>
-  <p class="meta">
-    {% if page.previous.url %}
-      <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-    {% endif %}
-    {% if page.next.url %}
-      <a class="basic-alignment right" href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} &raquo;</a>
-    {% endif %}
-  </p>
-</footer> 
+<div class="line">
+  <article>
+    {% include article.html %}
+  </article>
+</div>
+<div class="line posts">
+  {% if page.previous.url %}
+    <a id="prev" class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">{{page.previous.title}}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a id="next" class="basic-alignment right" href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}}</a>
+  {% endif %}
+</div> 
 {% if site.disqus_short_name and page.comments == true %}
+<div class="line">
   <section>
     <h1>Comments</h1>
     <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
   </section>
+</div>
 {% endif %}
 </div>
 {% unless page.sidebar == false %}

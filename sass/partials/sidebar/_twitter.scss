@@ -37,7 +37,8 @@
     background: image-url('time.png') no-repeat;
     width: 12px;
     height: 12px;
-    @include opacity(20);
+    @include opacity(.30);
+    margin-top: 5px;
     &:hover {
       text-decoration: none;
     }

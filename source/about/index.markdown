@@ -9,13 +9,20 @@ footer: true
 
 <div class="line">
   <div class="me"></div>
-  <p>I'm a software engineer from Chicago and currently am a developer at <a href="http://enova.com">Enova</a>. I have a passion for user interface design and front end development.</p>
+  <p>I'm a software engineer from Chicago and developer at <a href="http://enova.com">Enova</a>. I have a passion for user interface design and front end development.</p>
 </div>
 
 <div class="line">
+  <p>I'm a recent graduate of <a href="http://www.rose-hulman.edu">Rose-Hulman Institute of Technology</a> with a degree in Software Engineering. I love telling stories, taking things apart, and am an avid rock climber.</p>
+  <div class="map"></div>
+  <p style="width: 48%; float: left">I'm passionate about one thing in particular&hellip; <em>learning</em>. I enjoy doing both UI design and backend development, and staying up to date with the latest web trends and technologies has been a huge goal for me since graduating.</p>
+  <p>By dabbling in both sides of the web spectrum, I hope to contribute some great software, both visually and functionally, to the open source community in the future. Follow me <a href="http://twitter.com/brousalis">on Twitter</a>, I'd love to work on a project with you.</p>
+</div>
+
+<div class="line" style="clear: both">
   <div class="technology">
     <p>Currently, I'm a <em style="color:#bbb">Ruby on Rails</em> developer specializing in UI development. I'm accustomed to using <em style="color:#88b8e6">HAML/ERB</em> and <em style="color:#d84f5f">SASS</em> for all of my frontend work, as well as <em style="color:#97be0d">CoffeeScript</em> for any Javascript that is needed.</p>
-    <p>I love learning new languages and working with new technologies. Check out some of my code on <a href="http://github.com/brousalis">Github</a>.</p>
+    <p>See how my dev environment is setup <a href="http://brousalis">here</a>, especially my <a href="http://brousalis">dotfiles</a>. Or check out some of my code on <a href="http://github.com/brousalis">Github</a>.</p>
   </div>
   <div id="diagram"></div>
   <div class="get" style="display: none;">
@@ -26,10 +33,15 @@ footer: true
   </div>
 </div>
 
-<div class="line" style="clear: both">
-  <p>
-  Passion ITS A MOTHERFUCKER
-  </p>
+<div class="line" style="padding-top: 1.2em; text-align: center; clear: both">
+  <p>I love working on open source projects and doing freelance work. If you have any questions or comments, don't hesitate to <a href="mailto:brousapg.at.gmail.com">e-mail me</a></p>
+  <ul class="social">
+    <li><a class="twitter" href="http://twitter.com/brousalis"></a></li>
+    <li><a class="github" href="http://github.com/brousalis"></a></li>
+    <li><a class="dribbble" href="http://dribbble.com/brousalis"></a></li>
+    <li><a class="email" href="mailto:brousapg.at.gmail.com"></a></li>
+    <li><a class="voice" href="https://clients4.google.com/voice/embed/webCallButton?id=2c68e0b4b0200ce7a0bfdd9793949d96e5004b5b"></a></li>
+  </ul>
 </div>
 
 <script src="{{ root_url }}/javascripts/raphael.js"></script>

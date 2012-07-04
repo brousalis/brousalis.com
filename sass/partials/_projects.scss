@@ -1,0 +1,158 @@
+.github-widget {
+  &:nth-child(even) .github-box {
+    margin-right: 0 !important;
+  }
+}
+.projects { padding: 2em !important; }
+.github-box {
+  font-family: $sans;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  color: #666;
+  @include border-radius(5px);
+  float: left;
+  margin-right: 1.3em;
+  margin-bottom: 2em;
+  width: 47%;
+
+  a {
+    color: #4183C4;
+    border: none;
+  }
+  
+  .github-box-title {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    @include border-radius(5px 5px 0 0);
+    background: #fcfcfc;
+    background: -moz-linear-gradient(#FCFCFC,#EBEBEB);
+    background: -webkit-linear-gradient(#FCFCFC,#EBEBEB);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc',endColorstr='#ebebeb')";
+    
+    h3 {
+      font-family: helvetica,arial,sans-serif;
+      font-weight: normal;
+      font-size: 16px;
+      color: gray;
+      margin: 0;
+      padding: 10px 10px 10px 10px;
+  
+      .repo {
+        font-weight: bold;
+      }
+    }
+    
+    .github-stats {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 21px;
+      height: 21px;
+      
+      a {
+        display: inline-block;
+        height: 21px;
+        color: #666;
+        padding: 0 5px 0 18px;
+        background: image-url('repo.png') no-repeat;
+        @include opacity(0.7);
+        &:hover {
+          @include opacity(1);
+        }
+      }
+      .watchers {
+        border-right: 1px solid #ddd;
+        background-position: 3px 4px;
+      }
+      .forks {
+        background-position: 3px -19px;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .github-box-content {
+    padding: 10px;
+    font-weight: 300;
+    font-size: 0.7em;
+    p {
+        margin: 0;
+    }
+    .link {
+        font-weight: bold;
+    }
+  }
+
+  .github-box-download {
+    position: relative;
+    border-top: 1px solid #ddd;
+    background: white;
+    border-radius: 0 0 3px 3px;
+    padding: 10px;
+    height: 24px;
+   
+    .updated {
+      margin: 0;
+      font-size: 12px;
+      color: #666;
+      line-height: 24px;
+      
+      strong {
+        font-size: 12px;
+        font-weight: bold;
+        color: #000;
+      }
+    }
+    
+    .download {
+      position: absolute;
+      display: block;
+      top: 10px;
+      right: 10px;
+      height: 24px;
+      line-height: 24px;
+      font-size: 12px;
+      color: #666;
+      font-weight: bold;
+      text-shadow: 0 1px 0 rgba(255,255,255,.9);
+      padding: 0 10px;
+      border: 1px solid #ddd;
+      border-bottom-color: #bbb;
+      border-radius: 3px;
+      display: block;
+      text-indent: -9999px;
+      width: 24px;
+      padding: 0;
+      background: image-url('download.png') no-repeat 6px 6px, -webkit-linear-gradient(#f5f5f5,#e5e5e5);
+      background: image-url('download.png') no-repeat 6px 6px, -moz-linear-gradient(#f1f7fa,#dbeaf1);
+      @include opacity(0.7);
+    }
+    .download:hover {
+      color: #527894;
+      border-color: #cfe3ed;
+      border-bottom-color: #9fc7db;
+      @include opacity(1);
+    }
+  }
+}
+
+.cat {
+  float: left;
+  margin-right: 1.5em;
+  @include transition(0.3s all linear);
+  a {
+    display: block;
+    width: 75px;
+    height: 75px;
+    background: image-url('cat.png') no-repeat;  
+    &:hover {
+      top:2px;
+      position: relative;
+    }
+  }
+}

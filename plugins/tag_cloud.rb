@@ -14,7 +14,7 @@ module Jekyll
           end
           sorted = sorted.sort_by {|k,v| v}.reverse!
           sorted.each do |k,v|
-            s << "<li><em>#{v}</em><a href=\"#{k}\">#{k}</a><span style=\"width:#{v * 100 / post_count}%\">bar</span><div class=\"#{k}\"></div></li>"
+            s << "<li><em>#{v}</em><a href=\"/blog/categories/#{k}\">#{k}</a><span style=\"width:#{v * 100 / post_count}%\">bar</span><div class=\"#{k}\"></div></li>"
           end
           s << "</ul>"
         end

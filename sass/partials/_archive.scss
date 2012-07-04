@@ -16,10 +16,6 @@
   h1 {
     font-size: 1.5em;
     a {
-      @include hover-link;
-      color: inherit;
-      &:hover { color: $link-color-hover; }
-      font-weight: normal;
       display: inline-block;
     }
   }
@@ -39,20 +35,22 @@
   &, .entry-content { a { @include link-colors(inherit, $link-color-hover); }}
   a:hover { color: $link-color-hover; }
   @media only screen and (min-width: 550px) {
-    article { margin-left: 5em; }
+    article { margin-left: 6em; }
     h2 {
       margin-bottom: .3em;
       font-weight: normal;
       display: inline-block;
-      position: relative; top: -1px;
+      position: relative; top: -7px;
       float: left;
+      margin-left: 1.2em;
       &:first-child { padding-top: .75em; }
     }
     time {
       position: absolute;
       text-align: right;
-      left: 0em;
-      top: 1.8em;
+      left: 0;
+      top: 1.5em;
+      padding-left: 8px;
     }
     .year { display: none; }
     article {
@@ -70,3 +68,4 @@
   }
   .year { display: inline; }
 }
+

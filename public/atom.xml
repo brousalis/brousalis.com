@@ -4,7 +4,7 @@
   <title><![CDATA[Pete Brousalis]]></title>
   <link href="http://brousalis.com/atom.xml" rel="self"/>
   <link href="http://brousalis.com/"/>
-  <updated>2012-07-03T15:00:37-05:00</updated>
+  <updated>2012-07-04T02:14:11-05:00</updated>
   <id>http://brousalis.com/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -42,23 +42,23 @@
   
   <entry>
     <title type="html"><![CDATA[Personal dotfiles and scripts]]></title>
-    <link href="http://brousalis.com/blog/2012/06/25/test-post/"/>
-    <updated>2012-06-25T20:34:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/06/25/test-post</id>
+    <link href="http://brousalis.com/blog/2012/05/25/test-post/"/>
+    <updated>2012-05-25T20:34:00-05:00</updated>
+    <id>http://brousalis.com/blog/2012/05/25/test-post</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[My Setup]]></title>
-    <link href="http://brousalis.com/blog/2011/12/15/the-setup/"/>
-    <updated>2011-12-15T19:54:00-06:00</updated>
-    <id>http://brousalis.com/blog/2011/12/15/the-setup</id>
+    <link href="http://brousalis.com/blog/2012/04/15/the-setup/"/>
+    <updated>2012-04-15T19:54:00-05:00</updated>
+    <id>http://brousalis.com/blog/2012/04/15/the-setup</id>
     <content type="html"><![CDATA[<p>Inspired by <a href="http://usesthis.com/">The Setup</a>, a website filled with interviews dedicated to finding out how and what designers and developers use to get their work done. My career has only just begun, but I thought I&#8217;d share what I use.</p>
 
 <h3>Hardware</h3>
 
-<p>The <a href="http://www.apple.com/macbookpro/">15&#8221; MacBook Pro</a> has been my trusty companion for the last few years of my life. At <a href="http://enova.com">Enova</a>, the company I work for, they provide us the newest hardware available, so my baby runs a 2.2 GHz i7 with 8gigs of ram and a shiny SSD.</p>
+<p>The <a href="http://www.apple.com/macbookpro/">15&#8221; MacBook Pro</a> has been my dev machine for the last few years of my life. Upgrading to an SSD drive will change your life, if you haven&#8217;t had the opportunity. As lame as it is, I splurged for a <a href="http://www.amazon.com/gp/product/B0054JGGGY/ref=as_li_ss_tl?ie=UTF8&tag=sebadewithsbl-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B0054JGGGY">Razer Mamba</a> mouse. You can turn off the glowing LED lights on this version, and it proves a really accurate and light weight mouse.</p>
 
 <p>At home, I connect my laptop to a <a href="http://www.apple.com/imac/">27&#8221; iMac</a>. The resolution, sharpness and colours from this display are the best I&#8217;ve ever seen, and using any other monitor is depressing.</p>
 
@@ -66,7 +66,7 @@
 
 <p>I switched to <a href="http://www.apple.com/macosx/">Mac OS X</a> in 2009 after using Windows XP and <a href="http://www.ubuntu.com/">various</a> <a href="http://www.gentoo.org/">flavours</a> of <a href="http://www.debian.org/">Linux</a>. I do miss <a href="http://awesome.naquadah.org/">Awesome</a> window manager, as I prefer never to use my mouse, but by using some special keybindings and apps I can emulate it well enough on Lion.</p>
 
-<p>All of my developing and editing is done in <a href="http://vim.org">VIM</a>. After using countless IDEs, I was forced to learn to use VIM for several work environments, and now cannot use anything else. The learning curve is very high, but once you&#8217;ve got the hang of it - there&#8217;s no looking back. I use <a href="http://iterm.com">iTerm</a> with zsh and some heavily modified <a href="http://github.com/brousalis/dotfiles">dotfiles</a> for absolutely everything. I use <a href="http://reeder.com">Reeder</a> for my daily RSS feeds, and use <a href="http://gmail.com">Gmail</a> for all of my busy work. Naturally, <a href="http://adobe.com">Photoshop CS6</a> is used on a daily basis for any and all of my artistic needs.</p>
+<p>All of my developing and editing is done in <a href="http://vim.org">VIM</a>. The learning curve is very high, but once you&#8217;ve got the hang of it - there&#8217;s no looking back. I use <a href="http://iterm.com">iTerm</a> with zsh and some heavily modified <a href="http://github.com/brousalis/dotfiles">dotfiles</a> for absolutely everything. I use <a href="http://reeder.com">Reeder</a> for my daily RSS feeds, and use <a href="http://gmail.com">Gmail</a> for all of my busy work. For mocking and design, I use <a href="http://adobe.com">Photoshop CS6</a>, shockingly.</p>
 
 <p>This site is run on <a href="http://octopress.org">Octopress</a>, a static-site generator, turning markdown posts into what you see right now. I use <a href="http://typekit.com">TypeKit</a> for all of the fonts, and the one you are most likely seeing is <em>Proxima Nova</em> (sans) and <em>Adele</em> (serif).</p>
 ]]></content>
