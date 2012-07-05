@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
                   <p class="link"><a href="' + repo.homepage + '">' + repo.homepage + '</a></p> \
               </div> \
               <div class="github-box-download"> \
-                  <p class="updated">Latest commit to <strong>master</strong> branch on ' + pushed_at + '</p> \
+                  <p class="updated">Latest commit to <strong>master</strong> on ' + pushed_at + '</p> \
                   <a class="download" href="' + repo.url.replace('api.','').replace('repos/','') + '/zipball/master">Download as zip</a> \
               </div> \
           </div> \

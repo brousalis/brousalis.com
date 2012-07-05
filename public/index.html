@@ -9,8 +9,12 @@
   <meta name="author" content="Pete Brousalis">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="I&#8217;ve seen a similar box-shadow mixin in several places, particularly Twitter Bootstrap, and I think it can be improved. 1
+2
+3
+4
+5
+@mixin box- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -60,7 +64,8 @@
 <ul class="main-navigation">
   <li class="mouse"><a href="/"></a></li>
   <li><a class="logo" href="/"><img src="/images/logo_name.png"></a></li>
-  <li><a class="blog" href="/blog/archives">Blog</a></li>
+  <li><a class="blog" href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/about">About</a></li>
   <li><a href="/projects">Projects</a></li>
   <li><a href="/work">Work</a></li>
@@ -91,23 +96,79 @@
 
 
 
-<time datetime="2012-07-03T13:12:00-05:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2012</time>  
+<time datetime="2012-07-01T13:12:00-05:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>  
         <ul class="post-icon">
           
-            <li class="css"></li>
+            
+              <li class="css"></li>
+             
           
         </ul> 
       </div>
      
     
-      <h1 class="entry-title"><a href="/blog/2012/07/03/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/07/01/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a></h1>
     
   </header>
   
 
-  <div class="entry-content">
+  <div class="entry-content"><p>I&#8217;ve seen a similar box-shadow mixin in several places, particularly <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a>, and I think it can be improved.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@mixin</span><span class="nf"> box-shadow</span><span class="p">(</span><span class="nv">$shadow</span><span class="p">)</span> <span class="err">{</span>
+</span><span class='line'>  <span class="na">-webkit-box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class='line'>     <span class="na">-moz-box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class='line'>          <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is the mixin most often seen, however it doesn&#8217;t allow for multiple shadows, like:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">box-shadow</span><span class="o">:</span> <span class="nt">0</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.1</span><span class="o">),</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">5px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.2</span><span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is my modified version that supports multiple shadows:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@mixin</span><span class="nf"> box-shadow</span><span class="p">(</span><span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">:</span><span class="n-Pseudo">false</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="o">:</span><span class="n-Pseudo">false</span><span class="p">)</span> <span class="err">{</span>
+</span><span class='line'>  <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="err">;</span>
+</span><span class='line'>  <span class="k">@if</span> <span class="nv">$shadow2</span> <span class="err">{</span> <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="err">;</span> <span class="err">}</span>
+</span><span class='line'>  <span class="k">@if</span> <span class="nv">$shadows</span> <span class="o">!=</span> <span class="n-Pseudo">false</span> <span class="err">{</span> <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="err">;</span> <span class="err">}</span>
+</span><span class='line'>  <span class="na">-webkit-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class='line'>     <span class="na">-moz-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class='line'>          <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can then call it:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@include</span> <span class="nt">box-shadow</span><span class="o">(</span><span class="nt">0</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.1</span><span class="o">),</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">5px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.2</span><span class="o">)</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/01/sass-better-box-shadow-mixin/">Leave a comment</a>
+    </footer> 
   
 
 
@@ -133,65 +194,45 @@
 
 
 
-<time datetime="2012-07-03T11:14:00-05:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2012</time>  
+<time datetime="2012-06-15T00:48:00-05:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>  
         <ul class="post-icon">
           
-            <li class="ruby"></li>
+            
+              <li class="lab"></li>
+             
           
         </ul> 
       </div>
      
     
-      <h1 class="entry-title"><a href="/blog/2012/07/03/jekyll-category-list-plugin/">Jekyll category list plugin</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/06/15/current-git-branch-in-bash-prompt/">Current Git branch in prompt</a></h1>
     
   </header>
   
 
-  <div class="entry-content">
+  <div class="entry-content"><p>I&#8217;ve found it necessary now to have the current Git branch always listed in my command line. You can checkout how I do it with my <a href="http://github.com/brousalis/dotfiles">dotfiles</a>, or add the following below to your <span class="bash">.bashrc</span>:</p>
+
+<figure class='code'><figcaption><span>bashrc  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>parse_git_branch<span class="o">()</span> <span class="o">{</span> git branch 2&gt; /dev/null | sed -e <span class="s1">&#39;/^[^*]/d&#39;</span> -e <span class="s1">&#39;s/* \(.*\)/(\1)/&#39;</span>; <span class="o">}</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\[\033[01;34m\]\h:\[\033[01;33m\]\w\[\033[01;34m\] \$(parse_git_branch) \[\033[01;33m\]&gt;\[\e[0m\] &quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <strong>PS1</strong> defines what your prompt looks like. The important keywords here are <span class="bash">\h</span> - hostname, <span class="bash">\u</span> - username, <span class="bash">\w</span> - directory path.</p>
+
+<p>The lines such as <span class="bash">[\033[01;34m]</span> set colors for the text.</p>
+
+<p>Adding these then doing a <span class="bash">source ~/.bashrc</span> in console should make your command line look like:</p>
+
+<p><img src="/images/bash.png" style="border: black 0.5em solid !important"></p>
 </div>
   
   
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <div class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-
-<time datetime="2012-07-03T00:48:00-05:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2012</time>  
-        <ul class="post-icon">
-          
-            <li class="lab"></li>
-          
-        </ul> 
-      </div>
-     
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/03/current-git-branch-in-bash-prompt/">Current git branch in prompt</a></h1>
-    
-  </header>
-  
-
-  <div class="entry-content">
-</div>
-  
+    <footer>
+      <a rel="full-article" href="/blog/2012/06/15/current-git-branch-in-bash-prompt/">Leave a comment</a>
+    </footer> 
   
 
 
@@ -220,9 +261,11 @@
 <time datetime="2012-05-25T20:34:00-05:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>  
         <ul class="post-icon">
           
-            <li class="lab"></li>
-          
-            <li class="personal"></li>
+            
+              <li class="lab"></li>
+            
+              <li class="personal"></li>
+             
           
         </ul> 
       </div>
@@ -233,13 +276,9 @@
   </header>
   
 
-  <div class="entry-content"><p>I have spent about a year slowly configuring and adding to my personal set of dotfiles. I&#8217;ve hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty handy tricks I&#8217;ve picked up in my obsession with my dev environment, and I&#8217;d like to share a few.</p>
+  <div class="entry-content"><p>I have spent about a year slowly configuring my personal set of dotfiles, or configuration settings. I&#8217;ve hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty neat tricks I&#8217;ve picked up in quest for the perfect dev environment, and I&#8217;d like to share a few.</p>
 
-<h2>Using Dropbox</h2>
-
-<p><a class="dropbox" href="http://dropbox.com">Dropbox</a>I have a laptop for work, my iMac at home, several development machines hosted on Xen slices, and several virtual machines I use for testing. These machines are composed of Mac and Debian operating systems. To keep maintance of my config files easier between these environments, I have the Github repo cloned inside of my ~/Dropbox folder.  By doing this, each time you make a chance it is automatically updated on each environment.</p>
-
-<h2>Setting up your files</h2>
+<h2>Bootstrapping your config files</h2>
 
 <figure class='code'><figcaption><span>bootstrap.sh </span><a href='https://github.com/brousalis/dotfiles/blob/master/bootstrap.sh'>github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -298,34 +337,12 @@
 
 <p>By running this file <span class="bash">./bootstrap</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.</p>
 
-<h2>Aliases</h2>
-
-<p>There are some handy aliases in my bashrc file, particularly these:</p>
-
-<figure class='code'><figcaption><span>bashrc </span><a href='https://github.com/brousalis/dotfiles/blob/master/bashrc'>github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="k">function </span>bugscreen<span class="o">()</span> <span class="o">{</span> <span class="nb">export </span><span class="nv">BUG</span><span class="o">=</span><span class="nv">$1</span>; screen -R <span class="nv">$1</span>; <span class="o">}</span>
-</span><span class='line'><span class="k">function </span>u<span class="o">()</span> <span class="o">{</span> <span class="nv">NUM</span><span class="o">=</span><span class="k">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">1</span><span class="k">}</span>; <span class="k">for</span> <span class="o">((</span> <span class="nv">start</span> <span class="o">=</span> 1; start &lt;<span class="o">=</span> <span class="nv">$NUM</span>; start++ <span class="o">))</span>; <span class="k">do </span><span class="nb">cd</span> ..; <span class="k">done</span>; <span class="o">}</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">gitrem</span><span class="o">=</span><span class="s2">&quot;git ls-files --deleted | xargs git rm&quot;</span>
-</span><span class='line'><span class="nb">alias </span><span class="nv">dsremove</span><span class="o">=</span><span class="s2">&quot;find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><span class="bash">bugscreen 123456</span> loads a preconfigured screen session from the /screens/ folder. Read below to find out more.</p>
-
-<p><span class="bash">u 3</span> goes up 3 directories from where you are.</p>
-
-<p><span class="bash">gitrem</span> removes files you may have forgot to git rm in a folder</p>
-
-<p><span class="bash">dsremove</span> deletes all .DS_Store files from a directory</p>
-
-<h2>Preconfigured screens</h2>
-
-<p>Located in the /screen/ folder, is an example of how to setup a screen sessionwith preconfigured tabs. Then in my .screenrc</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/05/25/dotfiles/">Read on</a>
+    </footer>
   
 
 
@@ -354,7 +371,9 @@
 <time datetime="2012-04-15T19:54:00-05:00" pubdate data-updated="true">Apr 15<span>th</span>, 2012</time>  
         <ul class="post-icon">
           
-            <li class="personal"></li>
+            
+              <li class="personal"></li>
+             
           
         </ul> 
       </div>
@@ -383,15 +402,15 @@
 </div>
   
   
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/15/the-setup/">Leave a comment</a>
+    </footer> 
+  
 
 
     </article>
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Archives</a>
-    
-  </div>
+  
 </div>
 <aside class="sidebar">
   
@@ -404,25 +423,20 @@
 </section>
 <section id="categories">
   <h1>Categories</h1>
-  <ul><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:40%">bar</span><div class="personal"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:40%">bar</span><div class="lab"></div></li><li><em>1</em><a href="/blog/categories/ruby">ruby</a><span style="width:20%">bar</span><div class="ruby"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:20%">bar</span><div class="css"></div></li></ul>
+  <ul><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:50%">bar</span><div class="personal"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:50%">bar</span><div class="lab"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:25%">bar</span><div class="css"></div></li></ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <span>Jul 03</span>
-        <a href="/blog/2012/07/03/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a>
+        <span>Jul 01</span>
+        <a href="/blog/2012/07/01/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a>
       </li>
     
       <li class="post">
-        <span>Jul 03</span>
-        <a href="/blog/2012/07/03/jekyll-category-list-plugin/">Jekyll category list plugin</a>
-      </li>
-    
-      <li class="post">
-        <span>Jul 03</span>
-        <a href="/blog/2012/07/03/current-git-branch-in-bash-prompt/">Current git branch in prompt</a>
+        <span>Jun 15</span>
+        <a href="/blog/2012/06/15/current-git-branch-in-bash-prompt/">Current Git branch in prompt</a>
       </li>
     
       <li class="post">

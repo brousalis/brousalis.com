@@ -3,12 +3,10 @@ layout: default
 single: true
 ---
 
-<div class="blog-index">
-<div class="line">
-  <article>
-    {% include article.html %}
-  </article>
-</div>
+<div class="blog-index post">
+<article>
+  {% include article.html %}
+</article>
 <div class="line posts">
   {% if page.previous.url %}
     <a id="prev" class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">{{page.previous.title}}</a>

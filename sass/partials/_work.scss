@@ -16,7 +16,6 @@
       overflow: hidden;
       position: relative;
       box-shadow: 0 0 2px rgba(0, 0, 0, .2), 0 2px 5px rgba(0, 0, 0, .5);
-      @include border-radius(8px);
       img {
         display: block;
         position: relative;

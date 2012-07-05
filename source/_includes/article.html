@@ -4,9 +4,15 @@
       <div class="meta">
         {% include post/date.html %}{{ time }}  
         <ul class="post-icon">
-          {% for cat in post.categories %}
-            <li class="{{ cat }}"></li>
-          {% endfor %}
+          {% if index %}
+            {% for cat in post.categories %}
+              <li class="{{ cat }}"></li>
+            {% endfor %} 
+          {% else %}
+            {% for cat in page.categories %}
+              <li class="{{ cat }}"></li>
+            {% endfor %}
+          {% endif %}
         </ul> 
       </div>
     {% endunless %} 
@@ -22,8 +28,12 @@
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+      <a rel="full-article" href="{{ root_url }}{{ post.url }}">Read on</a>
     </footer>
+  {% else %}
+    <footer>
+      <a rel="full-article" href="{{ root_url }}{{ post.url }}">Leave a comment</a>
+    </footer> 
   {% endif %}
 {% else %}
 <div class="entry-content">{{ content }}</div>

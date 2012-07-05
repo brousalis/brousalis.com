@@ -1,6 +1,5 @@
 module Jekyll
   class CategoryList < Liquid::Tag
-
     def render(context)
       s = StringIO.new
       begin

@@ -46,7 +46,7 @@ article {
       height: 16px; 
       float: left;
       text-indent: -9999px;
-      margin-top: -1px;
+      margin-top: -2px;
     }
   } 
   h2 {
@@ -88,7 +88,6 @@ article {
     }
   }
   > footer {
-    padding-bottom: 2.5em;
     margin-top: 2em;
     @extend .sans;
     p.meta {
@@ -134,23 +133,24 @@ div.line + div.line {
     a { color: inherit; &:hover { color: $link-color-hover; } }
   }
   a[rel=full-article] {
-    background: darken($main-bg, 5);
     display: inline-block;
-    padding: .4em .8em;
+    padding: 3px 6px;
     margin-right: .5em;
     text-decoration: none;
     color: mix($text-color, $text-color-light);
-    @extend .serif;
-    @include transition(background-color .5s);
+    background: image-url('next2.png') no-repeat 98% 11px;
+    @extend .sans;
+    padding-right: 20px;
+    @include transition(all 0.3s linear);
+    @include opacity(0.7);
+    float: right;
     &:hover {
-      background: $link-color-hover;
-      text-shadow: none;
-      color: $main-bg;
+      @include opacity(1);
     }
   }
   footer {
     @extend .sans;
-    margin-top: 1em;
+    margin-top: 2em;
   }
 }
 
@@ -182,6 +182,7 @@ article[role="article"] {
     padding-top: 0 !important;
   }
 }
+.post .line { padding-left: 45px; padding-right: 45px; }
 .dropbox { float: left; text-indent: -9999px; position: relative; margin: 20px 30px 3px 20px; background: image-url('dropbox.png') no-repeat; height: 43px; width: 42px; } 
 .bash { font-family: proxima-nova-1; background: #F1F1F1 $noise-bg !important; color: #586E75 !important; padding: 3px 6px; @include box-shadow(rgba(0, 0, 0, 0.06) 0 0 10px); border: 1px solid #ECECEC !important}
 h4 { display: none !important; }

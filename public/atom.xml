@@ -4,7 +4,7 @@
   <title><![CDATA[Pete Brousalis]]></title>
   <link href="http://brousalis.com/atom.xml" rel="self"/>
   <link href="http://brousalis.com/"/>
-  <updated>2012-07-04T13:18:12-05:00</updated>
+  <updated>2012-07-05T18:35:46-05:00</updated>
   <id>http://brousalis.com/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -15,28 +15,85 @@
   
   <entry>
     <title type="html"><![CDATA[SASS better box-shadow mixin]]></title>
-    <link href="http://brousalis.com/blog/2012/07/03/sass-better-box-shadow-mixin/"/>
-    <updated>2012-07-03T13:12:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/07/03/sass-better-box-shadow-mixin</id>
-    <content type="html"><![CDATA[
+    <link href="http://brousalis.com/blog/2012/07/01/sass-better-box-shadow-mixin/"/>
+    <updated>2012-07-01T13:12:00-05:00</updated>
+    <id>http://brousalis.com/blog/2012/07/01/sass-better-box-shadow-mixin</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve seen a similar box-shadow mixin in several places, particularly <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a>, and I think it can be improved.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@mixin</span><span class="nf"> box-shadow</span><span class="p">(</span><span class="nv">$shadow</span><span class="p">)</span> <span class="err">{</span>
+</span><span class='line'>  <span class="na">-webkit-box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class='line'>     <span class="na">-moz-box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class='line'>          <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is the mixin most often seen, however it doesn&#8217;t allow for multiple shadows, like:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">box-shadow</span><span class="o">:</span> <span class="nt">0</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.1</span><span class="o">),</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">5px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.2</span><span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is my modified version that supports multiple shadows:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@mixin</span><span class="nf"> box-shadow</span><span class="p">(</span><span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">:</span><span class="n-Pseudo">false</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="o">:</span><span class="n-Pseudo">false</span><span class="p">)</span> <span class="err">{</span>
+</span><span class='line'>  <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="err">;</span>
+</span><span class='line'>  <span class="k">@if</span> <span class="nv">$shadow2</span> <span class="err">{</span> <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="err">;</span> <span class="err">}</span>
+</span><span class='line'>  <span class="k">@if</span> <span class="nv">$shadows</span> <span class="o">!=</span> <span class="n-Pseudo">false</span> <span class="err">{</span> <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="err">;</span> <span class="err">}</span>
+</span><span class='line'>  <span class="na">-webkit-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class='line'>     <span class="na">-moz-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class='line'>          <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can then call it:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@include</span> <span class="nt">box-shadow</span><span class="o">(</span><span class="nt">0</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.1</span><span class="o">),</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">5px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.2</span><span class="o">)</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Jekyll category list plugin]]></title>
-    <link href="http://brousalis.com/blog/2012/07/03/jekyll-category-list-plugin/"/>
-    <updated>2012-07-03T11:14:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/07/03/jekyll-category-list-plugin</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Current git branch in prompt]]></title>
-    <link href="http://brousalis.com/blog/2012/07/03/current-git-branch-in-bash-prompt/"/>
-    <updated>2012-07-03T00:48:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/07/03/current-git-branch-in-bash-prompt</id>
-    <content type="html"><![CDATA[
+    <title type="html"><![CDATA[Current Git branch in prompt]]></title>
+    <link href="http://brousalis.com/blog/2012/06/15/current-git-branch-in-bash-prompt/"/>
+    <updated>2012-06-15T00:48:00-05:00</updated>
+    <id>http://brousalis.com/blog/2012/06/15/current-git-branch-in-bash-prompt</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve found it necessary now to have the current Git branch always listed in my command line. You can checkout how I do it with my <a href="http://github.com/brousalis/dotfiles">dotfiles</a>, or add the following below to your <span class="bash">.bashrc</span>:</p>
+
+<figure class='code'><figcaption><span>bashrc  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>parse_git_branch<span class="o">()</span> <span class="o">{</span> git branch 2&gt; /dev/null | sed -e <span class="s1">&#39;/^[^*]/d&#39;</span> -e <span class="s1">&#39;s/* \(.*\)/(\1)/&#39;</span>; <span class="o">}</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\[\033[01;34m\]\h:\[\033[01;33m\]\w\[\033[01;34m\] \$(parse_git_branch) \[\033[01;33m\]&gt;\[\e[0m\] &quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <strong>PS1</strong> defines what your prompt looks like. The important keywords here are <span class="bash">\h</span> - hostname, <span class="bash">\u</span> - username, <span class="bash">\w</span> - directory path.</p>
+
+<p>The lines such as <span class="bash">[\033[01;34m]</span> set colors for the text.</p>
+
+<p>Adding these then doing a <span class="bash">source ~/.bashrc</span> in console should make your command line look like:</p>
+
+<p><img src="http://brousalis.com/images/bash.png" style="border: black 0.5em solid !important"></p>
 ]]></content>
   </entry>
   
@@ -45,13 +102,9 @@
     <link href="http://brousalis.com/blog/2012/05/25/dotfiles/"/>
     <updated>2012-05-25T20:34:00-05:00</updated>
     <id>http://brousalis.com/blog/2012/05/25/dotfiles</id>
-    <content type="html"><![CDATA[<p>I have spent about a year slowly configuring and adding to my personal set of dotfiles. I&#8217;ve hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty handy tricks I&#8217;ve picked up in my obsession with my dev environment, and I&#8217;d like to share a few.</p>
+    <content type="html"><![CDATA[<p>I have spent about a year slowly configuring my personal set of dotfiles, or configuration settings. I&#8217;ve hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty neat tricks I&#8217;ve picked up in quest for the perfect dev environment, and I&#8217;d like to share a few.</p>
 
-<h2>Using Dropbox</h2>
-
-<p><a class="dropbox" href="http://dropbox.com">Dropbox</a>I have a laptop for work, my iMac at home, several development machines hosted on Xen slices, and several virtual machines I use for testing. These machines are composed of Mac and Debian operating systems. To keep maintance of my config files easier between these environments, I have the Github repo cloned inside of my ~/Dropbox folder.  By doing this, each time you make a chance it is automatically updated on each environment.</p>
-
-<h2>Setting up your files</h2>
+<h2>Bootstrapping your config files</h2>
 
 <figure class='code'><figcaption><span>bootstrap.sh </span><a href='https://github.com/brousalis/dotfiles/blob/master/bootstrap.sh'>github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -110,6 +163,13 @@
 
 <p>By running this file <span class="bash">./bootstrap</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.</p>
 
+<!-- more -->
+
+
+<h2>Using Dropbox</h2>
+
+<p><a class="dropbox" href="http://dropbox.com">Dropbox</a>I have a laptop for work, my iMac at home, several development machines hosted on Xen slices, and several virtual machines I use for testing. These machines are composed of Mac and Debian operating systems. To keep maintance of my config files easier between these environments, I have the Github repo cloned inside of my ~/Dropbox folder.  By doing this, each time you make a chance it is automatically updated on each environment.</p>
+
 <h2>Aliases</h2>
 
 <p>There are some handy aliases in my bashrc file, particularly these:</p>
@@ -135,7 +195,29 @@
 
 <h2>Preconfigured screens</h2>
 
-<p>Located in the /screen/ folder, is an example of how to setup a screen sessionwith preconfigured tabs. Then in my .screenrc</p>
+<p>Located in the /screen folder of my dotfiles repo is the <span class="bash">123456</span> file. This is an example of how to setup a screen session with preconfigured tabs. Then by typing:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bugscreen 123456
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will load a new screen session with the tabs setup in the 123456 file.</p>
+
+<h2>Updating VIM to 7.3</h2>
+
+<p>If you need to update VIM to 7.3, which is needed for some of the VIM plugins I use. This command runs the vim.sh file:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>./bootstrap vim
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This shell script will modify your /etc/apt/sources file, update VIM to 7.3, and remove the sources from apt-sources. This will only work on a Linux machine, only tested on Debian.</p>
+
+<h2>Pull requests</h2>
+
+<p>If you find any errors with my scripts or have any questions, feel free to make a pull request, post a comment below or <a href="mailto:brousapg.at.gmail.com">contact me</a>.</p>
 ]]></content>
   </entry>
   

@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: ruby - Pete Brousalis</title>
+  <title>Current Git branch in prompt - Pete Brousalis</title>
   <meta name="author" content="Pete Brousalis">
 
   
-  <meta name="description" content="Category: ruby">
+  <meta name="description" content="I&#8217;ve found it necessary now to have the current Git branch always listed in my command line. You can checkout how I do it with my dotfiles, or &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://brousalis.comblog/categories/ruby">
+  <link rel="canonical" href="http://brousalis.com/blog/2012/06/15/current-git-branch-in-bash-prompt">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -59,7 +59,8 @@
 <ul class="main-navigation">
   <li class="mouse"><a href="/"></a></li>
   <li><a class="logo" href="/"><img src="/images/logo_name.png"></a></li>
-  <li><a class="blog" href="/blog/archives">Blog</a></li>
+  <li><a class="blog" href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/about">About</a></li>
   <li><a href="/projects">Projects</a></li>
   <li><a href="/work">Work</a></li>
@@ -67,29 +68,79 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-  <div id="blog-archives" class="category">
-
-
-
-  
-  <h2>2012</h2>
-
+      <div class="blog-index post">
 <article>
   
-<h1><a href="/blog/2012/07/03/jekyll-category-list-plugin/">Jekyll category list plugin</a></h1>
-<time datetime="2012-07-03T11:14:00-05:00" pubdate><span class='month'>Jul</span> <span class='day'>03</span> <span class='year'>2012</span></time>
+  <header>
+    
+      <div class="meta">
+        
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
-</footer>
+
+
+
+
+
+
+
+  
+
+
+
+
+<time datetime="2012-06-15T00:48:00-05:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+              <li class="lab"></li>
+            
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title">Current Git branch in prompt</h1>
+    
+  </header>
+  
+
+<div class="entry-content"><p>I&#8217;ve found it necessary now to have the current Git branch always listed in my command line. You can checkout how I do it with my <a href="http://github.com/brousalis/dotfiles">dotfiles</a>, or add the following below to your <span class="bash">.bashrc</span>:</p>
+
+<figure class='code'><figcaption><span>bashrc  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>parse_git_branch<span class="o">()</span> <span class="o">{</span> git branch 2&gt; /dev/null | sed -e <span class="s1">&#39;/^[^*]/d&#39;</span> -e <span class="s1">&#39;s/* \(.*\)/(\1)/&#39;</span>; <span class="o">}</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\[\033[01;34m\]\h:\[\033[01;33m\]\w\[\033[01;34m\] \$(parse_git_branch) \[\033[01;33m\]&gt;\[\e[0m\] &quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <strong>PS1</strong> defines what your prompt looks like. The important keywords here are <span class="bash">\h</span> - hostname, <span class="bash">\u</span> - username, <span class="bash">\w</span> - directory path.</p>
+
+<p>The lines such as <span class="bash">[\033[01;34m]</span> set colors for the text.</p>
+
+<p>Adding these then doing a <span class="bash">source ~/.bashrc</span> in console should make your command line look like:</p>
+
+<p><img src="/images/bash.png" style="border: black 0.5em solid !important"></p>
+</div>
 
 
 </article>
-
-</div>
-
+<div class="line posts">
   
+    <a id="prev" class="basic-alignment left" href="/blog/2012/05/25/dotfiles/" title="Previous Post: Personal dotfiles and scripts">Personal dotfiles and scripts</a>
+  
+  
+    <a id="next" class="basic-alignment right" href="/blog/2012/07/01/sass-better-box-shadow-mixin/" title="next Post: SASS better box-shadow mixin">SASS better box-shadow mixin</a>
+  
+</div> 
+
+<div class="line">
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+</div>
 
 </div>
 
@@ -104,25 +155,20 @@
 </section>
 <section id="categories">
   <h1>Categories</h1>
-  <ul><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:40%">bar</span><div class="personal"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:40%">bar</span><div class="lab"></div></li><li><em>1</em><a href="/blog/categories/ruby">ruby</a><span style="width:20%">bar</span><div class="ruby"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:20%">bar</span><div class="css"></div></li></ul>
+  <ul><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:50%">bar</span><div class="personal"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:50%">bar</span><div class="lab"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:25%">bar</span><div class="css"></div></li></ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <span>Jul 03</span>
-        <a href="/blog/2012/07/03/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a>
+        <span>Jul 01</span>
+        <a href="/blog/2012/07/01/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a>
       </li>
     
       <li class="post">
-        <span>Jul 03</span>
-        <a href="/blog/2012/07/03/jekyll-category-list-plugin/">Jekyll category list plugin</a>
-      </li>
-    
-      <li class="post">
-        <span>Jul 03</span>
-        <a href="/blog/2012/07/03/current-git-branch-in-bash-prompt/">Current git branch in prompt</a>
+        <span>Jun 15</span>
+        <a href="/blog/2012/06/15/current-git-branch-in-bash-prompt/">Current Git branch in prompt</a>
       </li>
     
       <li class="post">
@@ -167,7 +213,10 @@
       var disqus_shortname = 'brousalis';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://brousalis.com/blog/2012/06/15/current-git-branch-in-bash-prompt/';
+        var disqus_url = 'http://brousalis.com/blog/2012/06/15/current-git-branch-in-bash-prompt/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

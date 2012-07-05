@@ -9,7 +9,7 @@
   <meta name="author" content="Pete Brousalis">
 
   
-  <meta name="description" content="I have spent about a year slowly configuring and adding to my personal set of dotfiles. I&#8217;ve hosted them to share with everyone on Github. I &hellip;">
+  <meta name="description" content="I have spent about a year slowly configuring my personal set of dotfiles, or configuration settings. I&#8217;ve hosted them to share with everyone on &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -59,7 +59,8 @@
 <ul class="main-navigation">
   <li class="mouse"><a href="/"></a></li>
   <li><a class="logo" href="/"><img src="/images/logo_name.png"></a></li>
-  <li><a class="blog" href="/blog/archives">Blog</a></li>
+  <li><a class="blog" href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/about">About</a></li>
   <li><a href="/projects">Projects</a></li>
   <li><a href="/work">Work</a></li>
@@ -67,10 +68,9 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
-<div class="line">
-  <article>
-    
+      <div class="blog-index post">
+<article>
+  
   <header>
     
       <div class="meta">
@@ -91,6 +91,12 @@
 <time datetime="2012-05-25T20:34:00-05:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>  
         <ul class="post-icon">
           
+            
+              <li class="lab"></li>
+            
+              <li class="personal"></li>
+            
+          
         </ul> 
       </div>
      
@@ -100,13 +106,9 @@
   </header>
   
 
-<div class="entry-content"><p>I have spent about a year slowly configuring and adding to my personal set of dotfiles. I&#8217;ve hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty handy tricks I&#8217;ve picked up in my obsession with my dev environment, and I&#8217;d like to share a few.</p>
+<div class="entry-content"><p>I have spent about a year slowly configuring my personal set of dotfiles, or configuration settings. I&#8217;ve hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty neat tricks I&#8217;ve picked up in quest for the perfect dev environment, and I&#8217;d like to share a few.</p>
 
-<h2>Using Dropbox</h2>
-
-<p><a class="dropbox" href="http://dropbox.com">Dropbox</a>I have a laptop for work, my iMac at home, several development machines hosted on Xen slices, and several virtual machines I use for testing. These machines are composed of Mac and Debian operating systems. To keep maintance of my config files easier between these environments, I have the Github repo cloned inside of my ~/Dropbox folder.  By doing this, each time you make a chance it is automatically updated on each environment.</p>
-
-<h2>Setting up your files</h2>
+<h2>Bootstrapping your config files</h2>
 
 <figure class='code'><figcaption><span>bootstrap.sh </span><a href='https://github.com/brousalis/dotfiles/blob/master/bootstrap.sh'>github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -165,6 +167,13 @@
 
 <p>By running this file <span class="bash">./bootstrap</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.</p>
 
+<!-- more -->
+
+
+<h2>Using Dropbox</h2>
+
+<p><a class="dropbox" href="http://dropbox.com">Dropbox</a>I have a laptop for work, my iMac at home, several development machines hosted on Xen slices, and several virtual machines I use for testing. These machines are composed of Mac and Debian operating systems. To keep maintance of my config files easier between these environments, I have the Github repo cloned inside of my ~/Dropbox folder.  By doing this, each time you make a chance it is automatically updated on each environment.</p>
+
 <h2>Aliases</h2>
 
 <p>There are some handy aliases in my bashrc file, particularly these:</p>
@@ -190,18 +199,39 @@
 
 <h2>Preconfigured screens</h2>
 
-<p>Located in the /screen/ folder, is an example of how to setup a screen sessionwith preconfigured tabs. Then in my .screenrc</p>
+<p>Located in the /screen folder of my dotfiles repo is the <span class="bash">123456</span> file. This is an example of how to setup a screen session with preconfigured tabs. Then by typing:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bugscreen 123456
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will load a new screen session with the tabs setup in the 123456 file.</p>
+
+<h2>Updating VIM to 7.3</h2>
+
+<p>If you need to update VIM to 7.3, which is needed for some of the VIM plugins I use. This command runs the vim.sh file:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>./bootstrap vim
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This shell script will modify your /etc/apt/sources file, update VIM to 7.3, and remove the sources from apt-sources. This will only work on a Linux machine, only tested on Debian.</p>
+
+<h2>Pull requests</h2>
+
+<p>If you find any errors with my scripts or have any questions, feel free to make a pull request, post a comment below or <a href="mailto:brousapg.at.gmail.com">contact me</a>.</p>
 </div>
 
 
-  </article>
-</div>
+</article>
 <div class="line posts">
   
     <a id="prev" class="basic-alignment left" href="/blog/2012/04/15/the-setup/" title="Previous Post: My Setup">My Setup</a>
   
   
-    <a id="next" class="basic-alignment right" href="/blog/2012/07/03/current-git-branch-in-bash-prompt/" title="next Post: Current git branch in prompt">Current git branch in prompt</a>
+    <a id="next" class="basic-alignment right" href="/blog/2012/06/15/current-git-branch-in-bash-prompt/" title="next Post: Current Git branch in prompt">Current Git branch in prompt</a>
   
 </div> 
 
@@ -226,25 +256,20 @@
 </section>
 <section id="categories">
   <h1>Categories</h1>
-  <ul><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:40%">bar</span><div class="personal"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:40%">bar</span><div class="lab"></div></li><li><em>1</em><a href="/blog/categories/ruby">ruby</a><span style="width:20%">bar</span><div class="ruby"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:20%">bar</span><div class="css"></div></li></ul>
+  <ul><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:50%">bar</span><div class="personal"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:50%">bar</span><div class="lab"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:25%">bar</span><div class="css"></div></li></ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <span>Jul 03</span>
-        <a href="/blog/2012/07/03/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a>
+        <span>Jul 01</span>
+        <a href="/blog/2012/07/01/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a>
       </li>
     
       <li class="post">
-        <span>Jul 03</span>
-        <a href="/blog/2012/07/03/jekyll-category-list-plugin/">Jekyll category list plugin</a>
-      </li>
-    
-      <li class="post">
-        <span>Jul 03</span>
-        <a href="/blog/2012/07/03/current-git-branch-in-bash-prompt/">Current git branch in prompt</a>
+        <span>Jun 15</span>
+        <a href="/blog/2012/06/15/current-git-branch-in-bash-prompt/">Current Git branch in prompt</a>
       </li>
     
       <li class="post">
