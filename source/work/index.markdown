@@ -14,7 +14,7 @@ footer: false
     <li><a href="http://teamegocentric.com"><img src="/images/egocentric.png"><div><span>Team Egocentric</span></div></a></li>
     <li><a href="http://www.rose-hulman.edu/Users/groups/TriangleFraternity/"><img src="/images/triangle.png"><div><span>Triangle Fraternity</span></div></a></li>
     <li><a href="http://www.mvmainc.com"><img src="/images/mvma.png"><div><span>MVMA Inc.</span></div></a></li>
-    <li><a href="mailto:brousapg.at.gmail.com"><img src="/images/blank.png"><div><span>Your next project!</span></div></a></li>
+    <li><a href="mailto:brousapg(at)gmail.com"><img src="/images/blank.png"><div><span>Your next project!</span></div></a></li>
   </ul> 
 </div> 
 <script src="{{ root_url }}/javascripts/jquery.js"></script>

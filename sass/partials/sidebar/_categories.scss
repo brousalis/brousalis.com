@@ -5,18 +5,22 @@ aside.sidebar {
       margin-top: 5px;
       li {  
         border-bottom: none;
-        @include box-shadow(none);
         position: relative;
         padding: .2em 0;
         margin-bottom: 2px;
         overflow: hidden;
-        @include transition(all 1s);
         text-shadow: none;
+        @include box-shadow(none);
+        @include transition(all 1s);
+        &:hover em { top: 5px; }
+        &:hover span { width: 96% !important; }
+        &:hover div { top: 40px; }
         a {
           position: relative;
           display: block;
           z-index: 1;
           padding-left: 12px;
+          color: #797D80;
         }
         em {
           font-style: normal;

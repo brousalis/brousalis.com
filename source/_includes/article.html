@@ -6,7 +6,7 @@
         <ul class="post-icon">
           {% if index %}
             {% for cat in post.categories %}
-              <li class="{{ cat }}"></li>
+            <li class="{{ cat }}"></li>
             {% endfor %} 
           {% else %}
             {% for cat in page.categories %}
@@ -28,7 +28,7 @@
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}">Read on</a>
+      <a rel="full-article" href="{{ root_url }}{{ post.url }}">Read the rest</a>
     </footer>
   {% else %}
     <footer>

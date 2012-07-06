@@ -76,11 +76,11 @@ a {
 }
 
 a {
-  @include transition(color .4s);
+  @include transition(color .3s);
 }
 
 html {
-  background: $page-bg image-url('bg/14.png') fixed;
+  background: $page-bg image-url('bg.png') fixed;
   -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: "liga", "dlig";
      -moz-font-feature-settings: "liga=1, dlig=1";

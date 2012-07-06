@@ -19,14 +19,12 @@
 
   
   <link rel="canonical" href="http://brousalis.com/blog/2012/05/25/dotfiles">
-  <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <script type="text/javascript" src="http://use.typekit.com/pgq1wgn.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Pete Brousalis" type="application/atom+xml">
   
   <script type="text/javascript">
@@ -165,7 +163,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>By running this file <span class="bash">./bootstrap</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.</p>
+<p>By running this file <span class="bash">./bootstrap.sh</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.</p>
 
 <!-- more -->
 
@@ -189,13 +187,13 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><span class="bash">bugscreen 123456</span> loads a preconfigured screen session from the /screens/ folder. Read below to find out more.</p>
+<p><span class="bash">bugscreen 123456</span> loads a preconfigured gnu-screen, read more below.</p>
 
-<p><span class="bash">u 3</span> goes up 3 directories from where you are.</p>
+<p><span class="bash">u 3</span> goes up 3 directories from where you are - can be any number.</p>
 
-<p><span class="bash">gitrem</span> removes files you may have forgot to git rm in a folder</p>
+<p><span class="bash">gitrem</span> removes files you may have forgot to git rm in a folder.</p>
 
-<p><span class="bash">dsremove</span> deletes all .DS_Store files from a directory</p>
+<p><span class="bash">dsremove</span> deletes all .DS_Store files from a directory.</p>
 
 <h2>Preconfigured screens</h2>
 
@@ -221,23 +219,25 @@
 
 <h2>Pull requests</h2>
 
-<p>If you find any errors with my scripts or have any questions, feel free to make a pull request, post a comment below or <a href="mailto:brousapg.at.gmail.com">contact me</a>.</p>
+<p>If you find any errors with my scripts or have any questions, feel free to make a pull request, post a comment below or <a href="mailto:brousapg(at)gmail.com">contact me</a>.</p>
 </div>
 
 
 </article>
 <div class="line posts">
   
+    <span class="prev">PREV. POST</span>
     <a id="prev" class="basic-alignment left" href="/blog/2012/04/15/the-setup/" title="Previous Post: My Setup">My Setup</a>
   
   
+    <span class="next">NEXT POST</span>
     <a id="next" class="basic-alignment right" href="/blog/2012/06/15/current-git-branch-in-bash-prompt/" title="next Post: Current Git branch in prompt">Current Git branch in prompt</a>
   
 </div> 
 
 <div class="line">
   <section>
-    <h1>Comments</h1>
+    <h1></h1>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
   </section>
@@ -251,7 +251,7 @@
   <p>I'm a 23 year-old software engineer and UI enthusiast from Chicago, IL. I'm a recent graduate of <a href="http://rose-hulman.edu">Rose-Hulman</a> and employed at <a href="#">Enova</a>.</p>
   <ul>
     <li><a href="/about">Read more</a></li>
-    <li><a href="mailto:brousapg.at.gmail.com">Contact</a></li>
+    <li><a href="mailto:brousapg(at)gmail.com">Contact</a></li>
   </ul>
 </section>
 <section id="categories">
@@ -308,6 +308,10 @@
 
     </div>
   </div>
+  <footer>
+<p> Copyright &copy; 2012 - Pete Brousalis <a href="#" class="up">up</a></p>           
+</footer>
+
   
 
 <script type="text/javascript">

@@ -47,6 +47,12 @@ article {
       float: left;
       text-indent: -9999px;
       margin-top: -2px;
+      a { 
+        display: block;
+        width: 16px;
+        height: 16px;
+        text-indent: -9999px;
+      }
     }
   } 
   h2 {
@@ -107,19 +113,31 @@ article + article {
     background: $img-border top left repeat-x;
   }
 }
+
 div.line + div.line {
   padding: 2em 2em 0 2em;
   background: $img-border top left repeat-x;
   clear: both;
 }
-.posts { height: 40px; padding-top: 0; background: image-url('blank.png') !important;}
+.post .line { padding-left: 45px; padding-right: 45px; }
+.posts { height: 50px; padding-top: 0; background: $img-border top left repeat-x; }
+
 #next, #prev { 
   font-family: proxima-nova-1;
   position: absolute;
-  margin-top: -10px;
 }
+.prev, .next { 
+  color: #DDD;
+  font-family: proxima-nova-1;
+  font-size: 0.7em;
+  margin-top: -15px;
+  position: absolute;
+}
+.prev { margin-left: 9px; }
+.next { right: 0; margin-right: 70px; }
 #next { right:2em;background: image-url('arrows.png') no-repeat 100% -15px; padding-right: 2em; }
 #prev { left:2em;background: image-url('arrows.png') no-repeat 0 9px; padding-left: 1em; }
+
 #content .blog-index {
   padding: { top: 0; bottom: 0; }
   article { 
@@ -138,7 +156,7 @@ div.line + div.line {
     margin-right: .5em;
     text-decoration: none;
     color: mix($text-color, $text-color-light);
-    background: image-url('next2.png') no-repeat 98% 11px;
+    background: image-url('next.png') no-repeat 98% 11px;
     @extend .sans;
     padding-right: 20px;
     @include transition(all 0.3s linear);
@@ -182,7 +200,6 @@ article[role="article"] {
     padding-top: 0 !important;
   }
 }
-.post .line { padding-left: 45px; padding-right: 45px; }
 .dropbox { float: left; text-indent: -9999px; position: relative; margin: 20px 30px 3px 20px; background: image-url('dropbox.png') no-repeat; height: 43px; width: 42px; } 
-.bash { font-family: proxima-nova-1; background: #F1F1F1 $noise-bg !important; color: #586E75 !important; padding: 3px 6px; @include box-shadow(rgba(0, 0, 0, 0.06) 0 0 10px); border: 1px solid #ECECEC !important}
+.bash { font-family: proxima-nova-1; background: #F1F1F1 $noise-bg !important; color: #777 !important; padding: 3px 6px; @include box-shadow(rgba(0, 0, 0, 0.06) 0 0 10px); border: 1px solid #ECECEC !important}
 h4 { display: none !important; }

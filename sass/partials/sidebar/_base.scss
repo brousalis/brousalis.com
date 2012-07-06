@@ -19,7 +19,7 @@ aside.sidebar {
         padding-top: .4em;
       }
     }
-    &.about { margin-top: 1.2em; }
+    &.about { margin-top: 1.6em; }
     &.light {
       color: #666;
       ul {
@@ -30,12 +30,9 @@ aside.sidebar {
           width: 42%;
           text-align: center;
           @include transition(all .3s);
-          @include inset();
+          background: #e5e5e5;
           a {
-            color: #000;
-            &:hover {
-              color: #000;
-            }
+            color: #797D80;
             &:active {
               position: relative;
               top: 1px;
@@ -45,7 +42,10 @@ aside.sidebar {
             margin-right: 5px;
           }
           &:hover {
-            background-color: #ddd;
+            background: #e1e1e1;
+          }
+          &:hover a {
+            color: #555;
           }
         }
       }

@@ -34,7 +34,7 @@ footer: true
 </div>
 
 <div class="line" style="padding-top: 1.2em; text-align: center; clear: both">
-  <p>I love working on open source projects and doing freelance work. If you have any questions or comments, don't hesitate to <a href="mailto:brousapg.at.gmail.com">e-mail me</a></p>
+  <p>I love working on open source projects and doing freelance work. If you have any questions or comments, don't hesitate to <a href="mailto:brousapg(at)gmail.com">e-mail me</a></p>
   <ul class="social">
     <li><a class="twitter" href="http://twitter.com/brousalis"></a></li>
     <li><a class="github" href="http://github.com/brousalis"></a></li>

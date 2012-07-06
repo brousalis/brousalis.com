@@ -4,7 +4,7 @@
   <title><![CDATA[Pete Brousalis]]></title>
   <link href="http://brousalis.com/atom.xml" rel="self"/>
   <link href="http://brousalis.com/"/>
-  <updated>2012-07-05T18:35:46-05:00</updated>
+  <updated>2012-07-05T23:12:16-05:00</updated>
   <id>http://brousalis.com/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -161,7 +161,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>By running this file <span class="bash">./bootstrap</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.</p>
+<p>By running this file <span class="bash">./bootstrap.sh</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.</p>
 
 <!-- more -->
 
@@ -185,13 +185,13 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><span class="bash">bugscreen 123456</span> loads a preconfigured screen session from the /screens/ folder. Read below to find out more.</p>
+<p><span class="bash">bugscreen 123456</span> loads a preconfigured gnu-screen, read more below.</p>
 
-<p><span class="bash">u 3</span> goes up 3 directories from where you are.</p>
+<p><span class="bash">u 3</span> goes up 3 directories from where you are - can be any number.</p>
 
-<p><span class="bash">gitrem</span> removes files you may have forgot to git rm in a folder</p>
+<p><span class="bash">gitrem</span> removes files you may have forgot to git rm in a folder.</p>
 
-<p><span class="bash">dsremove</span> deletes all .DS_Store files from a directory</p>
+<p><span class="bash">dsremove</span> deletes all .DS_Store files from a directory.</p>
 
 <h2>Preconfigured screens</h2>
 
@@ -217,7 +217,7 @@
 
 <h2>Pull requests</h2>
 
-<p>If you find any errors with my scripts or have any questions, feel free to make a pull request, post a comment below or <a href="mailto:brousapg.at.gmail.com">contact me</a>.</p>
+<p>If you find any errors with my scripts or have any questions, feel free to make a pull request, post a comment below or <a href="mailto:brousapg(at)gmail.com">contact me</a>.</p>
 ]]></content>
   </entry>
   

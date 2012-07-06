@@ -122,21 +122,6 @@ $.domReady(function() {
   } 
   changeColor();
 
-  function categoryHover() {
-    var w;
-    $('#categories ul li').hover(function () {
-      w = $(this).find('span').css('width');
-      $(this).find('em').css('top','5px');
-      $(this).find('span').css('width', '96%');
-      $(this).find('div').css('top', '40px');
-    }, function () {
-      $(this).find('div').css('top', '6px');
-      $(this).find('em').css('top','40px');
-      $(this).find('span').css('width', w);
-    });
-  }
-  categoryHover();
-
   var url = window.location.pathname, 
   urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); 
   $('.main-navigation li a').each(function(){
@@ -147,6 +132,9 @@ $.domReady(function() {
     }
   });
 
+ $('a[href^="mailto:"]').each(function() {
+  this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
+ });
 });
 // iOS scaling bug fix
 // Rewritten version
