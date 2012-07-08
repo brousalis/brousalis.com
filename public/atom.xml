@@ -4,7 +4,7 @@
   <title><![CDATA[Pete Brousalis]]></title>
   <link href="http://brousalis.com/atom.xml" rel="self"/>
   <link href="http://brousalis.com/"/>
-  <updated>2012-07-06T15:17:31-05:00</updated>
+  <updated>2012-07-07T20:22:29-05:00</updated>
   <id>http://brousalis.com/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -238,7 +238,7 @@
 
 <p>I switched to <a href="http://www.apple.com/macosx/">Mac OS X</a> in 2009 after using Windows XP and <a href="http://www.ubuntu.com/">various</a> <a href="http://www.gentoo.org/">flavours</a> of <a href="http://www.debian.org/">Linux</a>. I do miss <a href="http://awesome.naquadah.org/">Awesome</a> window manager, as I prefer never to use my mouse, but by using some special keybindings and apps I can emulate it well enough on Lion.</p>
 
-<p>All of my developing and editing is done in <a href="http://vim.org">VIM</a>. The learning curve is very high, but once you&#8217;ve got the hang of it - there&#8217;s no looking back. I use <a href="http://iterm.com">iTerm</a> with zsh and some heavily modified <a href="http://github.com/brousalis/dotfiles">dotfiles</a> for absolutely everything. I use <a href="http://reeder.com">Reeder</a> for my daily RSS feeds, and use <a href="http://gmail.com">Gmail</a> for all of my busy work. For mocking and design, I use <a href="http://adobe.com">Photoshop CS6</a>, shockingly.</p>
+<p>All of my developing and editing is done in <a href="http://vim.org">VIM</a>. The learning curve is very high, but once you&#8217;ve got the hang of it - there&#8217;s no looking back. I use <a href="http://iterm.com">iTerm</a> with zsh and some heavily modified <a href="http://github.com/brousalis/dotfiles">dotfiles</a> for absolutely everything. I use <a href="http://reederapp.com">Reeder</a> for my daily RSS feeds, and use <a href="http://gmail.com">Gmail</a> for all of my busy work. For mocking and design, I use <a href="http://adobe.com">Photoshop CS6</a>, shockingly.</p>
 
 <p>This site is run on <a href="http://octopress.org">Octopress</a>, a static-site generator, turning markdown posts into what you see right now. I use <a href="http://typekit.com">TypeKit</a> for all of the fonts, and the one you are most likely seeing is <em>Proxima Nova</em> (sans) and <em>Adele</em> (serif).</p>
 ]]></content>
