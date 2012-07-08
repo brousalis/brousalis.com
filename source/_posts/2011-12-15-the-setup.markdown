@@ -19,10 +19,6 @@ At home, I connect my laptop to a [27" iMac](http://www.apple.com/imac/). The re
 
 I switched to [Mac OS X](http://www.apple.com/macosx/) in 2009 after using Windows XP and [various](http://www.ubuntu.com/) [flavours](http://www.gentoo.org/) of [Linux](http://www.debian.org/). I do miss [Awesome](http://awesome.naquadah.org/) window manager, as I prefer never to use my mouse, but by using some special keybindings and apps I can emulate it well enough on Lion.
 
-<<<<<<< HEAD
 All of my developing and editing is done in [VIM](http://vim.org). The learning curve is very high, but once you've got the hang of it - there's no looking back. I use [iTerm](http://iterm2.com) with zsh and some heavily modified [dotfiles](http://github.com/brousalis/dotfiles) for absolutely everything. I use [Reeder](http://reeder.com) for my daily RSS feeds, and use [Gmail](http://gmail.com) for all of my busy work. For mocking and design, I use [Photoshop CS6](http://adobe.com), shockingly.
-=======
-All of my developing and editing is done in [VIM](http://vim.org). The learning curve is very high, but once you've got the hang of it - there's no looking back. I use [iTerm](http://iterm.com) with zsh and some heavily modified [dotfiles](http://github.com/brousalis/dotfiles) for absolutely everything. I use [Reeder](http://reederapp.com) for my daily RSS feeds, and use [Gmail](http://gmail.com) for all of my busy work. For mocking and design, I use [Photoshop CS6](http://adobe.com), shockingly.
->>>>>>> a3b6694fdf93906cc5830fb68e5e96ed4a497e17
 
 This site is run on [Octopress](http://octopress.org), a static-site generator, turning markdown posts into what you see right now. I use [TypeKit](http://typekit.com) for all of the fonts, and the one you are most likely seeing is _Proxima Nova_ (sans) and _Adele_ (serif). 
