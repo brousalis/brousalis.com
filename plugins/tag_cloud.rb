@@ -3,12 +3,12 @@ module Jekyll
     def render(context)
       s = StringIO.new
       begin
-        cats = context['site']['categories']
-        unless cats.nil?
+        categories = context['site']['categories']
+        unless categories.nil?
           s << "<ul>"
           sorted = {}
           post_count = context['site']['posts'].size.to_i
-          cats.each do |cat|
+          categories.each do |cat|
             sorted[cat[0]] = cat[1].size
           end
           sorted = sorted.sort_by {|k,v| v}.reverse!

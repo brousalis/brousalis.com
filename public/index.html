@@ -88,6 +88,127 @@
 
 
 
+<time datetime="2012-07-08T00:51:00-05:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+            <li class="ruby"></li>
+             
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/08/jekyll-category-list-plugin/">Jekyll category list plugin</a></h1>
+    
+  </header>
+  
+
+  <div class="entry-content"><p><a href="http://github.com/mojombo/jekyll">Jekyll</a> is a static site generator written in Ruby. It is a very flexible solution for blogging that is much more lightweight that something like Wordpress.</p>
+
+<p>In order to get the category list you see on the left to work, I had to write a custom Jekyll plugin. The animations are done by CSS3 transitions. I&#8217;ve created a repo on Github for the plugin.</p>
+
+<div style="margin-bottom: 30px; text-align: center;">
+  <a class="button" href="http://github.com/brousalis/jekyll-category-list">Github</a>
+  <a class="button" href="http://brousalis.github.com/jekyll-category-list" style="margin-left: 20px;">CSS Demo</a>
+</div>
+
+
+
+
+<figure class='code'><figcaption><span>categorylist.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">CategoryList</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>      <span class="n">s</span> <span class="o">=</span> <span class="no">StringIO</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>      <span class="k">begin</span>
+</span><span class='line'>        <span class="n">categories</span> <span class="o">=</span> <span class="n">context</span><span class="o">[</span><span class="s1">&#39;site&#39;</span><span class="o">][</span><span class="s1">&#39;categories&#39;</span><span class="o">]</span>
+</span><span class='line'>        <span class="k">unless</span> <span class="n">categories</span><span class="o">.</span><span class="n">nil?</span>
+</span><span class='line'>          <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;ul&gt;&quot;</span>
+</span><span class='line'>          <span class="n">sorted</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>          <span class="n">post_count</span> <span class="o">=</span> <span class="n">context</span><span class="o">[</span><span class="s1">&#39;site&#39;</span><span class="o">][</span><span class="s1">&#39;posts&#39;</span><span class="o">].</span><span class="n">size</span><span class="o">.</span><span class="n">to_i</span>
+</span><span class='line'>          <span class="n">categories</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">cat</span><span class="o">|</span>
+</span><span class='line'>            <span class="n">sorted</span><span class="o">[</span><span class="n">cat</span><span class="o">[</span><span class="mi">0</span><span class="o">]]</span> <span class="o">=</span> <span class="n">cat</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="n">size</span>
+</span><span class='line'>          <span class="k">end</span>
+</span><span class='line'>          <span class="n">sorted</span> <span class="o">=</span> <span class="n">sorted</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span><span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span> <span class="n">v</span><span class="p">}</span><span class="o">.</span><span class="n">reverse!</span>
+</span><span class='line'>          <span class="n">sorted</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
+</span><span class='line'>            <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;li&gt;&lt;em&gt;</span><span class="si">#{</span><span class="n">v</span><span class="si">}</span><span class="s2">&lt;/em&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">/blog/categories/</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="s2">&lt;/a&gt;&lt;span style=</span><span class="se">\&quot;</span><span class="s2">width:</span><span class="si">#{</span><span class="n">v</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">post_count</span><span class="si">}</span><span class="s2">%</span><span class="se">\&quot;</span><span class="s2">&gt;bar&lt;/span&gt;&lt;div class=</span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&gt;&lt;/div&gt;&lt;/li&gt;&quot;</span>
+</span><span class='line'>          <span class="k">end</span>
+</span><span class='line'>          <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;/ul&gt;&quot;</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'>      <span class="k">rescue</span> <span class="o">=&gt;</span> <span class="n">boom</span>
+</span><span class='line'>        <span class="nb">p</span> <span class="n">boom</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>      <span class="n">s</span><span class="o">.</span><span class="n">string</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;category_list&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">CategoryList</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Read the rest for the CSS, usage, and more information.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/08/jekyll-category-list-plugin/">Read the rest</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <div class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
 <time datetime="2012-07-01T13:12:00-05:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>  
         <ul class="post-icon">
           
@@ -415,11 +536,16 @@
 </section>
 <section id="categories">
   <h1>Categories</h1>
-  <ul><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:50%">bar</span><div class="personal"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:50%">bar</span><div class="lab"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:25%">bar</span><div class="css"></div></li></ul>
+  <ul><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:40%">bar</span><div class="personal"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:40%">bar</span><div class="lab"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:20%">bar</span><div class="css"></div></li><li><em>1</em><a href="/blog/categories/ruby">ruby</a><span style="width:20%">bar</span><div class="ruby"></div></li></ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <span>Jul 08</span>
+        <a href="/blog/2012/07/08/jekyll-category-list-plugin/">Jekyll category list plugin</a>
+      </li>
     
       <li class="post">
         <span>Jul 01</span>

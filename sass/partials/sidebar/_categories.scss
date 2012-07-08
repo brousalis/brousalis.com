@@ -10,44 +10,40 @@ aside.sidebar {
         margin-bottom: 2px;
         overflow: hidden;
         text-shadow: none;
-        @include box-shadow(none);
-        @include transition(all 1s);
         &:hover em { top: 5px; }
         &:hover span { width: 96% !important; }
         &:hover div { top: 40px; }
         a {
           position: relative;
           display: block;
-          z-index: 1;
           padding-left: 12px;
-          color: #797D80;
+          z-index: 1;
         }
         em {
           font-style: normal;
           font-size: 11px;
-          opacity: 0.9;
-          z-index: 2;
           right: 13px;
-          @include transition(all .2s);
+          opacity: 0.9;
           position: absolute;
           top: 40px;
+          z-index: 2;
+          @include transition(all .2s);
         }
         span {
-          position: absolute;
-          top: 20%;
-          left: 0;
-          z-index: 0;
           padding: 3px 6px;
           height: 50%;
           text-indent: -9999px;
           display: block;
           overflow: hidden;
           background: #e5e5e5;
+          position: absolute;
+          top: 20%;
+          left: 0;
+          z-index: 0;
           @include border-radius(100px);
           @include transition(width .5s);
         }
         div {
-          @include transition(all .2s);
           width: 16px;
           height: 16px;
           float: right;
@@ -56,6 +52,7 @@ aside.sidebar {
           top: 6px;
           right: 7px;
           opacity: 0.6;
+          @include transition(all .2s);
         }
       }
     }
