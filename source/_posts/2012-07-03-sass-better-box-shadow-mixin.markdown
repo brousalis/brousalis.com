@@ -28,7 +28,7 @@ Here is my modified version that supports multiple shadows:
 @mixin box-shadow($shadow1, $shadow2:false, $shadow3:false) {
 	$shadows: $shadow1;
   @if $shadow2 { $shadows: $shadow1, $shadow2; }
-  @if $shadows != false { $shadows: $shadow1, $shadow2, $shadow3; }
+  @if $shadow3 { $shadows: $shadow1, $shadow2, $shadow3; }
   -webkit-box-shadow: $shadows;
      -moz-box-shadow: $shadows;
           box-shadow: $shadows;

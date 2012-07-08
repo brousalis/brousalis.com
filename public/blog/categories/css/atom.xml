@@ -4,7 +4,7 @@
   <title><![CDATA[Category: css | Pete Brousalis]]></title>
   <link href="http://brousalis.com/blog/categories/css/atom.xml" rel="self"/>
   <link href="http://brousalis.com/"/>
-  <updated>2012-07-08T17:19:09-05:00</updated>
+  <updated>2012-07-08T17:19:38-05:00</updated>
   <id>http://brousalis.com/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -66,7 +66,7 @@
 </span><span class='line'><span class="o">&lt;/</span><span class="nt">code</span><span class="o">&gt;&lt;/</span><span class="nt">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="na">&lt;p&gt;</span><span class="err">  </span><span class="na">@if</span><span class="err"> </span><span class="na">$shadow2</span><span class="err"> </span><span class="na">{</span><span class="err"> </span><span class="na">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="err">;</span> <span class="err">}</span>
-</span><span class='line'>  <span class="k">@if</span> <span class="nv">$shadows</span> <span class="o">!=</span> <span class="n-Pseudo">false</span> <span class="err">{</span> <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="err">;</span> <span class="err">}</span>
+</span><span class='line'>  <span class="k">@if</span> <span class="nv">$shadow3</span> <span class="err">{</span> <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="err">;</span> <span class="err">}</span>
 </span><span class='line'>  <span class="na">-webkit-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="na">&lt;pre&gt;&lt;code&gt;</span><span class="err"> </span><span class="na">-moz-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
