@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Pete Brousalis]]></title>
   <link href="http://brousalis.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://brousalis.com/"/>
-  <updated>2012-07-08T17:19:38-05:00</updated>
+  <updated>2012-07-08T17:22:37-05:00</updated>
   <id>http://brousalis.com/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -238,7 +238,6 @@
 <span class='line-number'>104</span>
 <span class='line-number'>105</span>
 <span class='line-number'>106</span>
-<span class='line-number'>107</span>
 </pre></td><td class='code'><pre><code class='css'><span class='line'><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="nt">h1</span><span class="o">&gt;</span><span class="nt">categories</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
@@ -311,7 +310,6 @@
 </span><span class='line'>  <span class="k">top</span><span class="o">:</span> <span class="m">20</span><span class="o">%</span><span class="p">;</span>
 </span><span class='line'>  <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
 </span><span class='line'>  <span class="k">z-index</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="err">k</span>
 </span><span class='line'>  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span><span class="o">&lt;/</span><span class="err">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>

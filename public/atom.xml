@@ -4,7 +4,7 @@
   <title><![CDATA[Pete Brousalis]]></title>
   <link href="http://brousalis.com/atom.xml" rel="self"/>
   <link href="http://brousalis.com/"/>
-  <updated>2012-07-08T17:19:38-05:00</updated>
+  <updated>2012-07-08T17:22:37-05:00</updated>
   <id>http://brousalis.com/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -195,7 +195,6 @@
 <span class='line-number'>73</span>
 <span class='line-number'>74</span>
 <span class='line-number'>75</span>
-<span class='line-number'>76</span>
 </pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nf">#categories</span> <span class="p">{</span>
 </span><span class='line'>  <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
@@ -248,7 +247,6 @@
 </span><span class='line'>  <span class="k">top</span><span class="o">:</span> <span class="m">20</span><span class="o">%</span><span class="p">;</span>
 </span><span class='line'>  <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
 </span><span class='line'>  <span class="k">z-index</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-</span><span class='line'>  <span class="err">k</span>
 </span><span class='line'>  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
 </span><span class='line'>     <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
 </span><span class='line'>       <span class="o">-</span><span class="err">o</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>

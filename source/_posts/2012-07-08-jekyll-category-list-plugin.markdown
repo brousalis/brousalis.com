@@ -119,7 +119,6 @@ Below is the CSS needed to animate the bars width to 100%, as well as apply some
   top: 20%;
   left: 0;
   z-index: 0;
-  k
   -webkit-border-radius: 100px;
      -moz-border-radius: 100px;
        -o-border-radius: 100px;
