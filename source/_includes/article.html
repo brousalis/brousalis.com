@@ -30,11 +30,11 @@
   {% if excerpted == 'true' %}
     <footer>
       <a rel="full-article" href="{{ root_url }}{{ post.url }}">Read the rest</a>
-      <a rel="comments" href="{{ root_url }}{{ post.url }}#disqus_thread">comments</a>
+      <a rel="comments" href="{{ root_url }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ root_url }}{{ post.url }}">comments</a>
     </footer>
   {% else %}
     <footer>
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a>
+      <a rel="full-article" href="{{ root_url }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ root_url }}{{ post.url }}">Comments</a>
     </footer> 
   {% endif %}
 {% else %}
