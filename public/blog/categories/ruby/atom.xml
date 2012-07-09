@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Pete Brousalis]]></title>
   <link href="http://brousalis.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://brousalis.com/"/>
-  <updated>2012-07-08T20:54:46-05:00</updated>
+  <updated>2012-07-09T17:17:11-05:00</updated>
   <id>http://brousalis.com/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -55,11 +55,6 @@
 <span class='line-number'>24</span>
 <span class='line-number'>25</span>
 <span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
 </span><span class='line'>  <span class="k">class</span> <span class="nc">CategoryList</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
@@ -68,29 +63,24 @@
 </span><span class='line'><span class="sr">  begin</span>
 </span><span class='line'><span class="sr">    categories = context[&#39;site&#39;][&#39;categories&#39;]</span>
 </span><span class='line'><span class="sr">    unless categories.nil?</span>
-</span><span class='line'><span class="sr">      s &amp;lt;&amp;lt; &quot;&amp;lt;ul&amp;gt;&quot;</span>
-</span><span class='line'><span class="sr">      sorted = {}</span>
 </span><span class='line'><span class="sr">      post_count = context[&#39;site&#39;][&#39;posts&#39;].size.to_i</span>
-</span><span class='line'><span class="sr">      categories.each do |cat|</span>
-</span><span class='line'><span class="sr">        sorted[cat[0]] = cat[1].size</span>
-</span><span class='line'><span class="sr">      end</span>
-</span><span class='line'><span class="sr">      sorted = sorted.sort_by {|k,v| v}.reverse!</span>
-</span><span class='line'><span class="sr">      sorted.each do |k,v|</span>
-</span><span class='line'><span class="sr">        s &amp;lt;&amp;lt; &quot;&amp;lt;li&amp;gt;&amp;lt;em&amp;gt;</span><span class="si">#{</span><span class="n">v</span><span class="si">}</span><span class="sr">&amp;lt;/em</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="p">\</span><span class="s2">&quot;/blog/categories/</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&amp;gt;</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="s2">&amp;lt;/a&amp;gt;&amp;lt;span style=</span><span class="se">\&quot;</span><span class="s2">width:</span><span class="si">#{</span><span class="n">v</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">post_count</span><span class="si">}</span><span class="s2">%</span><span class="se">\&quot;</span><span class="s2">&amp;gt;bar&amp;lt;/span&amp;gt;&amp;lt;div class=</span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;&quot;</span>
-</span><span class='line'>      <span class="k">end</span>
-</span><span class='line'>      <span class="n">s</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="s2">&quot;&amp;lt;/ul&amp;gt;&quot;</span>
+</span><span class='line'><span class="sr">      categories.sort_by { |cat, posts| posts.size }</span>
+</span><span class='line'><span class="sr">        .reverse()</span>
+</span><span class='line'><span class="sr">        .each do |cat, posts|</span>
+</span><span class='line'><span class="sr">           s &amp;lt;&amp;lt; &quot;&amp;lt;li&amp;gt;&amp;lt;em&amp;gt;</span><span class="si">#{</span><span class="n">posts</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="sr">&amp;lt;/em</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="p">\</span><span class="s2">&quot;/blog/categories/</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&amp;gt;</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="s2">&amp;lt;/a&amp;gt;&amp;lt;span style=</span><span class="se">\&quot;</span><span class="s2">width:</span><span class="si">#{</span><span class="n">posts</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">post_count</span><span class="si">}</span><span class="s2">%</span><span class="se">\&quot;</span><span class="s2">&amp;gt;bar&amp;lt;/span&amp;gt;&amp;lt;div class=</span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/li&amp;gt;&quot;</span>
+</span><span class='line'>        <span class="k">end</span>
 </span><span class='line'>    <span class="k">end</span>
 </span><span class='line'>  <span class="k">rescue</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">boom</span>
 </span><span class='line'>    <span class="nb">p</span> <span class="n">boom</span>
 </span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  <span class="n">s</span><span class="o">.</span><span class="n">string</span>
+</span><span class='line'>  <span class="s2">&quot;&amp;lt;ul&amp;gt;</span><span class="si">#{</span><span class="n">s</span><span class="o">.</span><span class="n">string</span><span class="si">}</span><span class="s2">&amp;lt;/ul&amp;gt;&quot;</span>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
 </span><span class='line'><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;Liquid::Template.register_tag(&#39;category_list&#39;, Jekyll::CategoryList)</span>
+</span><span class='line'><span class="sr">&lt;p&gt;Liquid::Template.register_tag(&#39;category_list&#39;, Jekyll::CategoryList) &lt;br/</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Read the rest for the CSS, usage, and more information.</p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Pete Brousalis]]></title>
   <link href="http://brousalis.com/atom.xml" rel="self"/>
   <link href="http://brousalis.com/"/>
-  <updated>2012-07-08T20:54:46-05:00</updated>
+  <updated>2012-07-09T17:17:11-05:00</updated>
   <id>http://brousalis.com/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -54,11 +54,6 @@
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
 <span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
 </span><span class='line'>  <span class="k">class</span> <span class="nc">CategoryList</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
 </span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
@@ -66,22 +61,17 @@
 </span><span class='line'>      <span class="k">begin</span>
 </span><span class='line'>        <span class="n">categories</span> <span class="o">=</span> <span class="n">context</span><span class="o">[</span><span class="s1">&#39;site&#39;</span><span class="o">][</span><span class="s1">&#39;categories&#39;</span><span class="o">]</span>
 </span><span class='line'>        <span class="k">unless</span> <span class="n">categories</span><span class="o">.</span><span class="n">nil?</span>
-</span><span class='line'>          <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;ul&gt;&quot;</span>
-</span><span class='line'>          <span class="n">sorted</span> <span class="o">=</span> <span class="p">{}</span>
 </span><span class='line'>          <span class="n">post_count</span> <span class="o">=</span> <span class="n">context</span><span class="o">[</span><span class="s1">&#39;site&#39;</span><span class="o">][</span><span class="s1">&#39;posts&#39;</span><span class="o">].</span><span class="n">size</span><span class="o">.</span><span class="n">to_i</span>
-</span><span class='line'>          <span class="n">categories</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">cat</span><span class="o">|</span>
-</span><span class='line'>            <span class="n">sorted</span><span class="o">[</span><span class="n">cat</span><span class="o">[</span><span class="mi">0</span><span class="o">]]</span> <span class="o">=</span> <span class="n">cat</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="n">size</span>
-</span><span class='line'>          <span class="k">end</span>
-</span><span class='line'>          <span class="n">sorted</span> <span class="o">=</span> <span class="n">sorted</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span><span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span> <span class="n">v</span><span class="p">}</span><span class="o">.</span><span class="n">reverse!</span>
-</span><span class='line'>          <span class="n">sorted</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
-</span><span class='line'>            <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;li&gt;&lt;em&gt;</span><span class="si">#{</span><span class="n">v</span><span class="si">}</span><span class="s2">&lt;/em&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">/blog/categories/</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="s2">&lt;/a&gt;&lt;span style=</span><span class="se">\&quot;</span><span class="s2">width:</span><span class="si">#{</span><span class="n">v</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">post_count</span><span class="si">}</span><span class="s2">%</span><span class="se">\&quot;</span><span class="s2">&gt;bar&lt;/span&gt;&lt;div class=</span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">k</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&gt;&lt;/div&gt;&lt;/li&gt;&quot;</span>
-</span><span class='line'>          <span class="k">end</span>
-</span><span class='line'>          <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;/ul&gt;&quot;</span>
+</span><span class='line'>          <span class="n">categories</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">cat</span><span class="p">,</span> <span class="n">posts</span><span class="o">|</span> <span class="n">posts</span><span class="o">.</span><span class="n">size</span> <span class="p">}</span>
+</span><span class='line'>            <span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+</span><span class='line'>            <span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">cat</span><span class="p">,</span> <span class="n">posts</span><span class="o">|</span>
+</span><span class='line'>               <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;li&gt;&lt;em&gt;</span><span class="si">#{</span><span class="n">posts</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s2">&lt;/em&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">/blog/categories/</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="s2">&lt;/a&gt;&lt;span style=</span><span class="se">\&quot;</span><span class="s2">width:</span><span class="si">#{</span><span class="n">posts</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">post_count</span><span class="si">}</span><span class="s2">%</span><span class="se">\&quot;</span><span class="s2">&gt;bar&lt;/span&gt;&lt;div class=</span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&gt;&lt;/div&gt;&lt;/li&gt;&quot;</span>
+</span><span class='line'>            <span class="k">end</span>
 </span><span class='line'>        <span class="k">end</span>
 </span><span class='line'>      <span class="k">rescue</span> <span class="o">=&gt;</span> <span class="n">boom</span>
 </span><span class='line'>        <span class="nb">p</span> <span class="n">boom</span>
 </span><span class='line'>      <span class="k">end</span>
-</span><span class='line'>      <span class="n">s</span><span class="o">.</span><span class="n">string</span>
+</span><span class='line'>      <span class="s2">&quot;&lt;ul&gt;</span><span class="si">#{</span><span class="n">s</span><span class="o">.</span><span class="n">string</span><span class="si">}</span><span class="s2">&lt;/ul&gt;&quot;</span>
 </span><span class='line'>    <span class="k">end</span>
 </span><span class='line'>  <span class="k">end</span>
 </span><span class='line'><span class="k">end</span>
