@@ -6,7 +6,7 @@ sharing: false
 footer: false
 --- 
 <div class="line">
-  <p>This page is unfinished and I will update it as soon as I get a chance. If you are interested in working together, please <a href="http://github.com/brousalis">e-mail me</a>.</p>
+  <p>This page is unfinished and I will update it as soon as I get a chance. If you are interested in working together, please <a href="mailto:brousapg(at)gmail.com">e-mail me</a>.</p>
 </div>
 <div class="line">
   <ul id="work" class="work">

@@ -26,13 +26,15 @@
 {% if index %}
   <div class="entry-content">{{ content | excerpt }}</div>
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+
   {% if excerpted == 'true' %}
     <footer>
       <a rel="full-article" href="{{ root_url }}{{ post.url }}">Read the rest</a>
+      <a rel="comments" href="{{ root_url }}{{ post.url }}#disqus_thread">comments</a>
     </footer>
   {% else %}
     <footer>
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}">Leave a comment</a>
+      <a rel="full-article" href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a>
     </footer> 
   {% endif %}
 {% else %}
