@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: personal | Pete Brousalis]]></title>
-  <link href="http://brousalis.com/blog/categories/personal/atom.xml" rel="self"/>
-  <link href="http://brousalis.com/"/>
-  <updated>2012-07-09T17:17:11-05:00</updated>
-  <id>http://brousalis.com/</id>
+  <link href="http://brousalis.github.com/brousalis/blog/categories/personal/atom.xml" rel="self"/>
+  <link href="http://brousalis.github.com/brousalis/"/>
+  <updated>2012-07-11T12:43:37-05:00</updated>
+  <id>http://brousalis.github.com/brousalis/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Personal dotfiles and scripts]]></title>
-    <link href="http://brousalis.com/blog/2012/05/25/dotfiles/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/05/25/dotfiles/"/>
     <updated>2012-05-25T20:34:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/05/25/dotfiles</id>
+    <id>http://brousalis.github.com/brousalis/blog/2012/05/25/dotfiles</id>
     <content type="html"><![CDATA[<p>I have spent about a year slowly configuring my personal set of dotfiles, or configuration settings. I've hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty neat tricks I've picked up in quest for the perfect dev environment, and I'd like to share a few.</p>
 
 <h2>Bootstrapping your config files</h2>
@@ -145,9 +145,9 @@
   
   <entry>
     <title type="html"><![CDATA[My Setup]]></title>
-    <link href="http://brousalis.com/blog/2012/04/15/the-setup/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/04/15/the-setup/"/>
     <updated>2012-04-15T19:54:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/04/15/the-setup</id>
+    <id>http://brousalis.github.com/brousalis/blog/2012/04/15/the-setup</id>
     <content type="html"><![CDATA[<p>Inspired by <a href="http://usesthis.com/">The Setup</a>, a website filled with interviews dedicated to finding out how and what designers and developers use to get their work done. My career has only just begun, but I thought I'd share what I use.</p>
 
 <h3>Hardware</h3>

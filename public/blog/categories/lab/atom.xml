@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: lab | Pete Brousalis]]></title>
-  <link href="http://brousalis.com/blog/categories/lab/atom.xml" rel="self"/>
-  <link href="http://brousalis.com/"/>
-  <updated>2012-07-09T17:17:11-05:00</updated>
-  <id>http://brousalis.com/</id>
+  <link href="http://brousalis.github.com/brousalis/blog/categories/lab/atom.xml" rel="self"/>
+  <link href="http://brousalis.github.com/brousalis/"/>
+  <updated>2012-07-11T12:43:37-05:00</updated>
+  <id>http://brousalis.github.com/brousalis/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Current Git branch in prompt]]></title>
-    <link href="http://brousalis.com/blog/2012/06/15/current-git-branch-in-bash-prompt/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/06/15/current-git-branch-in-bash-prompt/"/>
     <updated>2012-06-15T00:48:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/06/15/current-git-branch-in-bash-prompt</id>
+    <id>http://brousalis.github.com/brousalis/blog/2012/06/15/current-git-branch-in-bash-prompt</id>
     <content type="html"><![CDATA[<p>I've found it necessary now to have the current Git branch always listed in my command line. You can checkout how I do it with my <a href="http://github.com/brousalis/dotfiles">dotfiles</a>, or add the following below to your <span class="bash">.bashrc</span>:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bashrc  </span></figcaption>
@@ -33,15 +33,15 @@
 
 <p>Adding these then doing a <span class="bash">source ~/.bashrc</span> in console should make your command line look like:</p>
 
-<p><img src="http://brousalis.com/images/bash.png" style="border: black 0.5em solid !important"></p>
+<p><img src="http://brousalis.github.com/brousalis/images/bash.png" style="border: black 0.5em solid !important"></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Personal dotfiles and scripts]]></title>
-    <link href="http://brousalis.com/blog/2012/05/25/dotfiles/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/05/25/dotfiles/"/>
     <updated>2012-05-25T20:34:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/05/25/dotfiles</id>
+    <id>http://brousalis.github.com/brousalis/blog/2012/05/25/dotfiles</id>
     <content type="html"><![CDATA[<p>I have spent about a year slowly configuring my personal set of dotfiles, or configuration settings. I've hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty neat tricks I've picked up in quest for the perfect dev environment, and I'd like to share a few.</p>
 
 <h2>Bootstrapping your config files</h2>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: css | Pete Brousalis]]></title>
-  <link href="http://brousalis.com/blog/categories/css/atom.xml" rel="self"/>
-  <link href="http://brousalis.com/"/>
-  <updated>2012-07-09T17:17:11-05:00</updated>
-  <id>http://brousalis.com/</id>
+  <link href="http://brousalis.github.com/brousalis/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://brousalis.github.com/brousalis/"/>
+  <updated>2012-07-11T12:43:37-05:00</updated>
+  <id>http://brousalis.github.com/brousalis/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SASS better box-shadow mixin]]></title>
-    <link href="http://brousalis.com/blog/2012/07/01/sass-better-box-shadow-mixin/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/07/01/sass-better-box-shadow-mixin/"/>
     <updated>2012-07-01T13:12:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/07/01/sass-better-box-shadow-mixin</id>
+    <id>http://brousalis.github.com/brousalis/blog/2012/07/01/sass-better-box-shadow-mixin</id>
     <content type="html"><![CDATA[<p>I've seen a similar box-shadow mixin in several places, particularly <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a>, and I think it can be improved.</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

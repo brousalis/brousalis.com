@@ -6,7 +6,7 @@ comments: true
 categories: ruby
 ---
 
-<a href="http://github.com/mojombo/jekyll">Jekyll</a> is a static site generator written in Ruby. It is a very flexible solution for blogging that is much more lightweight that something like Wordpress. 
+<a href="http://github.com/mojombo/jekyll">Jekyll</a> is a static site generator written in Ruby. It is a very flexible solution for maintaining a blog that is much more lightweight than a framework like Wordpress. 
 
 In order to get the category list you see on the left to work, I had to write a custom Jekyll plugin. The animations are done by CSS3 transitions. I've created a repo on Github for the plugin.
 

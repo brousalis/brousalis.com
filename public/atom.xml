@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Pete Brousalis]]></title>
-  <link href="http://brousalis.com/atom.xml" rel="self"/>
-  <link href="http://brousalis.com/"/>
-  <updated>2012-07-09T17:17:11-05:00</updated>
-  <id>http://brousalis.com/</id>
+  <link href="http://brousalis.github.com/brousalis/atom.xml" rel="self"/>
+  <link href="http://brousalis.github.com/brousalis/"/>
+  <updated>2012-07-11T12:43:37-05:00</updated>
+  <id>http://brousalis.github.com/brousalis/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
     
@@ -15,10 +15,10 @@
   
   <entry>
     <title type="html"><![CDATA[Jekyll category list plugin]]></title>
-    <link href="http://brousalis.com/blog/2012/07/08/jekyll-category-list-plugin/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/07/08/jekyll-category-list-plugin/"/>
     <updated>2012-07-08T00:51:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/07/08/jekyll-category-list-plugin</id>
-    <content type="html"><![CDATA[<p><a href="http://github.com/mojombo/jekyll">Jekyll</a> is a static site generator written in Ruby. It is a very flexible solution for blogging that is much more lightweight that something like Wordpress.</p>
+    <id>http://brousalis.github.com/brousalis/blog/2012/07/08/jekyll-category-list-plugin</id>
+    <content type="html"><![CDATA[<p><a href="http://github.com/mojombo/jekyll">Jekyll</a> is a static site generator written in Ruby. It is a very flexible solution for maintaining a blog that is much more lightweight than a framework like Wordpress.</p>
 
 <p>In order to get the category list you see on the left to work, I had to write a custom Jekyll plugin. The animations are done by CSS3 transitions. I&#8217;ve created a repo on Github for the plugin.</p>
 
@@ -269,9 +269,9 @@
   
   <entry>
     <title type="html"><![CDATA[SASS better box-shadow mixin]]></title>
-    <link href="http://brousalis.com/blog/2012/07/01/sass-better-box-shadow-mixin/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/07/01/sass-better-box-shadow-mixin/"/>
     <updated>2012-07-01T13:12:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/07/01/sass-better-box-shadow-mixin</id>
+    <id>http://brousalis.github.com/brousalis/blog/2012/07/01/sass-better-box-shadow-mixin</id>
     <content type="html"><![CDATA[<p>I&#8217;ve seen a similar box-shadow mixin in several places, particularly <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a>, and I think it can be improved.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -328,9 +328,9 @@
   
   <entry>
     <title type="html"><![CDATA[Current Git branch in prompt]]></title>
-    <link href="http://brousalis.com/blog/2012/06/15/current-git-branch-in-bash-prompt/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/06/15/current-git-branch-in-bash-prompt/"/>
     <updated>2012-06-15T00:48:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/06/15/current-git-branch-in-bash-prompt</id>
+    <id>http://brousalis.github.com/brousalis/blog/2012/06/15/current-git-branch-in-bash-prompt</id>
     <content type="html"><![CDATA[<p>I&#8217;ve found it necessary now to have the current Git branch always listed in my command line. You can checkout how I do it with my <a href="http://github.com/brousalis/dotfiles">dotfiles</a>, or add the following below to your <span class="bash">.bashrc</span>:</p>
 
 <figure class='code'><figcaption><span>bashrc  </span></figcaption>
@@ -347,15 +347,15 @@
 
 <p>Adding these then doing a <span class="bash">source ~/.bashrc</span> in console should make your command line look like:</p>
 
-<p><img src="http://brousalis.com/images/bash.png" style="border: black 0.5em solid !important"></p>
+<p><img src="http://brousalis.github.com/brousalis/images/bash.png" style="border: black 0.5em solid !important"></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Personal dotfiles and scripts]]></title>
-    <link href="http://brousalis.com/blog/2012/05/25/dotfiles/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/05/25/dotfiles/"/>
     <updated>2012-05-25T20:34:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/05/25/dotfiles</id>
+    <id>http://brousalis.github.com/brousalis/blog/2012/05/25/dotfiles</id>
     <content type="html"><![CDATA[<p>I have spent about a year slowly configuring my personal set of dotfiles, or configuration settings. I&#8217;ve hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty neat tricks I&#8217;ve picked up in quest for the perfect dev environment, and I&#8217;d like to share a few.</p>
 
 <h2>Bootstrapping your config files</h2>
@@ -477,9 +477,9 @@
   
   <entry>
     <title type="html"><![CDATA[My Setup]]></title>
-    <link href="http://brousalis.com/blog/2012/04/15/the-setup/"/>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/04/15/the-setup/"/>
     <updated>2012-04-15T19:54:00-05:00</updated>
-    <id>http://brousalis.com/blog/2012/04/15/the-setup</id>
+    <id>http://brousalis.github.com/brousalis/blog/2012/04/15/the-setup</id>
     <content type="html"><![CDATA[<p>Inspired by <a href="http://usesthis.com/">The Setup</a>, a website filled with interviews dedicated to finding out how and what designers and developers use to get their work done. My career has only just begun, but I thought I&#8217;d share what I use.</p>
 
 <h3>Hardware</h3>
