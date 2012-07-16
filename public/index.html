@@ -88,6 +88,89 @@
 
 
 
+<time datetime="2012-07-13T14:43:00-05:00" pubdate data-updated="true">Jul 13<span>th</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+            <li class="ruby"></li>
+             
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/13/google-buttons-sass-gem/">google-buttons-sass gem</a></h1>
+    
+  </header>
+  
+
+  <div class="entry-content"><p>I&#8217;m happy to release <span class="bash">google-buttons-sass</span>, a gem that converts the <a href="https://github.com/todc/css3-google-buttons">CSS3 Google Buttons</a>, written by Tim O&#8217;Donnell, to SASS and imports them into your project.</p>
+
+<div style="margin-bottom: 30px; text-align: center;">
+  <img src="/images/buttons.png" style="border: white 4px solid !important; margin: 0px 0px 20px 17px">
+  <a class="button" href="http://blog.timodonnell.com/css3-google-buttons/" style="margin-left: 20px;">CSS Demo</a>
+  <a class="button" href="http://github.com/brousalis/google-buttons-sass">Github</a>
+</div>
+
+
+<p>This gem requires Twitter Bootstrap to be installed, which you can do by importing the CSS files directly to your project or by installing the <span class="bash">bootstrap-sass</span> gem.</p>
+
+<p>If you are using Bundler for your project, you can install the gem:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;sass-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.1&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;google-buttons-sass&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you don&#8217;t have Twitter Bootstrap assets installed into your project manually, you may want to install <a href="https://github.com/thomas-mcdonald/bootstrap-sass">bootstrap-sass</a>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;bootstrap-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.4.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then add the following line to your main css file to import the styles:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@import</span> <span class="s2">&quot;google-buttons&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><span class="more">Read more to find out how to use the gem in a non-Rails project and with compass.</span></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/13/google-buttons-sass-gem/">Read the rest</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <div class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
 <time datetime="2012-07-08T00:51:00-05:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>  
         <ul class="post-icon">
           
@@ -526,11 +609,16 @@
 </section>
 <section id="categories">
   <h1>Categories</h1>
-  <ul><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:40%">bar</span><div class="personal"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:40%">bar</span><div class="lab"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:20%">bar</span><div class="css"></div></li><li><em>1</em><a href="/blog/categories/ruby">ruby</a><span style="width:20%">bar</span><div class="ruby"></div></li></ul>
+  <ul><li><em>2</em><a href="/blog/categories/ruby">ruby</a><span style="width:33%">bar</span><div class="ruby"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:33%">bar</span><div class="lab"></div></li><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:33%">bar</span><div class="personal"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:16%">bar</span><div class="css"></div></li></ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <span>Jul 13</span>
+        <a href="/blog/2012/07/13/google-buttons-sass-gem/">google-buttons-sass gem</a>
+      </li>
     
       <li class="post">
         <span>Jul 08</span>
@@ -550,11 +638,6 @@
       <li class="post">
         <span>May 25</span>
         <a href="/blog/2012/05/25/dotfiles/">Personal dotfiles and scripts</a>
-      </li>
-    
-      <li class="post">
-        <span>Apr 15</span>
-        <a href="/blog/2012/04/15/the-setup/">My Setup</a>
       </li>
     
   </ul>

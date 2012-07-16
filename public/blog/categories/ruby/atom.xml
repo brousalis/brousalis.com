@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Pete Brousalis]]></title>
   <link href="http://brousalis.github.com/brousalis/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://brousalis.github.com/brousalis/"/>
-  <updated>2012-07-11T12:43:37-05:00</updated>
+  <updated>2012-07-15T22:53:52-05:00</updated>
   <id>http://brousalis.github.com/brousalis/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[google-buttons-sass gem]]></title>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/07/13/google-buttons-sass-gem/"/>
+    <updated>2012-07-13T14:43:00-05:00</updated>
+    <id>http://brousalis.github.com/brousalis/blog/2012/07/13/google-buttons-sass-gem</id>
+    <content type="html"><![CDATA[<p>I'm happy to release <span class="bash">google-buttons-sass</span>, a gem that converts the <a href="https://github.com/todc/css3-google-buttons">CSS3 Google Buttons</a>, written by Tim O'Donnell, to SASS and imports them into your project.</p>
+
+<div style="margin-bottom: 30px; text-align: center;">
+  <img src="http://brousalis.github.com/brousalis/images/buttons.png" style="border: white 4px solid !important; margin: 0px 0px 20px 17px">
+  <a class="button" href="http://blog.timodonnell.com/css3-google-buttons/" style="margin-left: 20px;">CSS Demo</a>
+  <a class="button" href="http://github.com/brousalis/google-buttons-sass">Github</a>
+</div>
+
+
+<p>This gem requires Twitter Bootstrap to be installed, which you can do by importing the CSS files directly to your project or by installing the <span class="bash">bootstrap-sass</span> gem.</p>
+
+<p>If you are using Bundler for your project, you can install the gem:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;sass-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.1&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;google-buttons-sass&#39;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>If you don't have Twitter Bootstrap assets installed into your project manually, you may want to install <a href="https://github.com/thomas-mcdonald/bootstrap-sass">bootstrap-sass</a>:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;bootstrap-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.4.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Then add the following line to your main css file to import the styles:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@import</span> <span class="s2">&quot;google-buttons&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><span class="more">Read more to find out how to use the gem in a non-Rails project and with compass.</span></p>
+
+<!-- more -->
+
+
+<p>If you want to use the Javascript that supports the custom select box, add the following line to your main js file:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//= require google-buttons</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>To read more about <strong>Compass</strong> support or have any questions, comments, bugs, please visit the <a href="https://github.com/brousalis/google-buttons-sass">Github page</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Jekyll category list plugin]]></title>

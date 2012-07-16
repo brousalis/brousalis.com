@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://brousalis.github.com/brousalisblog/categories/css">
+  <link rel="canonical" href="http://brousalis.github.com/brousalis/blog/2012/07/13/google-buttons-sass-gem">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
@@ -65,29 +65,108 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-  <div id="blog-archives" class="category">
-
-
-
-  
-  <h2>2012</h2>
-
+      <div class="blog-index post">
 <article>
   
-<h1><a href="/blog/2012/07/01/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a></h1>
-<time datetime="2012-07-01T13:12:00-05:00" pubdate><span class='month'>Jul</span> <span class='day'>01</span> <span class='year'>2012</span></time>
+  <header>
+    
+      <div class="meta">
+        
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/css/'>css</a></span>
-</footer>
+
+
+
+
+
+
+
+  
+
+
+
+
+<time datetime="2012-07-13T14:43:00-05:00" pubdate data-updated="true">Jul 13<span>th</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+              <li class="ruby"></li>
+            
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title">google-buttons-sass gem</h1>
+    
+  </header>
+  
+
+<div class="entry-content"><p>I&#8217;m happy to release <span class="bash">google-buttons-sass</span>, a gem that converts the <a href="https://github.com/todc/css3-google-buttons">CSS3 Google Buttons</a>, written by Tim O&#8217;Donnell, to SASS and imports them into your project.</p>
+
+<div style="margin-bottom: 30px; text-align: center;">
+  <img src="/images/buttons.png" style="border: white 4px solid !important; margin: 0px 0px 20px 17px">
+  <a class="button" href="http://blog.timodonnell.com/css3-google-buttons/" style="margin-left: 20px;">CSS Demo</a>
+  <a class="button" href="http://github.com/brousalis/google-buttons-sass">Github</a>
+</div>
+
+
+<p>This gem requires Twitter Bootstrap to be installed, which you can do by importing the CSS files directly to your project or by installing the <span class="bash">bootstrap-sass</span> gem.</p>
+
+<p>If you are using Bundler for your project, you can install the gem:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;sass-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.1&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;google-buttons-sass&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you don&#8217;t have Twitter Bootstrap assets installed into your project manually, you may want to install <a href="https://github.com/thomas-mcdonald/bootstrap-sass">bootstrap-sass</a>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;bootstrap-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.4.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then add the following line to your main css file to import the styles:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@import</span> <span class="s2">&quot;google-buttons&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><span class="more">Read more to find out how to use the gem in a non-Rails project and with compass.</span></p>
+
+<!-- more -->
+
+
+<p>If you want to use the Javascript that supports the custom select box, add the following line to your main js file:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//= require google-buttons</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To read more about <strong>Compass</strong> support or have any questions, comments, bugs, please visit the <a href="https://github.com/brousalis/google-buttons-sass">Github page</a>.</p>
+</div>
 
 
 </article>
-
-</div>
-
+<div class="line posts">
   
+    <span class="prev">PREV. POST</span>
+    <a id="prev" class="basic-alignment left" href="/blog/2012/07/08/jekyll-category-list-plugin/" title="Previous Post: Jekyll category list plugin">Jekyll category list plugin</a>
+  
+  
+</div> 
+
+<div class="line">
+  <section>
+    <h1></h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+</div>
 
 </div>
 
@@ -169,7 +248,10 @@
       var disqus_shortname = 'brousalis';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://brousalis.github.com/brousalis/blog/2012/07/13/google-buttons-sass-gem/';
+        var disqus_url = 'http://brousalis.github.com/brousalis/blog/2012/07/13/google-buttons-sass-gem/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

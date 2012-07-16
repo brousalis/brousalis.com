@@ -118,6 +118,7 @@ div.line + div.line {
   clear: both;
 }
 .post .line { padding-left: 45px; padding-right: 45px; }
+.post .more { display: none; }
 .posts { height: 50px; padding-top: 0; background: $img-border top left repeat-x; }
 
 #next, #prev { 
