@@ -29,10 +29,10 @@ Then add the following line to your main css file to import the styles:
 @import "google-buttons"
 {% endcodeblock %}
 
-If you want to use the Javascript that supports the custom select box, which can be seen in the <em>CSS demo</em>, add the following line to your main js file:
+If you want to use the Javascript that supports the custom select box, which can be seen in the <a href="http://blog.timodonnell.com/css3-google-buttons/base-css.html#forms">CSS demo</a>, add the following line to your main js file:
 
 {% codeblock lang:js %}
 //= require google-buttons
 {% endcodeblock %}
 
-To read more about <strong>Compass</strong> support or have any questions, comments, bugs, please visit the [Github page](https://github.com/brousalis/google-buttons-sass).
+To read more about <strong>Compass</strong> support or if you have any questions, comments, bugs, please visit the [Github page](https://github.com/brousalis/google-buttons-sass).

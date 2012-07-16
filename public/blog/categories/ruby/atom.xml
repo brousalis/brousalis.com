@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Pete Brousalis]]></title>
   <link href="http://brousalis.github.com/brousalis/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://brousalis.github.com/brousalis/"/>
-  <updated>2012-07-16T11:02:01-05:00</updated>
+  <updated>2012-07-16T11:07:34-05:00</updated>
   <id>http://brousalis.github.com/brousalis/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -43,13 +43,13 @@
 </pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@import</span> <span class="s2">&quot;google-buttons&quot;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>If you want to use the Javascript that supports the custom select box, which can be seen in the <em>CSS demo</em>, add the following line to your main js file:</p>
+<p>If you want to use the Javascript that supports the custom select box, which can be seen in the <a href="http://blog.timodonnell.com/css3-google-buttons/base-css.html#forms">CSS demo</a>, add the following line to your main js file:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//= require google-buttons</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>To read more about <strong>Compass</strong> support or have any questions, comments, bugs, please visit the <a href="https://github.com/brousalis/google-buttons-sass">Github page</a>.</p>
+<p>To read more about <strong>Compass</strong> support or if you have any questions, comments, bugs, please visit the <a href="https://github.com/brousalis/google-buttons-sass">Github page</a>.</p>
 ]]></content>
   </entry>
   
