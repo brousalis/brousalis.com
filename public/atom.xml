@@ -4,7 +4,7 @@
   <title><![CDATA[Pete Brousalis]]></title>
   <link href="http://brousalis.github.com/brousalis/atom.xml" rel="self"/>
   <link href="http://brousalis.github.com/brousalis/"/>
-  <updated>2012-07-15T22:58:52-05:00</updated>
+  <updated>2012-07-15T23:00:00-05:00</updated>
   <id>http://brousalis.github.com/brousalis/</id>
   <author>
     <name><![CDATA[Pete Brousalis]]></name>
@@ -18,7 +18,7 @@
     <link href="http://brousalis.github.com/brousalis/blog/2012/07/13/google-buttons-sass-gem/"/>
     <updated>2012-07-13T14:43:00-05:00</updated>
     <id>http://brousalis.github.com/brousalis/blog/2012/07/13/google-buttons-sass-gem</id>
-    <content type="html"><![CDATA[<p>I&#8217;m happy to release <span class="bash">google-buttons-sass</span>, a gem that is a SASS-powered version of <a href="https://github.com/todc/css3-google-buttons">CSS3 Google Buttons</a> written by Tim O&#8217;Donnell to SASS, ready to be imported to your project.</p>
+    <content type="html"><![CDATA[<p>I&#8217;m happy to release <span class="bash">google-buttons-sass</span>, a gem that is a SASS-powered version of <a href="https://github.com/todc/css3-google-buttons">CSS3 Google Buttons</a> written by Tim O&#8217;Donnell, ready to be imported to your project.</p>
 
 <div style="margin-bottom: 30px; text-align: center;">
   <img src="http://brousalis.github.com/brousalis/images/buttons.png" style="border: white 4px solid !important; margin: 0px 0px 20px 17px">
