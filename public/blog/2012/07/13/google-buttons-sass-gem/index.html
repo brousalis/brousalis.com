@@ -103,6 +103,8 @@
 
 <div class="entry-content"><p>I&#8217;m happy to release <span class="bash">google-buttons-sass</span>, a gem that is a SASS-powered version of <a href="https://github.com/todc/css3-google-buttons">CSS3 Google Buttons</a> written by Tim O&#8217;Donnell.</p>
 
+<p>This gem requires <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> to be installed, which you can do by importing the CSS files directly to your project or by installing the <span class="bash">bootstrap-sass</span> gem.</p>
+
 <div style="margin-bottom: 30px; text-align: center;">
   <img src="/images/buttons.png" style="border: white 4px solid !important; margin: 0px 0px 20px 17px">
   <a class="button" href="http://blog.timodonnell.com/css3-google-buttons/" style="margin-left: 20px;">CSS Demo</a>
@@ -110,21 +112,12 @@
 </div>
 
 
-<p>This gem requires Twitter Bootstrap to be installed, which you can do by importing the CSS files directly to your project or by installing the <span class="bash">bootstrap-sass</span> gem.</p>
-
-<p>If you are using Bundler for your project, you can install the gem:</p>
+<p>To get started, use Bundler to install the gem:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;sass-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.1&#39;</span>
 </span><span class='line'><span class="n">gem</span> <span class="s1">&#39;google-buttons-sass&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you don&#8217;t have Twitter Bootstrap assets installed into your project manually, you may want to install <a href="https://github.com/thomas-mcdonald/bootstrap-sass">bootstrap-sass</a>:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;bootstrap-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 2.0.4.0&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -135,12 +128,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><span class="more">Read more to find out how to use the gem in a non-Rails project and with compass.</span></p>
-
-<!-- more -->
-
-
-<p>If you want to use the Javascript that supports the custom select box, add the following line to your main js file:</p>
+<p>If you want to use the Javascript that supports the custom select box, which can be seen in the <em>CSS demo</em>, add the following line to your main js file:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//= require google-buttons</span>
