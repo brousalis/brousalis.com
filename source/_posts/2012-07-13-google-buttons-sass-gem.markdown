@@ -6,7 +6,7 @@ comments: true
 categories: ruby
 ---
 
-I'm happy to release <span class="bash">google-buttons-sass</span>, a gem that is a SASS-powered version of [CSS3 Google Buttons](https://github.com/todc/css3-google-buttons) written by Tim O'Donnell, ready to be imported to your project.
+I'm happy to release <span class="bash">google-buttons-sass</span>, a gem that is a SASS-powered version of [CSS3 Google Buttons](https://github.com/todc/css3-google-buttons) written by Tim O'Donnell.
 
 <div style="margin-bottom: 30px; text-align: center;">
   <img src="/images/buttons.png" style="border: white 4px solid !important; margin: 0px 0px 20px 17px">
