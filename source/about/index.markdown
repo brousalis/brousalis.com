@@ -9,7 +9,7 @@ footer: true
 
 <div class="line">
   <div class="me"></div>
-  <p>I'm a software engineer from Chicago and developer at <a href="http://enova.com">Enova</a>. I have a passion for user interface design and front end development.</p>
+  <p>I'm a software engineer from Chicago and developer at <a href="http://enova.com">Enova</a>. I specialize in front end development and user interface design.</p>
 </div>
 
 <div class="line">
@@ -17,7 +17,7 @@ footer: true
   <div class="map"></div>
   <p style="width: 48%; float: left">I'm passionate about one thing in particular&hellip; <em>learning</em>. I enjoy both UI design and backend development, and learning how to use and contribute to the latest web technologies has been a huge goal for me since graduating.</p>
 
-  <p>By learning about both backend and frontend development, I hope to develop and contribute software that is designed well on both the outside, and inside. Follow me <a href="http://twitter.com/brousalis">on Twitter</a>, I'd love to work on a project with you.</p>
+  <p>By pair programming, hack nights, side projects, I've learned a great deal since graduating and hope to develop software that is designed well on both the inside, and outside. Follow me <a href="http://twitter.com/brousalis">on Twitter</a>, I'd love to work on a project with you.</p>
 </div>
 
 <div class="line" style="clear: both">

@@ -1,0 +1,701 @@
+
+<!DOCTYPE html SYSTEM>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>brousalis.com - Pete Brousalis</title>
+  <meta name="author" content="Pete Brousalis" />
+
+  <meta name="description" content="Pete Brousalis, software engineer" />
+  <meta name="keywords" content="Pete Brousalis, software, software engineer, UI, UI developer, brousalis" />
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  <link href="http://brousalis.github.com/brousalis" rel="canonical" />
+  <link media="screen, projection" type="text/css" href="/stylesheets/screen.css" rel="stylesheet" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="http://use.typekit.com/pgq1wgn.js" type="text/javascript"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <link title="Pete Brousalis" type="application/atom+xml" href="/atom.xml" rel="alternate" />
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9821208-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a title="subscribe via RSS" href="/atom.xml" rel="subscribe-rss">RSS</a></li>
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input value="site:brousalis.github.com/brousalis" type="hidden" name="q" />
+    <input class="search" type="text" name="q" placeholder="" results="0" />
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li class="mouse"><a href="/"></a></li>
+  <li><a class="logo" href="/"><img src="/images/logo_name.png" /></a></li>
+  <li><a class="blog" href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/work">Work</a></li>
+</ul>        
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <div class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<time data-updated="true" pubdate datetime="2012-07-13T14:43:00-05:00">Jul 13<span>th</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+            <li class="ruby"></li>
+             
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/13/google-buttons-sass-gem/">google-buttons-sass gem</a></h1>
+    
+  </header>
+  
+
+  <div class="entry-content"><p>I&#8217;m happy to release <span class="bash">google-buttons-sass</span>, a gem that is a SASS-powered version of <a href="https://github.com/todc/css3-google-buttons">CSS3 Google Buttons</a> written by Tim O&#8217;Donnell.</p>
+
+<p>This gem requires <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> to be installed, which you can do by importing the CSS files directly to your project or by installing the <span class="bash">bootstrap-sass</span> gem.</p>
+
+<div style="margin-bottom: 30px; text-align: center;">
+  <img src="/images/buttons.png" style="border: white 4px solid !important; margin: 0px 0px 20px 17px" />
+  <a class="button" style="margin-left: 20px;" href="http://blog.timodonnell.com/css3-google-buttons/">CSS Demo</a>
+  <a class="button" href="http://github.com/brousalis/google-buttons-sass">Github</a>
+</div>
+
+
+<p>To get started, use Bundler to install the gem:</p>
+
+<figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="n">gem</span> <span class="s1">&#39;sass-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.1&#39;</span>
+</span><span class="line"><span class="n">gem</span> <span class="s1">&#39;google-buttons-sass&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then add the following line to your main css file to import the styles:</p>
+
+<figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="css"><span class="line"><span class="k">@import</span> <span class="s2">&quot;google-buttons&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to use the Javascript that supports the custom select box, which can be seen in the <a href="http://blog.timodonnell.com/css3-google-buttons/base-css.html#forms">CSS demo</a>, add the following line to your main js file:</p>
+
+<figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="js"><span class="line"><span class="c1">//= require google-buttons</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To read more about <strong>Compass</strong> support or if you have any questions, comments, bugs, please visit the <a href="https://github.com/brousalis/google-buttons-sass">Github page</a>.</p>
+</div>
+  
+  
+    <footer>
+      <a href="/blog/2012/07/13/google-buttons-sass-gem/" rel="full-article">Leave a comment</a>
+    </footer> 
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <div class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<time data-updated="true" pubdate datetime="2012-07-08T00:51:00-05:00">Jul 8<span>th</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+            <li class="ruby"></li>
+             
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/08/jekyll-category-list-plugin/">Jekyll category list plugin</a></h1>
+    
+  </header>
+  
+
+  <div class="entry-content"><p><a href="http://github.com/mojombo/jekyll">Jekyll</a> is a static site generator written in Ruby. It is a very flexible solution for maintaining a blog that is much more lightweight than a framework like Wordpress.</p>
+
+<p>In order to get the category list you see on the left to work, I had to write a custom Jekyll plugin. The animations are done by CSS3 transitions. I&#8217;ve created a repo on Github for the plugin.</p>
+
+<div style="margin-bottom: 30px; text-align: center;">
+  <a class="button" href="http://github.com/brousalis/jekyll-category-list">Github</a>
+  <a class="button" style="margin-left: 20px;" href="http://brousalis.github.com/jekyll-category-list">CSS Demo</a>
+</div>
+
+
+
+
+<figure class="code"><figcaption><span>categorylist.rb </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class="line">  <span class="k">class</span> <span class="nc">CategoryList</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class="line">    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class="line">      <span class="n">s</span> <span class="o">=</span> <span class="no">StringIO</span><span class="o">.</span><span class="n">new</span>
+</span><span class="line">      <span class="k">begin</span>
+</span><span class="line">        <span class="n">categories</span> <span class="o">=</span> <span class="n">context</span><span class="o">[</span><span class="s1">&#39;site&#39;</span><span class="o">][</span><span class="s1">&#39;categories&#39;</span><span class="o">]</span>
+</span><span class="line">        <span class="k">unless</span> <span class="n">categories</span><span class="o">.</span><span class="n">nil?</span>
+</span><span class="line">          <span class="n">post_count</span> <span class="o">=</span> <span class="n">context</span><span class="o">[</span><span class="s1">&#39;site&#39;</span><span class="o">][</span><span class="s1">&#39;posts&#39;</span><span class="o">].</span><span class="n">size</span><span class="o">.</span><span class="n">to_i</span>
+</span><span class="line">          <span class="n">categories</span><span class="o">.</span><span class="n">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">cat</span><span class="p">,</span> <span class="n">posts</span><span class="o">|</span> <span class="n">posts</span><span class="o">.</span><span class="n">size</span> <span class="p">}</span>
+</span><span class="line">            <span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+</span><span class="line">            <span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">cat</span><span class="p">,</span> <span class="n">posts</span><span class="o">|</span>
+</span><span class="line">               <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;&lt;li&gt;&lt;em&gt;</span><span class="si">#{</span><span class="n">posts</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s2">&lt;/em&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">/blog/categories/</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="s2">&lt;/a&gt;&lt;span style=</span><span class="se">\&quot;</span><span class="s2">width:</span><span class="si">#{</span><span class="n">posts</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">post_count</span><span class="si">}</span><span class="s2">%</span><span class="se">\&quot;</span><span class="s2">&gt;bar&lt;/span&gt;&lt;div class=</span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&gt;&lt;/div&gt;&lt;/li&gt;&quot;</span>
+</span><span class="line">            <span class="k">end</span>
+</span><span class="line">        <span class="k">end</span>
+</span><span class="line">      <span class="k">rescue</span> <span class="o">=&gt;</span> <span class="n">boom</span>
+</span><span class="line">        <span class="nb">p</span> <span class="n">boom</span>
+</span><span class="line">      <span class="k">end</span>
+</span><span class="line">      <span class="s2">&quot;&lt;ul&gt;</span><span class="si">#{</span><span class="n">s</span><span class="o">.</span><span class="n">string</span><span class="si">}</span><span class="s2">&lt;/ul&gt;&quot;</span>
+</span><span class="line">    <span class="k">end</span>
+</span><span class="line">  <span class="k">end</span>
+</span><span class="line"><span class="k">end</span>
+</span><span class="line">
+</span><span class="line"><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;category_list&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">CategoryList</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Read the rest for the CSS, usage, and more information.</p>
+
+</div>
+  
+  
+    <footer>
+      <a href="/blog/2012/07/08/jekyll-category-list-plugin/" rel="full-article">Read the rest</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <div class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<time data-updated="true" pubdate datetime="2012-07-01T13:12:00-05:00">Jul 1<span>st</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+            <li class="css"></li>
+             
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/01/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a></h1>
+    
+  </header>
+  
+
+  <div class="entry-content"><p>I&#8217;ve seen a similar box-shadow mixin in several places, particularly <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a>, and I think it can be improved.</p>
+
+<figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class="sass"><span class="line"><span class="k">@mixin</span><span class="nf"> box-shadow</span><span class="p">(</span><span class="nv">$shadow</span><span class="p">)</span> <span class="err">{</span>
+</span><span class="line">  <span class="na">-webkit-box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class="line">     <span class="na">-moz-box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class="line">          <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class="line"><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is the mixin most often seen, however it doesn&#8217;t allow for multiple shadows, like:</p>
+
+<figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="css"><span class="line"><span class="nt">box-shadow</span><span class="o">:</span> <span class="nt">0</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.1</span><span class="o">),</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">5px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.2</span><span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is my modified version that supports multiple shadows:</p>
+
+<figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+</pre></td><td class="code"><pre><code class="sass"><span class="line"><span class="k">@mixin</span><span class="nf"> box-shadow</span><span class="p">(</span><span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">:</span><span class="n-Pseudo">false</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="o">:</span><span class="n-Pseudo">false</span><span class="p">)</span> <span class="err">{</span>
+</span><span class="line">  <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="err">;</span>
+</span><span class="line">  <span class="k">@if</span> <span class="nv">$shadow2</span> <span class="err">{</span> <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="err">;</span> <span class="err">}</span>
+</span><span class="line">  <span class="k">@if</span> <span class="nv">$shadow3</span> <span class="err">{</span> <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="err">;</span> <span class="err">}</span>
+</span><span class="line">  <span class="na">-webkit-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class="line">     <span class="na">-moz-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class="line">          <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class="line"><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can then call it:</p>
+
+<figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="css"><span class="line"><span class="k">@include</span> <span class="nt">box-shadow</span><span class="o">(</span><span class="nt">0</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.1</span><span class="o">),</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">5px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.2</span><span class="o">)</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+    <footer>
+      <a href="/blog/2012/07/01/sass-better-box-shadow-mixin/" rel="full-article">Leave a comment</a>
+    </footer> 
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <div class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<time data-updated="true" pubdate datetime="2012-06-15T00:48:00-05:00">Jun 15<span>th</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+            <li class="lab"></li>
+             
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/15/current-git-branch-in-bash-prompt/">Current Git branch in prompt</a></h1>
+    
+  </header>
+  
+
+  <div class="entry-content"><p>I&#8217;ve found it necessary now to have the current Git branch always listed in my command line. You can checkout how I do it with my <a href="http://github.com/brousalis/dotfiles">dotfiles</a>, or add the following below to your <span class="bash">.bashrc</span>:</p>
+
+<figure class="code"><figcaption><span>bashrc  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">parse_git_branch<span class="o">()</span> <span class="o">{</span> git branch 2&gt; /dev/null | sed -e <span class="s1">&#39;/^[^*]/d&#39;</span> -e <span class="s1">&#39;s/* \(.*\)/(\1)/&#39;</span>; <span class="o">}</span>
+</span><span class="line"><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\[\033[01;34m\]\h:\[\033[01;33m\]\w\[\033[01;34m\] \$(parse_git_branch) \[\033[01;33m\]&gt;\[\e[0m\] &quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <strong>PS1</strong> defines what your prompt looks like. The important keywords here are <span class="bash">\h</span> - hostname, <span class="bash">\u</span> - username, <span class="bash">\w</span> - directory path.</p>
+
+<p>The lines such as <span class="bash">[\033[01;34m]</span> set colors for the text.</p>
+
+<p>Adding these then doing a <span class="bash">source ~/.bashrc</span> in console should make your command line look like:</p>
+
+<p><img src="/images/bash.png" style="border: black 0.5em solid !important" /></p>
+</div>
+  
+  
+    <footer>
+      <a href="/blog/2012/06/15/current-git-branch-in-bash-prompt/" rel="full-article">Leave a comment</a>
+    </footer> 
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <div class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<time data-updated="true" pubdate datetime="2012-05-25T20:34:00-05:00">May 25<span>th</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+            <li class="lab"></li>
+            
+            <li class="personal"></li>
+             
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/25/dotfiles/">Personal dotfiles and scripts</a></h1>
+    
+  </header>
+  
+
+  <div class="entry-content"><p>I have spent about a year slowly configuring my personal set of dotfiles, or configuration settings. I&#8217;ve hosted them to share with everyone on <a href="http://github.com/brousalis/dotfiles">Github</a>. I have some pretty neat tricks I&#8217;ve picked up in quest for the perfect dev environment, and I&#8217;d like to share a few.</p>
+
+<h2>Bootstrapping your config files</h2>
+
+<figure class="code"><figcaption><span>bootstrap.sh </span><a href="https://github.com/brousalis/dotfiles/blob/master/bootstrap.sh">github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#!/bin/bash</span>
+</span><span class="line">
+</span><span class="line"><span class="nv">FOLDER</span><span class="o">=</span><span class="s2">&quot;$HOME&quot;</span>/dotfiles
+</span><span class="line">
+</span><span class="line"><span class="c"># install vim</span>
+</span><span class="line"><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$1&quot;</span> <span class="o">==</span> <span class="s2">&quot;vim&quot;</span> <span class="o">]</span>
+</span><span class="line"><span class="k">then</span>
+</span><span class="line"><span class="k">  </span><span class="nb">source </span>vim.sh
+</span><span class="line">  <span class="nb">echo</span> <span class="s2">&quot;Setup vim install&quot;</span>
+</span><span class="line"><span class="k">fi</span>
+</span><span class="line">
+</span><span class="line"><span class="c"># dotfiles</span>
+</span><span class="line"><span class="nb">cd</span>      <span class="s2">&quot;$FOLDER&quot;</span>
+</span><span class="line">ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/vimrc         <span class="s2">&quot;$HOME&quot;</span>/.vimrc
+</span><span class="line">ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/bashrc        <span class="s2">&quot;$HOME&quot;</span>/.bashrc
+</span><span class="line">ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/bash_profile  <span class="s2">&quot;$HOME&quot;</span>/.bash_profile
+</span><span class="line">ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/vim           <span class="s2">&quot;$HOME&quot;</span>/.vim
+</span><span class="line">ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/screenrc      <span class="s2">&quot;$HOME&quot;</span>/.screenrc
+</span><span class="line">ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/tmuxconf      <span class="s2">&quot;$HOME&quot;</span>/.tmux.conf
+</span><span class="line">ln -sf  <span class="s2">&quot;$FOLDER&quot;</span>/gitconfig     <span class="s2">&quot;$HOME&quot;</span>/.gitconfig
+</span><span class="line"><span class="nb">echo</span>    <span class="s2">&quot;Setup symlinks&quot;</span>
+</span><span class="line">
+</span><span class="line"><span class="c"># vim</span>
+</span><span class="line">mkdir -p <span class="s2">&quot;$HOME&quot;</span>/.vimbackup
+</span><span class="line">mkdir -p <span class="s2">&quot;$HOME&quot;</span>/.vimtmp
+</span><span class="line"><span class="nb">echo</span> <span class="s2">&quot;Setup vim temp&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>By running this file <span class="bash">./bootstrap.sh</span> it sets up symlinks between the home folder and the dotfiles folder. This puts them in their correct place and also makes modifying these files much easier.</p>
+
+</div>
+  
+  
+    <footer>
+      <a href="/blog/2012/05/25/dotfiles/" rel="full-article">Read the rest</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <div class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
+<time data-updated="true" pubdate datetime="2012-04-15T19:54:00-05:00">Apr 15<span>th</span>, 2012</time>  
+        <ul class="post-icon">
+          
+            
+            <li class="personal"></li>
+             
+          
+        </ul> 
+      </div>
+     
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/15/the-setup/">My Setup</a></h1>
+    
+  </header>
+  
+
+  <div class="entry-content"><p>Inspired by <a href="http://usesthis.com/">The Setup</a>, a website filled with interviews dedicated to finding out how and what designers and developers use to get their work done. My career has only just begun, but I thought I&#8217;d share what I use.</p>
+
+<h3>Hardware</h3>
+
+<p>The <a href="http://www.apple.com/macbookpro/">15&#8221; MacBook Pro</a> has been my dev machine for the last few years of my life. Upgrading to an SSD drive will change your life, if you haven&#8217;t had the opportunity. As lame as it is, I splurged for a <a href="http://www.amazon.com/gp/product/B0054JGGGY/ref=as_li_ss_tl?ie=UTF8&tag=sebadewithsbl-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B0054JGGGY">Razer Mamba</a> mouse. You can turn off the glowing LED lights on this version, and it proves a really accurate and light weight mouse.</p>
+
+<p>At home, I connect my laptop to a <a href="http://www.apple.com/imac/">27&#8221; iMac</a>. The resolution, sharpness and colours from this display are the best I&#8217;ve ever seen, and using any other monitor is depressing.</p>
+
+<h3>Software</h3>
+
+<p>I switched to <a href="http://www.apple.com/macosx/">Mac OS X</a> in 2009 after using Windows XP and <a href="http://www.ubuntu.com/">various</a> <a href="http://www.gentoo.org/">flavours</a> of <a href="http://www.debian.org/">Linux</a>. I do miss <a href="http://awesome.naquadah.org/">Awesome</a> window manager, as I prefer never to use my mouse, but by using some special keybindings and apps I can emulate it well enough on Lion.</p>
+
+<p>All of my developing and editing is done in <a href="http://vim.org">VIM</a>. The learning curve is very high, but once you&#8217;ve got the hang of it - there&#8217;s no looking back. I use <a href="http://iterm2.com">iTerm</a> with zsh and some heavily modified <a href="http://github.com/brousalis/dotfiles">dotfiles</a> for absolutely everything. I use <a href="http://reeder.com">Reeder</a> for my daily RSS feeds, and use <a href="http://gmail.com">Gmail</a> for all of my busy work. For mocking and design, I use <a href="http://adobe.com">Photoshop CS6</a>, shockingly.</p>
+
+<p>This site is run on <a href="http://octopress.org">Octopress</a>, a static-site generator, turning markdown posts into what you see right now. I use <a href="http://typekit.com">TypeKit</a> for all of the fonts, and the one you are most likely seeing is <em>Proxima Nova</em> (sans) and <em>Adele</em> (serif).</p>
+</div>
+  
+  
+    <footer>
+      <a href="/blog/2012/04/15/the-setup/" rel="full-article">Leave a comment</a>
+    </footer> 
+  
+
+
+    </article>
+  
+  
+</div>
+<aside class="sidebar">
+  
+    <section class="about light">
+  <p>I&#8217;m a 23 year-old software engineer and UI developer from Chicago, IL. I&#8217;m a recent graduate of <a href="http://rose-hulman.edu">Rose-Hulman</a> and employed at <a href="http://enova.com">Enova</a>.</p>
+  <ul>
+    <li><a href="/about">Read more</a></li>
+    <li><a href="mailto:brousapg(at)gmail.com">Contact</a></li>
+  </ul>
+</section>
+<section id="categories">
+  <h1>Categories</h1>
+  <ul><li><em>2</em><a href="/blog/categories/ruby">ruby</a><span style="width:33%">bar</span><div class="ruby"></div></li><li><em>2</em><a href="/blog/categories/lab">lab</a><span style="width:33%">bar</span><div class="lab"></div></li><li><em>2</em><a href="/blog/categories/personal">personal</a><span style="width:33%">bar</span><div class="personal"></div></li><li><em>1</em><a href="/blog/categories/css">css</a><span style="width:16%">bar</span><div class="css"></div></li></ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <span>Jul 13</span>
+        <a href="/blog/2012/07/13/google-buttons-sass-gem/">google-buttons-sass gem</a>
+      </li>
+    
+      <li class="post">
+        <span>Jul 08</span>
+        <a href="/blog/2012/07/08/jekyll-category-list-plugin/">Jekyll category list plugin</a>
+      </li>
+    
+      <li class="post">
+        <span>Jul 01</span>
+        <a href="/blog/2012/07/01/sass-better-box-shadow-mixin/">SASS better box-shadow mixin</a>
+      </li>
+    
+      <li class="post">
+        <span>Jun 15</span>
+        <a href="/blog/2012/06/15/current-git-branch-in-bash-prompt/">Current Git branch in prompt</a>
+      </li>
+    
+      <li class="post">
+        <span>May 25</span>
+        <a href="/blog/2012/05/25/dotfiles/">Personal dotfiles and scripts</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweet</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("brousalis", 1, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a data-show-count="false" class="twitter-follow-button" data-width="100%" data-align="right" href="http://twitter.com/brousalis">Follow @brousalis</a>
+  
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer>
+<p> Copyright &copy; 2012 - Pete Brousalis <a class="up" href="#">up</a></p>           
+</footer>
+
+  
+
+<script type="text/javascript">
+      var disqu_shortname = 'brousalis';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+</body>
+</html>

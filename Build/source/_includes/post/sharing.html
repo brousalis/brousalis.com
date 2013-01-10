@@ -1,0 +1,11 @@
+<div class="sharing">
+  {% if site.twitter_tweet_button %}
+  <a data-via="{{ site.twitter_user }}" class="twitter-share-button" href="http://twitter.com/share" data-url="{{ site.url }}{{ page.url }}" data-counturl="{{ site.url }}{{ page.url }}">Tweet</a>
+  {% endif %}
+  {% if site.google_plus_one %}
+  <div class="g-plusone" data-size="{{ site.google_plus_one_size }}"></div>
+  {% endif %}
+  {% if site.facebook_like %}
+    <div data-send="true" data-show-faces="false" class="fb-like" data-width="450"></div>
+  {% endif %}
+</div>

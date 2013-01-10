@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <title>brousalis.com - Pete Brousalis</title>
+  <meta name="author" content="Pete Brousalis" />
+
+  <meta name="description" content="Pete Brousalis, software engineer" />
+  <meta name="keywords" content="Pete Brousalis, software, software engineer, UI, UI developer, brousalis" />
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+  <link href="{{ canonical }}" rel="canonical" />
+  <link media="screen, projection" type="text/css" href="{{ root_url }}/stylesheets/screen.css" rel="stylesheet" />
+  <script src="{{ root_url }}/javascripts/modernizr-2.0.js"></script>
+  <script src="{{ root_url }}/javascripts/ender.js"></script>
+  <script src="{{ root_url }}/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="http://use.typekit.com/pgq1wgn.js" type="text/javascript"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <link title="{{site.title}}" type="application/atom+xml" href="{{ site.subscribe_rss }}" rel="alternate" />
+  {% include google_analytics.html %}
+</head></html>

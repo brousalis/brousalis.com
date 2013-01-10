@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: css | Pete Brousalis]]></title>
+  <link href="http://brousalis.github.com/brousalis/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://brousalis.github.com/brousalis/"/>
+  <updated>2012-07-16T11:07:34-05:00</updated>
+  <id>http://brousalis.github.com/brousalis/</id>
+  <author>
+    <name><![CDATA[Pete Brousalis]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SASS better box-shadow mixin]]></title>
+    <link href="http://brousalis.github.com/brousalis/blog/2012/07/01/sass-better-box-shadow-mixin/"/>
+    <updated>2012-07-01T13:12:00-05:00</updated>
+    <id>http://brousalis.github.com/brousalis/blog/2012/07/01/sass-better-box-shadow-mixin</id>
+    <content type="html"><![CDATA[<p>I've seen a similar box-shadow mixin in several places, particularly <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a>, and I think it can be improved.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@mixin</span><span class="nf"> box-shadow</span><span class="p">(</span><span class="nv">$shadow</span><span class="p">)</span> <span class="err">{</span>
+</span><span class='line'>  <span class="na">-webkit-box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="na">&lt;pre&gt;&lt;code&gt;</span><span class="err"> </span><span class="na">-moz-box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class='line'>      <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$shadow</span><span class="err">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nt">code</span><span class="o">&gt;&lt;/</span><span class="nt">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This is the mixin most often seen, however it doesn't allow for multiple shadows, like:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">box-shadow</span><span class="o">:</span> <span class="nt">0</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.1</span><span class="o">),</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">5px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.2</span><span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Here is my modified version that supports multiple shadows:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@mixin</span><span class="nf"> box-shadow</span><span class="p">(</span><span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">:</span><span class="n-Pseudo">false</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="o">:</span><span class="n-Pseudo">false</span><span class="p">)</span> <span class="err">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="na">&lt;pre&gt;&lt;code&gt;$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="err">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nt">code</span><span class="o">&gt;&lt;/</span><span class="nt">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="na">&lt;p&gt;</span><span class="err">  </span><span class="na">@if</span><span class="err"> </span><span class="na">$shadow2</span><span class="err"> </span><span class="na">{</span><span class="err"> </span><span class="na">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="err">;</span> <span class="err">}</span>
+</span><span class='line'>  <span class="k">@if</span> <span class="nv">$shadow3</span> <span class="err">{</span> <span class="nv">$shadows</span><span class="o">:</span> <span class="nv">$shadow1</span><span class="o">,</span> <span class="nv">$shadow2</span><span class="o">,</span> <span class="nv">$shadow3</span><span class="err">;</span> <span class="err">}</span>
+</span><span class='line'>  <span class="na">-webkit-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="na">&lt;pre&gt;&lt;code&gt;</span><span class="err"> </span><span class="na">-moz-box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class='line'>      <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$shadows</span><span class="err">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nt">code</span><span class="o">&gt;&lt;/</span><span class="nt">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>You can then call it:
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@include</span> <span class="nt">box-shadow</span><span class="o">(</span><span class="nt">0</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.1</span><span class="o">),</span> <span class="nt">0</span> <span class="nt">2px</span> <span class="nt">5px</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nc">.2</span><span class="o">)</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>
+
