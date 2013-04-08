@@ -1,0 +1,8 @@
+# Standard Jekyll configuration
+markdown: redcarpet
+permalink: /:categories/:title/
+exclude: ['Rakefile', 'sass']
+
+# Configuration required for some pages
+url: http://nathanstaines.com
+title: Nathan Staines

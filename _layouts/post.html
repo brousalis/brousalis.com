@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<article class="post clearfix">
+  <header>
+    {% if page.title %}
+      <h2>{{ page.title }}</h2>
+    {% endif %}
+
+    <p class="meta-data">
+      {% if page.date  %}
+        <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="content">
+    {{ content }}
+
+    <a id="likes" class="btn" data-page-id="{{ page.id }}" href="#">
+      <i class="icon-heart-empty"></i>
+      <span class="count">&dash;</span>
+    </a>
+  </div>
+
+  <footer>
+    <nav class="nav nav-posts">
+      {% if page.previous and page.previous.categories[0] == page.categories[0] %}
+        <a class="btn" href="{{ page.previous.url }}">&#8592; Previous post</a>
+      {% endif %}
+
+      {% if page.next and page.next.categories[0] == page.categories[0] %}
+        <a class="btn pull-right" href="{{ page.next.url }}">Next post &#8594;</a>
+      {% endif %}
+    </nav>
+  </footer>
+</article>
