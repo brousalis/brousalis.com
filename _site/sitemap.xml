@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://nathanstaines.com</loc>
-    <lastmod>2013-04-08T14:30:28-05:00</lastmod>
+    <loc>http://brousalis.net</loc>
+    <lastmod>2013-04-08T22:52:18-05:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://brousalis.net/articles/test-post-3/</loc>
+    
+      <lastmod>2013-04-08T12:38:59-05:00</lastmod>
+    
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://brousalis.net/articles/test-post-2/</loc>
+    
+      <lastmod>2013-04-08T12:38:57-05:00</lastmod>
+    
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://brousalis.net/articles/test-post-1/</loc>
+    
+      <lastmod>2013-04-08T12:38:54-05:00</lastmod>
+    
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
   
 </urlset>

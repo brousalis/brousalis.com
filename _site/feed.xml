@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Nathan Staines</title>
-  <link href="http://nathanstaines.com/feed.xml" rel="self" />
-  <link href="http://nathanstaines.com" />
-  <updated>2013-04-08T14:30:28-05:00</updated>
-  <id>http://nathanstaines.com</id>
+  <title>Pete Brousalis</title>
+  <link href="http://brousalis.net/feed.xml" rel="self" />
+  <link href="http://brousalis.net" />
+  <updated>2013-04-08T22:52:18-05:00</updated>
+  <id>http://brousalis.net</id>
   <author>
     <name>Pete Brousalis</name>
     <email>brousapg@gmail.com</email>
   </author>
 
+  
+    <entry>
+      <title>Test post 3</title>
+      <link href="http://brousalis.net/articles/test-post-3/"/>
+      <updated>2013-04-08T12:38:59-05:00</updated>
+      <id>http://brousalis.net/articles/test-post-3</id>
+      <content type="html"></content>
+    </entry>
+  
+    <entry>
+      <title>Test post 2</title>
+      <link href="http://brousalis.net/articles/test-post-2/"/>
+      <updated>2013-04-08T12:38:57-05:00</updated>
+      <id>http://brousalis.net/articles/test-post-2</id>
+      <content type="html"></content>
+    </entry>
+  
+    <entry>
+      <title>Test post 1</title>
+      <link href="http://brousalis.net/articles/test-post-1/"/>
+      <updated>2013-04-08T12:38:54-05:00</updated>
+      <id>http://brousalis.net/articles/test-post-1</id>
+      <content type="html"></content>
+    </entry>
   
 </feed>

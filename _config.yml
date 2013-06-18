@@ -1,8 +1,7 @@
-# Standard Jekyll configuration
 markdown: redcarpet
 permalink: /:categories/:title/
 exclude: ['Rakefile', 'sass']
-
-# Configuration required for some pages
-url: http://nathanstaines.com
-title: Nathan Staines
+url: http://brousalis.net
+title: Pete Brousalis
+safe: false
+auto: true

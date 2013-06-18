@@ -1,0 +1,253 @@
+@import "normalize";
+@import "preboot";
+
+body {
+  background: #fff;
+  padding: 0;
+  font-family: "Maven Pro", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #555;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 30px 0 10px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #333;
+}
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; margin-bottom: 0; }
+p { margin: 0 0 15px; }
+.lead {
+  font-size: 18px;
+  line-height: 1.25;
+  color: $black-40;
+}
+
+ol,
+ul {
+  margin: 0 0 15px 25px;
+  padding: 0;
+}
+.list-unstyled {
+  margin-left: 0;
+  li {
+    display: block;
+  }
+}
+
+code,
+pre {
+  padding: 0 3px 2px;
+  color: #333;
+  border-radius: 4px;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  white-space: nowrap;
+}
+pre {
+  display: block;
+  padding: 15px;
+  margin: 0 0 20px;
+  line-height: 1.4;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  code {
+    padding: 0;
+    color: inherit;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+.highlight {
+  padding: 14px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+  box-shadow: inset 45px 0 0 #fbfbfc, inset 46px 0 0 #ececf0;
+  pre {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    background-color: transparent;
+    border: 0;
+    .lineno {
+      display: inline-block;
+      width: 20px;
+      padding-right: 5px;
+      margin-right: 10px;
+      text-align: right;
+      color: #bebec5;
+    }
+  }
+}
+
+.row { @include make-row(); }
+.grid-4 { @include make-column(4); }
+
+// Neato divider between headers and content
+.header-divider {
+  margin-top: 60px;
+}
+.header-divider:after {
+  display: block;
+  content: "";
+  width: 25%;
+  height: 4px;
+  margin: 20px 0 26px;
+  background-color: #555;
+  border: 0;
+  opacity: .5;
+}
+
+// Shift content over for the side panel
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 760px;
+}
+
+// Side panel
+.sidebar {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+}
+.sidebar-inner {
+  padding: 30px;
+}
+.sidebar h1 {
+  margin-top: 0;
+  color: #fff;
+  letter-spacing: -1px;
+}
+.sidebar .header-divider:after {
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,.3);
+  opacity: 1;
+}
+.sidebar .list-unstyled {
+  font-size: 85%;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.sidebar .social-buttons {
+  margin-bottom: 0;
+}
+.sidebar a {
+  font-weight: bold;
+  color: #fff;
+  &:hover {
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(255,255,255,.5);
+  }
+}
+
+// Table of contents
+.toc {
+  margin-left: 0;
+}
+.toc li {
+  display: block;
+}
+.toc a {
+  display: block;
+  margin-left: -10px;
+  padding: 4px 10px;
+  &:hover {
+    text-decoration: none;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+  }
+}
+.btn {
+  display: block;
+  margin-bottom: 5px;
+  padding: 15px 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: #7a43b6;
+  text-align: center;
+  letter-spacing: -1px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  &:hover,
+  &:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #7a43b6;
+    border-color: #7a43b6;
+  }
+  &:active {
+    box-shadow: inset 0 3px 6px rgba(0,0,0,.3);
+    border-color: darken(#7a43b6, 10%);
+  }
+}
+
+@media screen and (min-width: 820px) {
+  body { font-size: 18px; }
+  .highlight { line-height: 25px; }
+  .lead { font-size: 24px; }
+  .btn { display: inline-block; margin-bottom: 0; }
+  .container {
+    margin-left: 30%;
+    margin-right: 10%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 25%;
+    background-attachment: fixed;
+    &:after {
+      position: absolute;
+      top: -20px;
+      right: 0;
+      bottom: -20px;
+      left: -10px;
+      z-index: 10;
+      display: block;
+      content: " ";
+      box-shadow: inset -5px 0 25px rgba(0,0,0,.3);
+    }
+    .sidebar-inner {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 15;
+    }
+  }
+}
