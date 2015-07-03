@@ -1,0 +1,9 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
