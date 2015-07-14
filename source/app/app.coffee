@@ -1,11 +1,14 @@
-#= require 'layouts/application'
-
 'use strict'
 
 modules = [
   'templates'
   'ui.router'
-  'app.main'
+
+  'app.about'
+  'app.contact'
+  'app.home'
+  'app.projects'
+  'app.work'
 ]
 
 angular.module('app', modules)
@@ -14,13 +17,4 @@ angular.module('app', modules)
   APPLICATION_SECRET: Settings.APPLICATION_SECRET
 
 .config ($stateProvider, $urlRouterProvider) ->
-  $stateProvider
-    .state 'main',
-      abstract: true
-      templateUrl: 'layouts/application'
-      controller: 'appController'
-
-  $urlRouterProvider.otherwise('/main').when('/', 'main')
-
-.controller 'appController', ($scope) ->
-  console.log 'app controller'
+  $urlRouterProvider.otherwise('/')

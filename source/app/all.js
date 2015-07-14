@@ -5,5 +5,12 @@
 
 //= require settings
 
-//= require_tree ../app/main
+//= require_tree ../app/components
+
+//= require_tree ../app/about
+//= require_tree ../app/contact
+//= require_tree ../app/home
+//= require_tree ../app/projects
+//= require_tree ../app/work
+
 //= require ../app/app

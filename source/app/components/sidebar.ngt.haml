@@ -1,0 +1,4 @@
+.sidebar
+  %ul
+    %li(data-ng-repeat="item in items" data-ng-class="{'active': item.active}")
+      %a(data-ui-sref="{{ item.sref }}" data-ng-class="{true: 'active'}") {{item.name}}
