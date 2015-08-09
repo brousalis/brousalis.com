@@ -4,17 +4,17 @@
 
 angular.module('app.about', [
   'ui.router'
-  'components.sidebar'
+  'components.header'
 ])
 
-.config ($stateProvider, sidebarProvider) ->
+.config ($stateProvider, headerProvider) ->
   $stateProvider
     .state 'about',
       url: '/about'
       templateUrl: 'about/about'
       controller: 'aboutController'
 
-  sidebarProvider.register name: 'about', sref: 'about'
+  headerProvider.register name: 'about', sref: 'about'
 
 .controller 'aboutController', ($scope) ->
   console.log 'about controller'

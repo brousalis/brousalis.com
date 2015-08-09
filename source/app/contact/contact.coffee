@@ -6,14 +6,14 @@ angular.module('app.contact', [
   'ui.router'
 ])
 
-.config ($stateProvider, sidebarProvider) ->
+.config ($stateProvider, headerProvider) ->
   $stateProvider
     .state 'contact',
       url: '/contact'
       templateUrl: 'contact/contact'
       controller: 'contactController'
 
-  sidebarProvider.register name: 'contact', sref: 'contact'
+  headerProvider.register name: 'contact', sref: 'contact'
 
 .controller 'contactController', ($scope) ->
   console.log 'contact controller'

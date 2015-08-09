@@ -1,0 +1,88 @@
+// Layout
+// ========================================
+
+// HTML5 display definitions
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
+  display: block
+
+// Defaults
+
+html
+  box-sizing: border-box
+  color: #444
+  font: 87.5%
+  line-height: 24px
+  line-height: 1.5rem
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+
+*,
+*:after,
+*:before
+  box-sizing: inherit
+
+[hidden],
+template
+  display: none
+
+body
+  margin: 0
+  background: #f1f1f1
+
+// Stuff
+
+.header
+  display: block
+  position: relative
+  width: 100%
+  background-color: transparent
+  padding: 6% 0 0 0
+  z-index: 1000
+
+.content
+  display: block
+  position: relative
+  width: 90%
+  max-width: 1200px
+  margin: 0 auto
+  background: #fff
+
+// Grid
+
+.grid
+  list-style: none
+
+.grid-col
+  display: inline-block
+  *display: inline
+  letter-spacing: normal
+  vertical-align: middle
+  white-space: normal
+  zoom: 1
+
+.grid-1-1
+  width: 100%
+
+$columns: 12
+
+// Counting down from 12, for 12 columns
+@while 1 <= $columns
+
+  // Counting up to the given potential number of columns in a given row
+  @for $column from 1 to $columns
+    .grid-#{$column}-#{$columns}
+      width: ($column/$columns) * 100%
+
+  $columns: $columns - 1

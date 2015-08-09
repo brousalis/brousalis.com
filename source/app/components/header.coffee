@@ -1,26 +1,26 @@
-#= require 'components/sidebar'
+#= require 'components/header'
 
 'use strict'
 
 # Define Angular module
-angular.module('components.sidebar', [
+angular.module('components.header', [
   'ui.router'
 ])
 
-.directive 'sidebar', ($state, sidebar) ->
+.directive 'header', ($state, header) ->
   restrict: 'EA'
   replace: true
-  templateUrl: 'components/sidebar'
+  templateUrl: 'components/header'
   transclude: true
 
   link: (scope, iElemen, iAttrs) ->
-    scope.items = sidebar.get()
+    scope.items = header.get()
 
     setActive = (state = $state) ->
       if state.current? then state = state.current
 
       for item, idx in scope.items
-        # First set each Sidebar item to inactive
+        # First set each header item to inactive
         item.active = false
         scope.items[idx] = item
 
@@ -34,8 +34,8 @@ angular.module('components.sidebar', [
 
     setActive()
 
-# Setup the service which will register items for the Sidebar directive
-.provider 'sidebar', ->
+# Setup the service which will register items for the header directive
+.provider 'header', ->
   items = []
 
   register: (item) ->

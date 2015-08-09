@@ -6,14 +6,14 @@ angular.module('app.projects', [
   'ui.router'
 ])
 
-.config ($stateProvider, sidebarProvider) ->
+.config ($stateProvider, headerProvider) ->
   $stateProvider
     .state 'projects',
       url: '/'
       templateUrl: 'projects/projects'
       controller: 'projectsController'
 
-  sidebarProvider.register name: 'projects', sref: 'projects'
+  headerProvider.register name: 'projects', sref: 'projects'
 
 .controller 'projectsController', ($scope) ->
   console.log 'projects controller'
