@@ -1,5 +1,17 @@
 .header
   .content
-    %ul
-      %li(data-ng-repeat="item in items" data-ng-class="{'active': item.active}")
-        %a(data-ui-sref="{{ item.sref }}" data-ng-class="{true: 'active'}") {{item.name}}
+    .grid
+      .grid-col.grid-1-3
+        .logo Pete Brousalis
+      .grid-col.grid-1-3
+        %nav
+          %a(data-ng-repeat="item in items" data-ui-sref="{{ item.sref }}" data-ng-class="{'active': item.active}") {{item.name}}
+      .grid-col.grid-1-3
+        %ul.social
+          %li
+            %i.icon.ion-social-github
+          %li
+            %i.icon.ion-social-twitter
+          %li
+            %i.icon.ion-social-linkedin
+
